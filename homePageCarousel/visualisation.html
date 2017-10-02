@@ -100,7 +100,7 @@ dfs.carouselText = function(target, text){
             data = $(_this).data(),
             deadline = data.countdown,
             daysStart = data.startdays,
-            messageID = data.messageid;
+            messageID = data.messageid.replace('slide_','');
             console.log(deadline + ' , ' + daysStart + ' , ' + messageID);
             var countDownOBj = getTimeRemaining(deadline);
             console.log('Days: ' + countDownOBj.days);
