@@ -7,6 +7,10 @@
  Last Updated :
 
 - - - - - - - - - - - - - - - - - - - - - */
+/* Header */
+header#header {
+    display: none;
+}
 
 /* Backgrounds */
 html{background-image:none;background-color:#99cc00}
@@ -31,4 +35,10 @@ html{background-image:none;background-color:#99cc00}
 .wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family:inherit;color:#333333}
 .wufoo label.choice{color:#444444}
 .wufoo .instruct{font-size:80%;font-family:inherit;color:#444444
+}
+/* Custom Layout styles */
+li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
+  position: relative;
+  left: 20%;
+  width: 60% !important;
 }
