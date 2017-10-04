@@ -35,7 +35,7 @@ html{background-image:none;background-color:#99cc00}
 .wufoo .section div{font-size:85%;font-family:inherit;color:#444444}
 .wufoo label.desc, .wufoo legend.desc{font-size:95%;font-family:inherit;color:#444444}
 .wufoo li div, .wufoo li div label, .wufoo li span label{font-family:inherit;color:#444444}
-.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family:inherit;color:#333333;height: 25px;padding: 3px 5px;}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family: 'Open Sans', sans-serif;color:#333333;height: 30px;padding: 3px 12px;}
 .wufoo label.choice{color:#444444}
 .wufoo .instruct{font-size:80%;font-family:inherit;color:#444444
 }
@@ -47,14 +47,14 @@ li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
 }
 /* INPUTS */
 input#Field1 {
-    width: 150px;
+    width: 200px;
 }
 input#Field2 {
-    width: 250px;
+    width: 300px;
     margin-left: 12px;
 }
 input#Field3 {
-    width: 429px;
+    width: 530px;
 }
 
 /* LABELS */
