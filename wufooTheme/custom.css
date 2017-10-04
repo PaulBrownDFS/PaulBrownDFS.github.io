@@ -58,7 +58,7 @@ input#Field3 {
 }
 
 /* LABELS */
-label[for="Field1"], label[for="Field2"] {
+span label[for="Field1"], label[for="Field2"] {
     display: none;
 }
 form label#title1, form label#title3 {
