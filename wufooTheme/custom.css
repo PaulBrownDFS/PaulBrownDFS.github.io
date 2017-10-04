@@ -95,3 +95,12 @@ li.buttons {
     text-align: center;
     padding: 0px !important;
 }
+input#saveForm {
+    background: #c8057f;
+    color: #fff;
+    height: 30px;
+    border: none;
+    width: 200px;
+    box-shadow: 3px 3px 15px #aaa;
+    cursor: pointer;
+}
