@@ -20,7 +20,7 @@ html{background-image:none;background-color:#99cc00}
 #logo{background-image:none;background-color:#669900}
 #container{background:#FFFFFF}
 .wufoo input.text, .wufoo textarea.textarea{background:#FFFFFF url(/images/fieldbg.gif) repeat-x top}
-.wufoo .focused{background:#FFF7C0}
+.wufoo .focused{background:#FFFFFF}
 .wufoo .instruct{background-color:#F5F5F5}
 
 /* Borders */
@@ -42,8 +42,8 @@ html{background-image:none;background-color:#99cc00}
 /* Custom Layout styles */
 li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
   position: relative;
-  left: 20%;
-  width: 60% !important;
+  left: 22%;
+  width: 56% !important;
 }
 li#fo5li5 {
     padding-bottom: 0px;
