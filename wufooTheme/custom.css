@@ -48,6 +48,9 @@ li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
 li#fo5li5 {
     padding-bottom: 0px;
 }
+li#fo5li105 {
+    padding-top: 0px;
+}
 /* INPUTS */
 input#Field1 {
     width: 200px;
