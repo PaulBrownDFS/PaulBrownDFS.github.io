@@ -41,6 +41,10 @@ html{background-image:none;background-color:#99cc00}
 .wufoo .instruct{font-size:80%;font-family:inherit;color:#444444
 }
 /* Custom Layout styles */
+div#wufoo-s1yyl84i1klfeuw {
+    max-height: 320px;
+    overflow: hidden;
+}
 li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
   position: relative;
   left: 165px;
