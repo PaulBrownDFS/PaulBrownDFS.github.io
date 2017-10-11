@@ -71,15 +71,24 @@ input#Field2 {
     height:30px;
 }
 input#Field3 {
-    width: 530px;
+    width: 338px;
     height:30px;
+}
+input#Field206 {
+    height: 30px;
+    width: 150px;
+}
+li#fo5li206 {
+    position: absolute;
+    top: 89px;
+    left: 538px;
 }
 
 /* LABELS */
 span label[for="Field1"], label[for="Field2"] {
     display: none;
 }
-form label#title1, form label#title3 {
+form label#title1, form label#title3,form label#title206 {
     font-size: 22px;
     color:#222;
     text-transform: uppercase;
