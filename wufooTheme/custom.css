@@ -123,3 +123,24 @@ input#saveForm {
 form p.error {
     padding: 7px 0 5px 0 !important;
 }
+
+/* Media Queries - Mobile Screens */
+
+@media (max-width: 1023px) {
+  input#Field2 {
+    width: 260px;
+  }
+  input#Field3 {
+    width: 338px;
+  }
+  li#fo5li206 {
+    position: absolute;
+    top: 83px;
+    left: 370px;
+  }
+  li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
+    left: 0px;
+    width: 560px !important;
+  }
+
+}
