@@ -126,7 +126,7 @@ form p.error {
 
 /* Media Queries - Mobile Screens */
 
-@media (max-width: 1023px) {
+@media (max-width: 540px) {
   input#Field2 {
     width: 260px;
   }
