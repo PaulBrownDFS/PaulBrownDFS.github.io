@@ -131,16 +131,19 @@ form p.error {
     width: 260px;
   }
   input#Field3 {
-    width: 338px;
+    width: 320px;
   }
   li#fo5li206 {
     position: absolute;
     top: 83px;
-    left: 370px;
+    left: 363px;
   }
   li#fo5li1, li#fo5li3, li#fo5li5, li#fo5li105 {
     left: 0px;
     width: 560px !important;
+  }
+  input#Field206 {
+    width: 131px;
   }
 
 }
