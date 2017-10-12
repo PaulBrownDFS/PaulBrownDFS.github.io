@@ -145,5 +145,8 @@ form p.error {
   input#Field206 {
     width: 138px;
   }
+  span.choice__text.notranslate {
+    font-size: 13px;
+  }
 
 }
