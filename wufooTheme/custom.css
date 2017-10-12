@@ -89,7 +89,7 @@ span label[for="Field1"], label[for="Field2"] {
     display: none;
 }
 form label#title1, form label#title3,form label#title206 {
-    font-size: 22px;
+    font-size: 18px;
     color:#222;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
