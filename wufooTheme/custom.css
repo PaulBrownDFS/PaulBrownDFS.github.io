@@ -4,11 +4,11 @@
  Author : Paul Brown
  URL : http://
 
- Last Updated : 11th Oct 2017
+ Last Updated :
 
 - - - - - - - - - - - - - - - - - - - - - */
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300");
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 /* Header */
 header#header {
@@ -36,9 +36,7 @@ html{background-image:none;background-color:#99cc00}
 .wufoo .section div{font-size:85%;font-family:inherit;color:#444444}
 .wufoo label.desc, .wufoo legend.desc{font-size:95%;font-family:inherit;color:#444444}
 .wufoo li div, .wufoo li div label, .wufoo li span label{font-family:inherit;color:#444444}
-.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice {
-  font-size:100%;font-family: 'Open Sans Condensed',sans-serif;color:#333333;padding: 3px 12px;
-}
+.wufoo input.text, .wufoo textarea.textarea, .wufoo select.select, .wufoo label.choice{font-size:100%;font-family: 'Open Sans', sans-serif;color:#333333;padding: 3px 12px;}
 .wufoo label.choice{color:#444444}
 .wufoo .instruct{font-size:80%;font-family:inherit;color:#444444
 }
@@ -94,7 +92,7 @@ form label#title1, form label#title3,form label#title206 {
     font-size: 22px;
     color:#222;
     text-transform: uppercase;
-    font-family: "Open Sans Condensed",sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 }
 legend#title5 {
@@ -109,7 +107,7 @@ li.buttons {
     padding: 0px !important;
 }
 input#saveForm {
-    background: #e51a92;
+    background: #c8057f;
     color: #fff;
     height: 30px;
     border: none;
