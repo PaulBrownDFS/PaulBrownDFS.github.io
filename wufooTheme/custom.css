@@ -4,7 +4,7 @@
  Author : Paul Brown
  URL : /content/joules-home-furniture
 
- Last Updated :12th Oct 2017
+ Last Updated :17th Oct 2017
 
 - - - - - - - - - - - - - - - - - - - - - */
 
@@ -149,4 +149,26 @@ form p.error {
     font-size: 13px;
   }
 
+}
+
+@media (max-width: 420px) {
+  input#Field1 {
+    width: 150px;
+  }
+  input#Field2 {
+    width: 150px;
+    margin-left: 50px;
+  }
+  input#Field3 {
+    width: 170px;
+  }
+  input#Field206 {
+    width: 100px;
+  }
+  span.choice__text.notranslate {
+    font-size: 10px;
+  }
+  h4.joulesTermsHeader {
+    font-size: 15px;
+  }
 }
