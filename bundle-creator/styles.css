@@ -1,0 +1,80 @@
+section.clearance_bundle_image_creator .col-xs-12 {
+    width: 100%;
+    text-align: center;
+}
+.col-xs-12.skus input {
+    width: 150px;
+    height: 30px;
+    border-radius: 4px;
+    font-size: 20px;
+    color: #804ba7;
+    background: #f0eef7;
+    margin-right:15px;
+    padding: 5px 0px 0 5px;
+}
+section.clearance_bundle_image_creator .skus {
+  margin-bottom: 40px;
+}
+section.clearance_bundle_image_creator label {
+    font-size: 20px;
+    color: #534362;
+}
+button#render_image_btn {
+    background: #4e90bf;
+    color: #fff;
+    font-size: 16px;
+    margin: 10px 0;
+}
+.nudges {
+    text-align: center;
+}
+.nudges input {
+    height: 20px;
+    font-size: 16px;
+    width: 70px;
+    text-align: center;
+    background: #e1effb;
+}
+.nudges button {
+    background: #607D8B;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+section.clearance_bundle_image_creator h4 {
+    font-size: 24px;
+    margin: 5px;
+    color: #fff;
+    background:#6c76af;
+}
+section.clearance_bundle_image_creator span {
+    color: #aaa;
+}
+
+section.clearance_bundle_image_creator .attributes {
+  display:none;
+}
+section.clearance_bundle_image_creator hr {
+  margin: 2px 0 !important;
+}
+
+.attributes.active {
+  display:block !important;
+}
+input#image_url_text {
+    background: #e1effb;
+    font-size: 16px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+button#updateImageText {
+    background: #6c76af;
+    color: #fff;
+    font-size: 16px;
+}
+.changeColour ul {
+    width: 860px;
+}
+changeColour ul li {
+    margin:5px 0;
+}

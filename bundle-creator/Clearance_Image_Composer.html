@@ -1,0 +1,115 @@
+<!-- ContentID: Clearance_Image_Composer --> <!-- Clearance Bundle Image Creator V1.1 (PB) CSS-->
+
+<!-- Clearance Bundle Image Creator V1.1 (PB) HTML -->
+<style>
+.nudges,.nudges input{text-align:center}section.clearance_bundle_image_creator .col-xs-12{width:100%;text-align:center}.col-xs-12.skus input{width:150px;height:30px;border-radius:4px;font-size:20px;color:#804ba7;background:#f0eef7;margin-right:15px;padding:5px 0 0 5px}section.clearance_bundle_image_creator .skus{margin-bottom:40px}section.clearance_bundle_image_creator label{font-size:20px;color:#534362}button#render_image_btn{background:#4e90bf;color:#fff;font-size:16px;margin:10px 0}.nudges input{height:20px;font-size:16px;width:70px;background:#e1effb}.nudges button{background:#607D8B;color:#fff;font-weight:700;font-size:14px}section.clearance_bundle_image_creator h4{font-size:24px;margin:5px;color:#fff;background:#6c76af}section.clearance_bundle_image_creator span{color:#aaa}section.clearance_bundle_image_creator .attributes{display:none}section.clearance_bundle_image_creator hr{margin:2px 0!important}.attributes.active{display:block!important}input#image_url_text{background:#e1effb;font-size:16px;width:100%;margin-bottom:10px}button#updateImageText{background:#6c76af;color:#fff;font-size:16px}.changeColour ul{width:860px}changeColour ul li{margin:5px 0}
+</style>
+      <section class="clearance_bundle_image_creator">
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Clearance Bundle Image Creator <small>V1.1</small></h2>
+          </div>
+          <div class="col-xs-12 skus">
+            <label for="SKU1">SKU1:</label>
+              <input type="text" id="SKU1" name="SKU1" value="">
+            <label for="SKU2">SKU2:</label>
+              <input type="text" id="SKU2" name="SKU2" value="">
+            <label for="SKU3">SKU3:</label>
+              <input type="text" id="SKU3" name="SKU3" value="">
+            <label for="SKU4">SKU4:</label>
+              <input type="text" id="SKU4" name="SKU4" value="">
+          </div>
+          <div class="col-xs-12 image_preview">
+            <h5>Image Preview</h5>
+            <img src="" alt="" id="bundle">
+          </div>
+          <hr>
+          <div class="nudges">
+            <div class="main_image attributes">
+              <h4>Main Image</h4>
+              <label for="width">Width</label>
+              <input type="text" name="width" id="width" value="720"><span> px</span>
+              <label for="height">Height</label>
+              <input type="text" name="height" id="height" value="478"><span> px</span>
+              <button id="topUp">Up</button>
+              <button id="topDown">Down</button>
+              <button id="leftUp">Left</button>
+              <button id="leftDown">Right</button>
+              <label for="nudge">Nudge</label>
+              <input type="text" id="nudge" name="nudge" value="20"><span> px</span>
+              <hr>
+            </div>
+
+            <div class="left_image attributes">
+              <h4>Left Image</h4>
+              <label for="width">Width</label>
+              <input type="text" name="width1" id="width1" value="337"><span> px</span>
+              <label for="height">Height</label>
+              <input type="text" name="height1" id="height1" value="180"><span> px</span>
+              <button id="topUp1">Up</button>
+              <button id="topDown1">Down</button>
+              <button id="leftUp1">Left</button>
+              <button id="leftDown1">Right</button>
+              <label for="nudge">Nudge</label>
+              <input type="text" id="nudge1" name="nudge1" value="20"><span> px</span>
+              <hr>
+            </div>
+
+            <div class="middle_image attributes">
+              <h4>Middle Image</h4>
+              <label for="width">Width</label>
+              <input type="text" name="width2" id="width2" value="337"><span> px</span>
+              <label for="height">Height</label>
+              <input type="text" name="height2" id="height2" value="180"><span> px</span>
+              <button id="topUp2">Up</button>
+              <button id="topDown2">Down</button>
+              <button id="leftUp2">Left</button>
+              <button id="leftDown2">Right</button>
+              <label for="nudge">Nudge</label>
+              <input type="text" id="nudge2" name="nudge2" value="20"><span> px</span>
+              <hr>
+            </div>
+
+            <div class="right_image attributes">
+              <h4>Right Image</h4>
+              <label for="width">Width</label>
+              <input type="text" name="width3" id="width3" value="337"><span> px</span>
+              <label for="height">Height</label>
+              <input type="text" name="height3" id="height3" value="180"><span> px</span>
+              <button id="topUp3">Up</button>
+              <button id="topDown3">Down</button>
+              <button id="leftUp3">Left</button>
+              <button id="leftDown3">Right</button>
+              <label for="nudge">Nudge</label>
+              <input type="text" id="nudge3" name="nudge3" value="20"><span> px</span>
+              <hr>
+            </div>
+          </div>
+          <div class="col-xs-12 render">
+            <button id="render_image_btn">Render Image</button>
+            <hr>
+          </div>
+        </div>
+        <div class="changeColour">
+          Image URL:
+          <input type="text" id="image_url_text">
+          <button id="updateImageText">Update Colours</button>
+          <h3>Change Product Colour Information</h3>
+          <p>If you wish to display a different product colour, it is possible to adjust each product in the url that is called to build each bundle image.</p>
+          <ul>
+            <li>Step1: Create your bundle as normal with default colours</li>
+            <li>Step2: Adjust the bundle until its how you want the products sized / spaced</li>
+            <li>Step3: In the input box above, find the product image url, which follows main_product=, left_product=, right_product=, middle_product= or bottom_product= and locate the colour text in this string.</li>
+            <li>Step4: simply replace say charcoal, with red, sky or whatever colour you require ie. main_product=ludo_3h_revive_charcoal_view1, if we replace _charcoal_ with _red_ and then press the update colours button, a new bundle will be created with the current settings and new colours (if Valid)</li>
+          </ul>
+          <h3>In fact any image can be substituted if the whole image string is replaced with another amplience image url</h3>
+        </div>
+
+      </section>
+      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous">
+      </script>
+
+<script>
+  function renderNewView(){var t=getSkus();if(t.length>1){renderImage(getXML(t))}}function getSkus(){var t=document.querySelectorAll(".skus input"),e=[];for(i=0;i<t.length;i++)""!==t[i].value&&e.push(t[i].value);return e}function getXML(t){var e=[];return $.each(t,function(t,i){var n="http://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku="+i;$.ajax({url:n,type:"get",async:!1,dataType:"text"}).done(function(t,i,n){var o=t.replace(/&pound;/g,"&#163;"),p=$.parseXML(o),a=$(p),f=a.find("images medium").text(),u=a.find("link").first().text(),d=a.find("text").text();product_name=a.find("name").text(),e.push({src:f.replace("http://images.dfs.co.uk/i/dfs/",""),link:u,range:d,product:product_name})}).fail(function(t){console.log(t.statusText),console.log("Failed to load XML Document")})}),e}function renderImage(t){var e="http://x1.adis.ws/v1/media/graphics/i/dfs/clearance_bundle_template"+t.length,i="?fmt=jpg&";4===t.length&&(width=$("input#width").val(),height=$("input#height").val(),top_offset="undefined"!=typeof top_offset?top_offset:430,left="undefined"!=typeof left?left:144,width1=$("input#width1").val(),height1=$("input#height1").val(),top1="undefined"!=typeof top1?top1:882,left1="undefined"!=typeof left1?left1:5,width2=$("input#width2").val(),height2=$("input#height2").val(),top2="undefined"!=typeof top2?top2:882,left2="undefined"!=typeof left2?left2:330,width3=$("input#width3").val(),height3=$("input#height3").val(),top3="undefined"!=typeof top3?top3:882,left3="undefined"!=typeof left3?left3:680,i+="main_product="+t[0].src,i+="&left_product="+t[1].src,i+="&middle_product="+t[2].src,i+="&right_product="+t[3].src,i+="&width="+width,i+="&height="+height,i+="&top="+top_offset,i+="&left="+left,i+="&width1="+width1,i+="&height1="+height1,i+="&left1="+left1,i+="&top1="+top1,i+="&width2="+width2,i+="&height2="+height2,i+="&left2="+left2,i+="&top2="+top2,i+="&width3="+width3,i+="&height3="+height3,i+="&left3="+left3,i+="&top3="+top3,$(".attributes").removeClass("active"),$(".attributes.main_image, .attributes.left_image, .attributes.middle_image, .attributes.right_image").addClass("active")),3===t.length&&(width=$("input#width").val(),height=$("input#height").val(),top_offset="undefined"!=typeof top_offset?top_offset:430,left="undefined"!=typeof left?left:144,width1=$("input#width1").val(),height1=$("input#height1").val(),top1="undefined"!=typeof top1?top1:882,left1="undefined"!=typeof left1?left1:193,width2=$("input#width2").val(),height2=$("input#height2").val(),top2="undefined"!=typeof top2?top2:882,left2="undefined"!=typeof left2?left2:506,i+="main_product="+t[0].src,i+="&left_product="+t[1].src,i+="&right_product="+t[2].src,i+="&width="+width,i+="&height="+height,i+="&top="+top_offset,i+="&left="+left,i+="&width1="+width1,i+="&height1="+height1,i+="&left1="+left1,i+="&top1="+top1,i+="&width2="+width2,i+="&height2="+height2,i+="&left2="+left2,i+="&top2="+top2,$(".attributes").removeClass("active"),$(".middle_image h4").text("Right Image"),$(".attributes.main_image, .attributes.left_image, .attributes.middle_image").addClass("active")),2===t.length&&(width=$("input#width").val(),height=$("input#height").val(),top_offset="undefined"!=typeof top_offset?top_offset:430,left="undefined"!=typeof left?left:144,width1=$("input#width1").val(),height1=$("input#height1").val(),top1="undefined"!=typeof top1?top1:882,left1="undefined"!=typeof left1?left1:355,i+="main_product="+t[0].src,i+="&bottom_product="+t[1].src,i+="&width="+width,i+="&height="+height,i+="&top="+top_offset,i+="&left="+left,i+="&width1="+width1,i+="&height1="+height1,i+="&left1="+left1,i+="&top1="+top1,$(".attributes").removeClass("active"),$(".left_image h4").text("Bottom Image"),$(".attributes.main_image, .attributes.left_image").addClass("active"));var n=e+i;$("img#bundle").attr("src",n),$("input#image_url_text").val(n)}$(document).ready(function(){$(".clearance_bundle_image_creator").on("click","#render_image_btn",function(){renderNewView()}),$("#topUp").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[0].value);top_offset=parseInt(top_offset-e),renderNewView()}),$("#topDown").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[0].value);top_offset=parseInt(top_offset+e),renderNewView()}),$("#leftUp").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[0].value);left=parseInt(left-e),renderNewView()}),$("#leftDown").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[0].value);left=parseInt(left+e),renderNewView()}),$("button#topUp1").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[1].value);top1=parseInt(top1-e),renderNewView()}),$("button#topDown1").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[1].value);top1=parseInt(top1+e),renderNewView()}),$("button#leftUp1").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[1].value);left1=parseInt(left1-e),renderNewView()}),$("button#leftDown1").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[1].value);left1=parseInt(left1+e),renderNewView()}),$("button#topUp2").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[2].value);top2=parseInt(top2-e),renderNewView()}),$("button#topDown2").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[2].value);top2=parseInt(top2+e),renderNewView()}),$("button#leftUp2").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[2].value);left2=parseInt(left2-e),renderNewView()}),$("button#leftDown2").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[2].value);left2=parseInt(left2+e),renderNewView()}),$("button#topUp3").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[3].value);top3=parseInt(top3-e),renderNewView()}),$("button#topDown3").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[3].value);top3=parseInt(top3+e),renderNewView()}),$("button#leftUp3").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[3].value);left3=parseInt(left3-e),renderNewView()}),$("button#leftDown3").on("click",function(){var t=$("input[id*='nudge']"),e=parseInt(t[3].value);left3=parseInt(left3+e),renderNewView()}),$("button#updateImageText").on("click",function(){var t=$("input#image_url_text").val();$("img#bundle").attr("src",t)})});
+</script>
+      <!-- @End Clearance Bundle Creator -->
