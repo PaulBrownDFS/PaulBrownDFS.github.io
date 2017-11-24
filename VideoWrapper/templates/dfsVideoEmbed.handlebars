@@ -1,0 +1,42 @@
+<div class="{{target}}_videoContainer">
+  <video id="{{target}}_videoJS" class="video-js vjs-big-play-centered vjs-default-skin" controls preload="none" width="{{width}}" height="{{height}}"
+    poster="{{src}}?{{queryStrings}}">
+      <p class="vjs-no-js">
+        To view this video please enable JavaScript, and consider upgrading to a web browser that
+        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+      </p>
+    </video>
+</div>
+
+
+<script>
+var {{target}} = videojs('{{target}}_videoJS', {
+  plugins: {
+    videoJsResolutionSwitcher: {
+      default: '480',
+      dynamicLabel: true
+    }
+  }
+});
+{{target}}.updateSrc([
+
+  { src: "{{src}}/webm_480p?{{queryStrings}}",
+    type: "video/webm",res: 480,label: "480" },
+
+  { src: "{{src}}/webm_720p?{{queryStrings}}",
+    type: "video/webm",res: 720,label: "hd" },
+
+  { src: "{{src}}/webm_240p?{{queryStrings}}",
+    type: "video/webm",res: 240,label: "240" },
+
+  { src: "{{src}}/mp4_480p?{{queryStrings}}",
+    type: "video/mp4",res: 480,label: "480" },
+
+  { src: "{{src}}/mp4_720p?{{queryStrings}}",
+    type: "video/mp4",res: 720,label: "hd" },
+
+  { src: "{{src}}/mp4_240p?{{queryStrings}}",
+    type: "video/mp4",res: 240,label: "240" }
+
+]);
+</script>

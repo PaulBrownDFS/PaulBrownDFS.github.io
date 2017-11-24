@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Video Embed Test</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/css/amp-dfs-viewer.min.css">
+<script type="text/javascript" src="https://c1.adis.ws/c/dfs/jQuery-3.2.1.min"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/cms-javascript-sdk.min.js"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/handlebars.runtime.min.js"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/Amp_utils.min.js"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/handlebars_helpers.min.js"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/videoJsResSwitcher.min.js"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/amp-dfs-viewer-libs.min.js"></script>
+<script src="http://www.stage.uat1.dfs.co.uk/wcsstore8.00.00.712/DFSStorefrontAssetStore/javascript/amp-dfs-viewers.min.js"></script>
+<script src="ampVideoTemplate.js"></script>
+
+<script src="js/video_renderer.min.js" charset="utf-8"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron">
+        <div class="container">
+          <h1 class="display-3">Video Wrapper 1.0</h1>
+          <p>Video Demonstration showing how we can use the existing deprecated video embed code as used in all current content records, and use the new Video JS player to render them via a precomiled template to keep everything lightweight.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 text-center">
+          <!-- Video 1 -->
+          <div class="placeholder">
+            <h2>Video 1</h2>
+        				 	<img id="Espot_Video_Player_1" src="http://i1.adis.ws/v/dfs/EAZIGLIDE-VIDEO?$video_thumb$">
+        				  	<script type="text/javascript">
+        				  		amp.viewer("606c5d13-400f-4b17-8896-536284a6d2eb", {target: "Espot_Video_Player_1", width: 500, height: 281});
+        					</script>
+        	</div>
+        </div>
+        <div class="col-md-6 text-center">
+          <!-- Video 2-->
+            <div class="placeholder2">
+              <h2>Video 2</h2>
+          				 	<img id="Espot_Video_Player_2" src="http://i1.adis.ws/v/dfs/JOULES_Seasons_Trimmed?$video_thumb$">
+          				  	<script type="text/javascript">
+          				  		amp.viewer("606c5d13-400f-4b17-8896-536284a6d2eb", {target: "Espot_Video_Player_2", width: 500, height: 281});
+          					</script>
+          	</div>
+        </div>
+      </div>
+<h2>Required Files - Extremly Lightweight at around 7kb</h2>
+<p>ampVideoTemplate.js 6.48k</p>
+<p>video_renderer.min.js 454 bytes</p>
+</div>
+</body>
+</html>
