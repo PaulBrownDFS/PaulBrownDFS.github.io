@@ -1,6 +1,6 @@
-<div id="{{target}}">
-  <video id="{{target}}_videoJS" class="video-js vjs-big-play-centered vjs-default-skin" controls preload="none" width="{{width}}" height="{{height}}"
-    poster="{{src}}?{{queryStrings}}">
+<div class="{{target}}_videoContainer">
+  <video id="{{target}}" class="video-js vjs-big-play-centered vjs-default-skin" controls preload="none" width="{{width}}" height="{{height}}"
+    poster="{{src}}?{{queryStrings}}" data-render_version="1.02">
       <p class="vjs-no-js">
         To view this video please enable JavaScript, and consider upgrading to a web browser that
         <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -10,7 +10,7 @@
 
 
 <script>
-var {{target}} = videojs('{{target}}_videoJS', {
+var {{target}} = videojs('{{target}}', {
   plugins: {
     videoJsResolutionSwitcher: {
       default: '480',
@@ -40,3 +40,10 @@ var {{target}} = videojs('{{target}}_videoJS', {
 
 ]);
 </script>
+<style>
+/* Play button over-rides */
+.video-js .vjs-big-play-button {
+  background-color: rgba(0, 0, 0, 0.55) !important;
+  color: #fff !important;
+}
+</style>
