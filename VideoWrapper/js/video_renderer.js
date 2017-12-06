@@ -2,6 +2,9 @@
   if(!amp){
     amp = {};
   }
+  if(!amp._rc){
+      amp._rc = function() {return false}
+    }
   amp.viewer = function(id,instance){
     console.log('id', id, 'target', instance.target);
     amp.viewer[instance.target + '_src'] = document.getElementById(instance.target).src.split('?');
