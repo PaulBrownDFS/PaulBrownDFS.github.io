@@ -11,7 +11,7 @@
 
     var context = {
       "id" : id,
-      "Version": "1.02",
+      "Version": "1.02a",
       "target" : instance.target,
       "src" : amp.viewer[instance.target + '_src'][0].replace(/\/thumbs\/frame_[0-9]+\w+/g, ''),
       "queryStrings" : amp.viewer[instance.target + '_src'][1],
