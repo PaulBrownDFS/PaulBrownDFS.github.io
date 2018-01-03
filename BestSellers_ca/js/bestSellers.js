@@ -30,7 +30,8 @@ dfs.bestSellers.getbestSellersURL = function(){
                 var XMLdoc = $.parseXML( cleanXML ); // convert back to XML
                 var $xml = $( XMLdoc );
 
-                var productsData = parse(XMLdoc);
+                var x2js = new X2JS();
+                var productsData = x2js.xml_str2json( cleanXML );
                 dfs.bestSellers.bestsellers_data[index] = [];
                 dfs.bestSellers.variables.data = [];
                 var slideNum = 0;
@@ -38,29 +39,29 @@ dfs.bestSellers.getbestSellersURL = function(){
                 dfs.bestSellers.bestsellers_data[index][pageNum] = [];
 
 
-                for (i in productsData.product) {
+                for (i in productsData.products.product) {
                   slideNum++;
                   if(slideNum > 8){
                     pageNum++;
-                    console.log('paged', pageNum, slideNum);
+                    // console.log('paged', pageNum, slideNum);
                     dfs.bestSellers.bestsellers_data[index][pageNum] = [];
                     slideNum =1;
                   }
                   dfs.bestSellers.bestsellers_data[index][pageNum].push({
-                    sku: productsData.product[i].sku,
-                    name: productsData.product[i].name,
-                    description: productsData.product[i].description,
-                    link: productsData.product[i].link,
-                    price: productsData.product[i].price,
-                    wasprice: productsData.product[i].wasprice,
-                    image: productsData.product[i].images.medium,
-                    savelabel1: productsData.product[i].pricelabel1,
-                    price1: productsData.product[i].price1,
-                    savelabel2: productsData.product[i].pricelabel2,
-                    price2: productsData.product[i].price2,
-                    savinglabel: productsData.product[i].savinglabel,
-                    savingvalue: productsData.product[i].savingvalue,
-                    title: productsData.product[i].reviews.text
+                    sku: productsData.products.product[i].sku,
+                    name: productsData.products.product[i].name,
+                    description: productsData.products.product[i].description,
+                    link: productsData.products.product[i].link,
+                    price: productsData.products.product[i].price,
+                    wasprice: productsData.products.product[i].wasprice,
+                    image: productsData.products.product[i].images.medium,
+                    savelabel1: productsData.products.product[i].pricelabel1,
+                    price1: productsData.products.product[i].price1,
+                    savelabel2: productsData.products.product[i].pricelabel2,
+                    price2: productsData.products.product[i].price2,
+                    savinglabel: productsData.products.product[i].savinglabel,
+                    savingvalue: productsData.products.product[i].savingvalue,
+                    title: productsData.products.product[i].reviews.text
                   });
                 }
 
