@@ -24,7 +24,7 @@ dfs.bestSellers.getbestSellersURL = function(){
                   async: false,
                   dataType: 'text'
               }).done(function (response, textStatus, jqXHR){
-                console.log('Ajax Best Sellers Data Request:',textStatus);
+                console.log('Best Sellers Data Request:',textStatus);
                 //clean up xml (remove invalid &pound; or &euro;)
                 var cleanXML = response.replace(/&amp;pound;/g,'&#163;').replace(/&amp;euro;/g,'&#8364;');
                 var XMLdoc = $.parseXML( cleanXML ); // convert back to XML
