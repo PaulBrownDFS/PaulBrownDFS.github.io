@@ -256,6 +256,7 @@
 ul.bs_slides {
     list-style: none;
     height: 480px;
+    padding-left:40px;
 }
 ul.bs_slides li {
     float: left;
@@ -365,7 +366,7 @@ p.bs_primary {
   ul.bs_slides {
     height: 455px;
   }
-  
+
 }
 
 @media screen and (min-width: 768px) {
