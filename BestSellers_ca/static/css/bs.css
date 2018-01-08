@@ -344,6 +344,15 @@ p.bs_primary {
   #bsInnerWrap{
     width:1024px;
   }
+  ul.bs_slides li {
+    width: 248px;
+  }
+  ul.bs_slides {
+    padding-left: 10px;
+  }
+  a.left.carousel-control,a.right.carousel-control  {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
