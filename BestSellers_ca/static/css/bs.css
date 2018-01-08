@@ -264,7 +264,7 @@ ul.bs_slides li {
 }
 a.left.carousel-control {
     background-image: url(http://cdn-dfs2.amplience.com/dfs/carousel_nav_prev_no_dis_v2.png);
-    background-position: 0px -3px;
+    background-position: 0px 0px;
     background-repeat: no-repeat;
     width: 64px;
     height: 104px;
@@ -277,7 +277,7 @@ a.right.carousel-control {
     height: 104px;
     overflow: hidden;
     background-image: url(http://cdn-dfs2.amplience.com/dfs/carousel_nav_next_no_dis_v2.png);
-    background-position: 0px -3px;
+    background-position: 0px 0px;
     cursor: pointer;
     left: 1135px;
     top: 210px;
