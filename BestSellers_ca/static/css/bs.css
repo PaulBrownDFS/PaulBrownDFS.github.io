@@ -344,6 +344,9 @@ p.bs_primary {
   #bsInnerWrap{
     width:1024px;
   }
+  .bs_container {
+    width: 1024px;
+  }
   ul.bs_slides li {
     width: 248px;
   }
@@ -362,9 +365,7 @@ p.bs_primary {
   ul.bs_slides {
     height: 455px;
   }
-  .carousel-indicators {
-    width: 49%;
-  }
+  
 }
 
 @media screen and (min-width: 768px) {
