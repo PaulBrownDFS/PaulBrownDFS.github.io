@@ -348,10 +348,22 @@ p.bs_primary {
     width: 248px;
   }
   ul.bs_slides {
-    padding-left: 10px;
+    padding-left: 20px;
+  }
+  ul.bs_slides img {
+    width: 96%;
   }
   a.left.carousel-control,a.right.carousel-control  {
     display: none;
+  }
+  p.bs_primary {
+    right: 10px;
+  }
+  ul.bs_slides {
+    height: 455px;
+  }
+  .carousel-indicators {
+    width: 49%;
   }
 }
 
