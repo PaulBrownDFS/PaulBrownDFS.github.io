@@ -338,7 +338,7 @@ p.bs_primary {
     float: right;
     position: absolute;
     bottom: 10px;
-    right: 18px;
+    right: 0px;
 }
 
 @media (max-width: 1365px) {

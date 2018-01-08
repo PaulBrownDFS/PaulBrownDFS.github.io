@@ -1,0 +1,536 @@
+<!--ContentID: DFS_HP_AMP_02_V8SD -->
+
+<style>
+/*DFS Mammoth Winter Sale */
+.dmws_container {
+  background:url(//i1.adis.ws/i/dfs/hp_mammoth_sale_background) no-repeat;
+  position: relative;
+  height: 94px;
+}
+.dmws_container img {
+    position: relative;
+    left: 200px;
+    top: 8px;
+}
+.dmws_container p {
+    font-size: 24px;
+    color: #fff;
+    position: absolute;
+    top: 0px;
+    right: 160px;
+}
+.dmws_container p::before {
+    display: inline-block;
+    margin: 0px 3px 0px 0;
+    height: 15px;
+    content: " ";
+    text-shadow: none;
+    width: 9px;
+    background: url(//i1.adis.ws/i/dfs/iukArrowRightWhite?w=9) 0 0 no-repeat;
+}
+.dmws_container:hover p {
+    text-decoration: underline;
+}
+/*CTA amends */
+li.col-sm-20w {
+    width: 20%;
+    float: left;
+}
+.helpLinks .bsi_kitemark {
+    background: url(//i1.adis.ws/i/dfs/BSI_KM675963) no-repeat top;
+    background-size: 104px;
+}
+.helpLinks li h3 {
+    font-size: 1.2em !important;
+}
+
+.helpLinks p {
+    font-size: 1.3em;
+}
+li.col-sm-20w.rightBorder.fourYearIFC img {
+  position: relative;
+  top: 14px;
+  left: -80px;
+}
+li.col-sm-20w.rightBorder.bsi_kitemark img {
+  position: relative;
+  top: 14px;
+  left: -100px;
+}
+li.col-sm-20w.rightBorder.handMade img {
+  position: relative;
+  top: 14px;
+  left: -60px;
+}
+li.col-sm-20w.rightBorder.tenYG img {
+  position: relative;
+  top: 14px;
+  left: -55px;
+}
+li.col-sm-20w.britain img {
+  position: relative;
+  top: 14px;
+  left: -113px;
+}
+
+
+ @media (max-width: 1365px) {
+     li.col-sm-3.britain {
+      padding: 0 8px;
+    }
+    section.helpLinks.solidBorder .col-sm-3 h3 {
+      font-size: 12px !important;
+    }
+    /*DFS Mammoth Winter Sale */
+    .dmws_container p {
+      font-size: 22px;
+      top: 2px;
+      right: 24px;
+    }
+    .dmws_container img {
+      position: relative;
+      left: 20px;
+      top: 8px;
+    }
+    span.lbreak {
+      display: block;
+    }
+    li.col-sm-20w.rightBorder.fourYearIFC img {
+      left: -52px;
+    }
+    li.col-sm-20w.rightBorder.bsi_kitemark img {
+      left: -46px;
+    }
+    li.col-sm-20w.rightBorder.handMade img {
+      left: -37px;
+    }
+    li.col-sm-20w.rightBorder.tenYG img {
+      left: -27px;
+    }
+    li.col-sm-20w.britain img {
+      left: -56px;
+    }
+
+
+
+
+ }
+</style>
+<link rel="stylesheet" href="http://127.0.0.1:3000/static/css/bs.min.css">
+
+<div class='main HP_VERSION8' style="height: auto !important; max-height: none;">
+    <section class="helpLinks solidBorder col-sm-12">
+        <ul>
+            <li class="col-sm-20w rightBorder fourYearIFC">
+                <a href="/content/finance">
+                  <img src="//i1.adis.ws/i/dfs/greyArrowLink.png" style="padding-right:5px">
+                    <h3>4 years interest <span class="lbreak"></span>free credit</h3>
+                    <p>Rated best in the <span class="lbreak"></span>market by financial <span class="lbreak"></span>experts Defaqto</p>
+                </a>
+            </li>
+            <li class="col-sm-20w rightBorder bsi_kitemark">
+                <a href="/content/the-making-of-our-sofas">
+                  <img src="//i1.adis.ws/i/dfs/greyArrowLink.png" style="padding-right:5px">
+                    <h3>BSI Domestic <span class="lbreak"></span>Furniture Kitemark</h3>
+                    <p>The only sofa company <span class="lbreak"></span>that lives up to <span class="lbreak"></span>British standards</p>
+                </a>
+            </li>
+            <li class="col-sm-20w rightBorder handMade">
+                <a href="/content/meet-our-team">
+                  <img src="//i1.adis.ws/i/dfs/greyArrowLink.png" style="padding-right:5px">
+                    <h3>Handmade <span class="lbreak"></span>to order</h3>
+                    <p>All our sofas are <span class="lbreak"></span>handmade to order, <span class="lbreak"></span>meet the team</p>
+                </a>
+            </li>
+            <li class="col-sm-20w rightBorder tenYG">
+                <a href="/content/guarantee-page">
+                  <img src="//i1.adis.ws/i/dfs/greyArrowLink.png" style="padding-right:5px">
+                    <h3>15 year <span class="lbreak"></span>guarantee</h3>
+                    <p>Your new sofa is made to <span class="lbreak"></span>last, so it comes with a <span class="lbreak"></span>15 year guarantee</p>
+                </a>
+            </li>
+            <li class="col-sm-20w britain">
+                <a href="/content/the-making-of-our-sofas">
+                  <img src="//i1.adis.ws/i/dfs/greyArrowLink.png" style="padding-right:5px">
+                    <h3>Many of our sofas <span class="lbreak"></span>are made in Britain</h3>
+                    <p>We have workshops in <span class="lbreak"></span>Derbyshire, Nottinghamshire <span class="lbreak"></span>and Yorkshire</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+    <div class="clearfix"></div>
+    <section id="dfs_mammothSale">
+      <div class="dmws_container">
+        <a href="/offers/fabric-sofa-offers">
+          <img src="//i1.adis.ws/i/dfs/Mammoth_winter_sale2" alt="DFS Mammoth Winter Sale">
+          <p>View all our sofa offers</p>
+        </a>
+      </div>
+    </section>
+    <section class='col-sm-12 solidBorder'>
+        <!-- <h2 class='subHead'>Best sellers</h2>
+        <div id="holder_tc_51cd95ae-a35d-45c1-893a-299b6460e0a5" style="width:100%;height:500px;">
+            <div style="background-size: 1362px 500px height: 500px; width: 1362px; background-color: #ffffff; overflow:hidden">
+                <div id="tc_51cd95ae-a35d-45c1-893a-299b6460e0a5">
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+        amplienceEmbed({
+            t: "tc_51cd95ae-a35d-45c1-893a-299b6460e0a5",
+            c: "holder_tc_51cd95ae-a35d-45c1-893a-299b6460e0a5",
+            o: {
+                desktop: {
+                    name: "desktop",
+                    w: 1362,
+                    h: 500,
+                    vars: {
+                        id: "51cd95ae-a35d-45c1-893a-299b6460e0a5",
+                        autoScale: true,
+                        resolveJSPath: "true",
+                        deepLinking: "false",
+                        detectHttps: true,
+                        storeId: 10202,
+                        ctgID: "best-sellers-homepage",
+                        catalogId: 10101
+                    }
+                },
+              }
+        });
+        </script> -->
+
+        <div id="bsInnerWrap">
+          <div class="bs_container">
+         <div id="bestSellers_container"><div id="bsCarousel" class="carousel slide" data-ride="carousel">
+         <h2 class="bs_title">Best Sellers Homepage Test</h2>
+       <!-- Indicators -->
+       <ol class="carousel-indicators">
+         <li data-target="#bsCarousel" data-slide-to="0" class=""></li>
+         <li data-target="#bsCarousel" data-slide-to="1" class="active"></li>
+       </ol>
+       <div class="carousel-inner" role="listbox">
+
+         <div class="item">
+
+
+           <ul class="bs_slides">
+             <li>
+               <a href="http://www.dfs.co.uk/panache/pch1zakry" title="Panache Left Hand Facing Pillow Back Corner Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/panache_zapb_viewlister?$bs_viewlister$" alt="Panache Left Hand Facing Pillow Back Corner Sofa">
+                   <div class="bs_item">
+                     <h3>Panache</h3>
+                     <p>Left Hand Facing Pillow...</p>
+                     <p class="bs_price">Half Price £999</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/marni/mne74eecp" title="Marni 4 Seater Pillow Back Lounger Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/marni_4epb_viewlister?$bs_viewlister$" alt="Marni 4 Seater Pillow Back Lounger Sofa">
+                   <div class="bs_item">
+                     <h3>Marni</h3>
+                     <p>4 Seater Pillow Back...</p>
+                     <p class="bs_price">Best Ever Price £549</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/castello/cet13bazf" title="Castello 3 Seater Manual Recliner">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/castello_3b_viewlister?$bs_viewlister$" alt="Castello 3 Seater Manual Recliner">
+                   <div class="bs_item">
+                     <h3>Castello</h3>
+                     <p>3 Seater Manual Recliner</p>
+                     <p class="bs_price">Best Ever Price £474</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/sophia/sop93asoi" title="Sophia 3 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/sophia_3a_viewlister?$bs_viewlister$" alt="Sophia 3 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Sophia</h3>
+                     <p>3 Seater Sofa</p>
+                     <p class="bs_price">Sale Price £899</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/granby/gnb14aokl" title="Granby 4 Seater Pillow Back Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/granby_4apb_viewlister?$bs_viewlister$" alt="Granby 4 Seater Pillow Back Sofa">
+                   <div class="bs_item">
+                     <h3>Granby</h3>
+                     <p>4 Seater Pillow Back Sofa</p>
+                     <p class="bs_price">Best Ever Price £699</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/acer/ace14amyd" title="Acer 4 Seater Pillow Back Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/acer_4apb_viewlister?$bs_viewlister$" alt="Acer 4 Seater Pillow Back Sofa">
+                   <div class="bs_item">
+                     <h3>Acer</h3>
+                     <p>4 Seater Pillow Back Sofa</p>
+                     <p class="bs_price">Best Ever Price £466</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/loch-leven/loc14slhl" title="Loch Leven Grand Pillow Back Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/lochleven_4spb_viewlister?$bs_viewlister$" alt="Loch Leven Grand Pillow Back Sofa">
+                   <div class="bs_item">
+                     <h3>Loch Leven</h3>
+                     <p>Grand Pillow Back Sofa</p>
+                     <p class="bs_price">Best Ever Price £1549</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/georgia/ger33brzf" title="Georgia 3 Seater Manual Recliner">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/georgia_3b_viewlister?$bs_viewlister$" alt="Georgia 3 Seater Manual Recliner">
+                   <div class="bs_item">
+                     <h3>Georgia</h3>
+                     <p>3 Seater Manual Recliner</p>
+                     <p class="bs_price">Best Ever Price £799</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+           </ul>
+
+
+           <div class="clearfix"></div>
+         </div>
+
+         <div class="item active">
+
+
+           <ul class="bs_slides">
+             <li>
+               <a href="http://www.dfs.co.uk/lomax/lmx13akpr" title="Lomax 3 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/lomax_3a_viewlister?$bs_viewlister$" alt="Lomax 3 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Lomax</h3>
+                     <p>3 Seater Sofa</p>
+                     <p class="bs_price">Half Price £599</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/cassano/css53aotb" title="Cassano 3 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/cassano_3a_viewlister?$bs_viewlister$" alt="Cassano 3 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Cassano</h3>
+                     <p>3 Seater Sofa</p>
+                     <p class="bs_price">Now Only £949</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/palace/plc24alae" title="Palace Leather Grand Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/palace_4a_viewlister?$bs_viewlister$" alt="Palace Leather Grand Sofa">
+                   <div class="bs_item">
+                     <h3>Palace</h3>
+                     <p>Leather Grand Sofa</p>
+                     <p class="bs_price">Sale Price £2199</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/serengeti/sgt14angt" title="Serengeti 4 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/serengeti_4a_viewlister?$bs_viewlister$" alt="Serengeti 4 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Serengeti</h3>
+                     <p>4 Seater Sofa</p>
+                     <p class="bs_price">Now Only £999</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/windsor/wds23awdv" title="Windsor Velvet 3 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/windsor_3a_viewlister?$bs_viewlister$" alt="Windsor Velvet 3 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Windsor</h3>
+                     <p>Velvet 3 Seater Sofa</p>
+                     <p class="bs_price">Now Only £1349</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/caesar/ces46botb" title="Caesar Left Hand Facing Chaise End Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/caesar_6b_viewlister?$bs_viewlister$" alt="Caesar Left Hand Facing Chaise End Sofa">
+                   <div class="bs_item">
+                     <h3>Caesar</h3>
+                     <p>Left Hand Facing Chaise...</p>
+                     <p class="bs_price">Now Only £999</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/maxx/mxx33ahzn" title="Maxx 3 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/maxx_3a_viewlister?$bs_viewlister$" alt="Maxx 3 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Maxx</h3>
+                     <p>3 Seater Sofa</p>
+                     <p class="bs_price">Best Ever Price £399</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+             <li>
+               <a href="http://www.dfs.co.uk/ilkley/ilk14ahet" title="Ilkley Tweed 4 Seater Sofa">
+                 <div class="bs_wrapper">
+                   <img src="http://images.dfs.co.uk/i/dfs/ilkley_4a_viewlister?$bs_viewlister$" alt="Ilkley Tweed 4 Seater Sofa">
+                   <div class="bs_item">
+                     <h3>Ilkley</h3>
+                     <p>Tweed 4 Seater Sofa</p>
+                     <p class="bs_price">Now Only £1179</p>
+                     <div class="bs_button">
+                       <p class="bs_primary">Find out more</p>
+                     </div>
+                   </div>
+                 </div>
+               </a>
+             </li>
+           </ul>
+
+
+           <div class="clearfix"></div>
+         </div>
+
+       </div>
+       <a class="left carousel-control" href="#bsCarousel" role="button" data-slide="prev">
+         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+         <span class="sr-only">Previous</span>
+       </a>
+       <a class="right carousel-control" href="#bsCarousel" role="button" data-slide="next">
+         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+         <span class="sr-only">Next</span>
+       </a>
+       </div><!-- /.carousel -->
+       </div>
+       </div>
+       </div>
+    </section>
+    <section class='col-sm-12 navs solidBorder'>
+        <ul>
+            <li>
+                <a href='/fabric-sofas/all-fabric-sofas'>
+                    <img src='//i1.adis.ws/i/dfs/nav_all-fabric-sofas?$4col_ss$' alt=''>
+                    <p>Fabric sofas</p>
+                </a>
+            </li>
+            <li>
+                <a href='/leather-sofas/all-leather-sofas'>
+                    <img src='//i1.adis.ws/i/dfs/dnav_leather-sofas?$4col_ss$' alt=''>
+                    <p>Leather sofas</p>
+                </a>
+            </li>
+            <li>
+                <a href='/corner-sofas/fabric-corner-sofas'>
+                    <img src='//i1.adis.ws/i/dfs/nav_fabric-corner-sofas?$4col_ss$' alt=''>
+                    <p>Corner sofas</p>
+                </a>
+            </li>
+            <li>
+                <a href='/recliner-sofas/all-recliner-sofas'>
+                    <img src='//i1.adis.ws/i/dfs/dnav_recliners?$4col_ss$' alt=''>
+                    <p>Recliner sofas</p>
+                </a>
+            </li>
+            <li>
+                <a href='/content/exclusive-brands'>
+                    <img src='//i1.adis.ws/i/dfs/nav_exclusive-brands?$4col_ss$' alt=''>
+                    <p>Exclusive Brands</p>
+                </a>
+            </li>
+            <!--Displayed for 1366px -->
+            <li class='wide'>
+                <a href='/dining/tables-and-chairs'>
+                    <img src='//i1.adis.ws/i/dfs/hp-dining-thumb?$4col_ss$' alt=''>
+                    <p>Dining</p>
+                </a>
+            </li>
+            <li class='wide'>
+                <a href='/bedroom/beds'>
+                    <img src='//i1.adis.ws/i/dfs/dnav_bedroom?$4col_ss$' alt=''>
+                    <p>Bedroom</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+</div>
+<script src="http://127.0.0.1:3000/static/js/carousel.min.js" charset="utf-8"></script>
+<!-- end DFS_HP_AMP_02_V8SD -->
