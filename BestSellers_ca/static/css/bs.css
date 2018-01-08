@@ -349,10 +349,10 @@ p.bs_primary {
     width: 1024px;
   }
   ul.bs_slides li {
-    width: 248px;
+    width: 253px;
   }
   ul.bs_slides {
-    padding-left: 20px;
+    padding-left: 10px;
   }
   ul.bs_slides img {
     width: 96%;
