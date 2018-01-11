@@ -289,7 +289,7 @@ div#bsCarousel h2.bs_title {
     margin:0;
 }
 .bs_item h3 {
-    margin: 2px;
+    margin: 2px 0 -2px;
 }
 .bs_item p {
     font-size: 12px;
