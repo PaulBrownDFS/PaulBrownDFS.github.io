@@ -5,7 +5,7 @@
     <title>Banner</title>
 
     <link rel="stylesheet"
-          href="bannerHomepage.min.css?v1.06b"/>
+          href="bannerHomepage.min.css?v1.06c"/>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
     <style>
@@ -29,7 +29,7 @@
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script src="v_carousel.min.js"></script>
 
-<script src="template.bannerHomepage.min.js?v1.010d"></script>
+<script src="template.bannerHomepage.min.js?v1.010e"></script>
 
 <script>
 
@@ -85,101 +85,128 @@ dfs.carouselText = function(target, text){
 
 // Countdowns
 
-  if(!dfs){
-    var dfs = {};
-  }
-  dfs.carCountdown = {
-      init: function(){
-        console.log('Countdown Init!');
-        if($('.bannerTextContainer.carCountdown').length>0) {
-          this.addCountDown();
-        }
-    },
-      addCountDown: function(){
-        $('.bannerTextContainer.carCountdown').each(function() {
-          var _this = this,
-          data = $(_this).data(),
-          deadline = data.countdown,
-          daysStart = data.startdays,
-          messageC = data.messagec,
-          messageD = data.messaged,
-          messageID = data.messageid.replace('slide_','');
-          console.log(deadline + ' , ' + daysStart + ' , ' + messageID + ' ' + messageC + ' ' + messageD );
-          var countDownOBj = getTimeRemaining(deadline);
-          console.log('Days: ' + countDownOBj.days);
-          console.log('Hours: ' + countDownOBj.hours);
-          console.log('Mins: ' + countDownOBj.minutes);
-          console.log('Seconds: ' + countDownOBj.seconds);
-          if( countDownOBj.total > 0 && countDownOBj.days < daysStart) {
-            console.log('Show Countdown on Slide: ' + messageID );
-
-            $('h2.message'+ messageID + 'b, h2.message'+ messageID + 'a').addClass('cdText');
-
-            dayOrDays = countDownOBj.days > 1 ? "DAYS" : "DAY";
-            var updateCountdown = setInterval(function(){
-                  var countDownOBj = getTimeRemaining(deadline);
-
-                  if(countDownOBj.hours < 10 ){
-                    countDownOBj.hours = '0' + countDownOBj.hours;
-                  }
-                  if(countDownOBj.mins < 10 ){
-                    countDownOBj.mins = '0' + countDownOBj.mins;
-                  }
-                  if(countDownOBj.seconds < 10 ){
-                    countDownOBj.seconds = '0' + countDownOBj.seconds;
-                  }
-                  if(countDownOBj.days > 0) {
-                    var line1 = "FINAL " + countDownOBj.days + " " + dayOrDays;
-                  } else {
-                    var line1 = "ENDS TODAY";
-                  }
-
-                  var line2 = countDownOBj.hours + " Hrs " + countDownOBj.minutes + " Mins " + countDownOBj.seconds + " Secs",
-                  line3 = countDownOBj.days === 0 ? messageC : "";
-                  line4 = countDownOBj.days === 0 ? messageD : "";
-
-                  dfs.carouselText('message' + messageID + "a", line1);
-                  dfs.carouselText('message' + messageID + "b", line2);
-                  dfs.carouselText('message' + messageID + "c", line3);
-                  dfs.carouselText('message' + messageID + "d", line4);
-
-
-            }, 1000);
-          } else {
-            console.log('show text');
+    if(!dfs){
+      var dfs = {};
+    }
+    dfs.carCountdown = {
+        init: function(){
+          console.log('Countdown Init!');
+          if($('.bannerTextContainer.carCountdown').length>0) {
+            this.addCountDown();
           }
-      });
+      },
+        addCountDown: function(){
+          $('.bannerTextContainer.carCountdown').each(function() {
+            var _this = this,
+            data = $(_this).data(),
+            deadline = data.countdown,
+            daysStart = data.startdays,
+            messageC = data.messagec,
+            messageD = data.messaged,
+            textVariance1 = data.tv1,
+            textVariance2 = data.tv2,
+            textVariance3 = data.tv3,
+            textVariance4 = data.tv4,
+            messageID = data.messageid.replace('slide_','');
+            // console.log(deadline + ' , ' + daysStart + ' , ' + messageID) ;
+            // console.log(textVariance1,textVariance2,textVariance3,textVariance4);
+            var countDownOBj = dfs.getTimeRemaining(deadline);
+
+            // Check if this Slide needs a text Update
+
+            dfs.checkTextData(textVariance1, messageID);
+            dfs.checkTextData(textVariance2, messageID);
+            dfs.checkTextData(textVariance3, messageID);
+            dfs.checkTextData(textVariance4, messageID);
+
+            // Check If this Slide Countdown is to begin.
+            if( countDownOBj.total > 0 && countDownOBj.days < daysStart) {
+              console.log('Show Countdown on Slide: ' + messageID );
+
+              $('h2.message'+ messageID + 'b, h2.message'+ messageID + 'a').addClass('cdText');
+
+              dayOrDays = countDownOBj.days > 1 ? "DAYS" : "DAY";
+              var updateCountdown = setInterval(function(){
+                    var countDownOBj = dfs.getTimeRemaining(deadline);
+
+                    if(countDownOBj.hours < 10 ){
+                      countDownOBj.hours = '0' + countDownOBj.hours;
+                    }
+                    if(countDownOBj.mins < 10 ){
+                      countDownOBj.mins = '0' + countDownOBj.mins;
+                    }
+                    if(countDownOBj.seconds < 10 ){
+                      countDownOBj.seconds = '0' + countDownOBj.seconds;
+                    }
+                    if(countDownOBj.days > 0) {
+                      var line1 = "FINAL " + countDownOBj.days + " " + dayOrDays;
+                    } else {
+                      var line1 = "ENDS TODAY";
+                    }
+
+                    var line2 = countDownOBj.hours + " Hrs " + countDownOBj.minutes + " Mins " + countDownOBj.seconds + " Secs",
+                    line3 = countDownOBj.days === 0 ? messageC : "";
+                    line4 = countDownOBj.days === 0 ? messageD : "";
+
+                    dfs.carouselText('message' + messageID + "a", line1);
+                    dfs.carouselText('message' + messageID + "b", line2);
+                    dfs.carouselText('message' + messageID + "c", line3);
+                    dfs.carouselText('message' + messageID + "d", line4);
+
+
+              }, 1000);
+            } else {
+              console.log('show Static text for slide ' + messageID);
+            }
+        });
+      }
+    }
+
+  dfs.checkTextData = function(varience, mID){
+    var v1 = varience.replace(/\s+/g, '').split(',');
+    var moment = new Date(), startDate = v1[0].split('/'), endDate = v1[1].split('/');
+    var this_startDate = new Date(startDate[1]+'/' + startDate[0] +'/' + startDate[2] + ' 23:59:59');
+    var this_endDate = new Date(endDate[1]+'/' + endDate[0] +'/' + endDate[2] + ' 23:59:59');
+    // console.log('Now:' + moment)
+    // console.info('S:', this_startDate);
+    // console.info('E:', this_endDate);
+
+    if(this_startDate <= moment && this_endDate >= moment){
+      dfs.carouselText('message' + mID + "a", v1[2]);
+      dfs.carouselText('message' + mID + "b", v1[3]);
+      dfs.carouselText('message' + mID + "c", v1[4]);
+      dfs.carouselText('message' + mID + "d", v1[5]);
     }
   }
 
-function getTimeRemaining(endtime){
-var t = Date.parse(endtime) - Date.parse(new Date());
-var seconds = Math.floor( (t/1000) % 60 );
-var minutes = Math.floor( (t/1000/60) % 60 );
-var hours = Math.floor( (t/(1000*60*60)) % 24 );
-var days = Math.floor( t/(1000*60*60*24) );
-return {
-  'total': t,
-  'days': days,
-  'hours': hours,
-  'minutes': minutes,
-  'seconds': seconds
-};
+  dfs.getTimeRemaining = function(endtime){
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  var seconds = Math.floor( (t/1000) % 60 );
+  var minutes = Math.floor( (t/1000/60) % 60 );
+  var hours = Math.floor( (t/(1000*60*60)) % 24 );
+  var days = Math.floor( t/(1000*60*60*24) );
+  return {
+    'total': t,
+    'days': days,
+    'hours': hours,
+    'minutes': minutes,
+    'seconds': seconds
+  };
 }
 
-function updateElement(){
-var test4Element = $('#myCarousel');
-  if(test4Element.length) {
-        $('#myCarousel').carousel({ interval: 6000, cycle: true });
-      clearInterval(PollElement);
-      console.log('Carousel Ready and Initiated : ' + PollElement);
-      dfs.carCountdown.init();
+dfs.updateElement = function(){
+  var test4Element = $('#myCarousel');
+    if(test4Element.length) {
+          $('#myCarousel').carousel({ interval: 6000, cycle: true });
+        clearInterval(PollElement);
+        console.log('Carousel Ready and Initiated : ' + PollElement);
+        dfs.carCountdown.init();
 
-  }
+    }
 }
 
 // start carousel if loaded..
-var PollElement = setInterval(updateElement, 500);
+var PollElement = setInterval(dfs.updateElement, 500);
 
 
 </script>
