@@ -83,91 +83,99 @@ dfs.carouselText = function(target, text){
   }
 }
 
-  // Countdowns
+// Countdowns
 
-    if(!dfs){
-      var dfs = {};
-    }
-    dfs.carCountdown = {
-        init: function(){
-          console.log('Countdown Init!');
-          if($('.bannerTextContainer.carCountdown').length>0) {
-            this.addCountDown();
+  if(!dfs){
+    var dfs = {};
+  }
+  dfs.carCountdown = {
+      init: function(){
+        console.log('Countdown Init!');
+        if($('.bannerTextContainer.carCountdown').length>0) {
+          this.addCountDown();
+        }
+    },
+      addCountDown: function(){
+        $('.bannerTextContainer.carCountdown').each(function() {
+          var _this = this,
+          data = $(_this).data(),
+          deadline = data.countdown,
+          daysStart = data.startdays,
+          messageC = data.messagec,
+          messageD = data.messaged,
+          messageID = data.messageid.replace('slide_','');
+          console.log(deadline + ' , ' + daysStart + ' , ' + messageID + ' ' + messageC + ' ' + messageD );
+          var countDownOBj = getTimeRemaining(deadline);
+          console.log('Days: ' + countDownOBj.days);
+          console.log('Hours: ' + countDownOBj.hours);
+          console.log('Mins: ' + countDownOBj.minutes);
+          console.log('Seconds: ' + countDownOBj.seconds);
+          if( countDownOBj.total > 0 && countDownOBj.days < daysStart) {
+            console.log('Show Countdown on Slide: ' + messageID );
+
+            $('h2.message'+ messageID + 'b, h2.message'+ messageID + 'a').addClass('cdText');
+
+            dayOrDays = countDownOBj.days > 1 ? "DAYS" : "DAY";
+            var updateCountdown = setInterval(function(){
+                  var countDownOBj = getTimeRemaining(deadline);
+
+                  if(countDownOBj.hours < 10 ){
+                    countDownOBj.hours = '0' + countDownOBj.hours;
+                  }
+                  if(countDownOBj.mins < 10 ){
+                    countDownOBj.mins = '0' + countDownOBj.mins;
+                  }
+                  if(countDownOBj.seconds < 10 ){
+                    countDownOBj.seconds = '0' + countDownOBj.seconds;
+                  }
+                  if(countDownOBj.days > 0) {
+                    var line1 = "FINAL " + countDownOBj.days + " " + dayOrDays;
+                  } else {
+                    var line1 = "ENDS TODAY";
+                  }
+
+                  var line2 = countDownOBj.hours + " Hrs " + countDownOBj.minutes + " Mins " + countDownOBj.seconds + " Secs",
+                  line3 = countDownOBj.days === 0 ? messageC : "";
+                  line4 = countDownOBj.days === 0 ? messageD : "";
+
+                  dfs.carouselText('message' + messageID + "a", line1);
+                  dfs.carouselText('message' + messageID + "b", line2);
+                  dfs.carouselText('message' + messageID + "c", line3);
+                  dfs.carouselText('message' + messageID + "d", line4);
+
+
+            }, 1000);
+          } else {
+            console.log('show text');
           }
-      },
-        addCountDown: function(){
-          $('.bannerTextContainer.carCountdown').each(function() {
-            var _this = this,
-            data = $(_this).data(),
-            deadline = data.countdown,
-            daysStart = data.startdays,
-            messageID = data.messageid.replace('slide_','');
-            console.log(deadline + ' , ' + daysStart + ' , ' + messageID);
-            var countDownOBj = getTimeRemaining(deadline);
-            console.log('Days: ' + countDownOBj.days);
-            console.log('Hours: ' + countDownOBj.hours);
-            console.log('Mins: ' + countDownOBj.minutes);
-            console.log('Seconds: ' + countDownOBj.seconds);
-            if( countDownOBj.total > 0 && countDownOBj.days < daysStart) {
-              console.log('Show Countdown on Slide: ' + messageID );
-
-              $('h2.message'+ messageID + 'b, h2.message'+ messageID + 'a').addClass('cdText');
-
-              dayOrDays = countDownOBj.days > 1 ? "DAYS" : "DAY";
-              var updateCountdown = setInterval(function(){
-                    var countDownOBj = getTimeRemaining(deadline);
-
-                    if(countDownOBj.hours < 10 ){
-                      countDownOBj.hours = '0' + countDownOBj.hours;
-                    }
-                    if(countDownOBj.mins < 10 ){
-                      countDownOBj.mins = '0' + countDownOBj.mins;
-                    }
-                    if(countDownOBj.seconds < 10 ){
-                      countDownOBj.seconds = '0' + countDownOBj.seconds;
-                    }
-
-                    var line1 = "FINAL " + countDownOBj.days + " " + dayOrDays,
-                    line2 = countDownOBj.hours + " Hrs " + countDownOBj.minutes + " Mins " + countDownOBj.seconds + " Secs",
-                    line3 = countDownOBj.days === 1 ? "order direct until midnight" : "";
-
-                    dfs.carouselText('message' + messageID + "a", line1);
-                    dfs.carouselText('message' + messageID + "b", line2);
-                    dfs.carouselText('message' + messageID + "c", line3);
-
-
-              }, 1000);
-            } else {
-              console.log('show text');
-            }
-        });
-      }
+      });
     }
+  }
 
-  function getTimeRemaining(endtime){
-  var t = Date.parse(endtime) - Date.parse(new Date());
-  var seconds = Math.floor( (t/1000) % 60 );
-  var minutes = Math.floor( (t/1000/60) % 60 );
-  var hours = Math.floor( (t/(1000*60*60)) % 24 );
-  var days = Math.floor( t/(1000*60*60*24) );
-  return {
-    'total': t,
-    'days': days,
-    'hours': hours,
-    'minutes': minutes,
-    'seconds': seconds
-  };
+function getTimeRemaining(endtime){
+var t = Date.parse(endtime) - Date.parse(new Date());
+var seconds = Math.floor( (t/1000) % 60 );
+var minutes = Math.floor( (t/1000/60) % 60 );
+var hours = Math.floor( (t/(1000*60*60)) % 24 );
+var days = Math.floor( t/(1000*60*60*24) );
+return {
+  'total': t,
+  'days': days,
+  'hours': hours,
+  'minutes': minutes,
+  'seconds': seconds
+};
 }
 
 function updateElement(){
-  var test4Element = $('#myCarousel');
-    if(test4Element.length) {
-          $('#myCarousel').carousel({ interval: 6000, cycle: true });
-        clearInterval(PollElement);
-        console.log('Carousel Ready and Initiated : ' + PollElement);
-        dfs.carCountdown.init();
+var test4Element = $('#myCarousel');
+  if(test4Element.length) {
+        $('#myCarousel').carousel({ interval: 6000, cycle: true });
+      clearInterval(PollElement);
+      console.log('Carousel Ready and Initiated : ' + PollElement);
+      dfs.carCountdown.init();
 
-    }
+  }
 }
 
 // start carousel if loaded..
