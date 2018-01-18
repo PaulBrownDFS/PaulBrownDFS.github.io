@@ -201,10 +201,11 @@ return {
 dfs.updateElement = function(){
 var test4Element = $('#myCarousel');
   if(test4Element.length) {
-        $('#myCarousel').carousel({ interval: 6000, cycle: true });
-      clearInterval(PollElement);
-      console.log('Carousel Ready and Initiated : ' + PollElement);
-      dfs.carCountdown.init();
+        $('#myCarousel').carousel({ interval: 6000 });
+        clearInterval(PollElement);
+        $('#myCarousel').carousel('pause');
+        console.log('Carousel Paused & Ready + Initiated');
+        dfs.carCountdown.init();
 
   }
 }
