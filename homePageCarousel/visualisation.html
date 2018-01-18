@@ -164,6 +164,10 @@ dfs.carouselText = function(target, text){
 
   dfs.checkTextData = function(varience, mID){
     var v1 = varience.replace(/,\s+/g, ',').split(',');
+      if(v1.length !== 6) {
+        console.log('VarianceID: ' + mID + ' Invalid Csv Data length, Skipping This Event!');
+        return false;
+      }
     var moment = new Date(), startDate = v1[0].split('/'), endDate = v1[1].split('/');
     var this_startDate = new Date(startDate[1]+'/' + startDate[0] +'/' + startDate[2] + ' 23:59:59');
     var this_endDate = new Date(endDate[1]+'/' + endDate[0] +'/' + endDate[2] + ' 23:59:59');
