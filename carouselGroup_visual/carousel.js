@@ -344,7 +344,7 @@ var slideData = {};
                     masterIDs.Carousel_slide4,
                     masterIDs.Carousel_slide5,
                     ];
-        slideData.spec = {"roiPrices": masterIDs.roi};
+        slideData.spec = {"roiPrices": masterIDs.roi, "testDate" : masterIDs.testDate};
 
 
       })
