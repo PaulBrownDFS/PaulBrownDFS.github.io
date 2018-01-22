@@ -1,5 +1,5 @@
 <div id="bsCarousel" class="carousel slide" data-ride="carousel">
-  <h2 class="bs_title">{{variables.[0].title}}</h2>
+  {{#if variables.[0].title}}<h2 class="bs_title">{{variables.[0].title}}</h2>{{/if}}
 <!-- Indicators -->
 {{#if variables.[0].bottomNav}}
 <ol class="carousel-indicators">

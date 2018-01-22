@@ -28,7 +28,7 @@ dfs.bestSellers.getbestSellersURL = function(){
                 //clean up xml (remove invalid &pound; or &euro;)
                 var cleanXML = response.replace(/&amp;pound;/g,'&#163;').replace(/&amp;euro;/g,'&#8364;');
                 var XMLdoc = $.parseXML( cleanXML ); // convert back to XML
-                var $xml = $( XMLdoc );
+                // var $xml = $( XMLdoc );
 
                 var x2js = new X2JS();
                 var productsData = x2js.xml_str2json( cleanXML );
@@ -114,5 +114,5 @@ Handlebars.registerHelper('times', function(n, block) {
 // Init Best SELLERS
   dfs.bestSellers.getbestSellersURL();
   var templateScript = Handlebars.templates.bestSellers(dfs.bestSellers);
-  bestSl_Target = dfs.bestSellers.variables[0].target;
-  $('#'+ bestSl_Target).append(templateScript);
+  bestSellersTarget = dfs.bestSellers.variables[0].target;
+  $('#'+ bestSellersTarget).append(templateScript);
