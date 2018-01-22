@@ -2,6 +2,10 @@
   width:1366px;
   margin: 0 auto;
 }
+div#bestSellers_container {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
 ul.bs_slides {
     list-style: none;
     height: 480px;
