@@ -333,7 +333,7 @@ if (typeof jQuery === 'undefined') {
 
 // Live Loader
 
-// ===========================================
+/// ===========================================
 //  Carousel  Builder v1.0 PB
 // ===========================================
 var slideData = {};
@@ -549,7 +549,13 @@ dfs.carouselText = function(target, text){
 
   dfs.getTimeRemaining = function(endtime, testDate){
     if(testDate){
-      var t = Date.parse(testDate) - Date.parse(new Date());
+      var current_time = new Date(),
+        hrs = current_time.getHours(),
+        mins = current_time.getMinutes(),
+        secs = current_time.getSeconds();
+        testDate += ' ' + hrs + ':' + mins + ':' + secs;
+
+      var t = Date.parse(endtime) - Date.parse(new Date(testDate));
     } else {
       var t = Date.parse(endtime) - Date.parse(new Date());
     }
