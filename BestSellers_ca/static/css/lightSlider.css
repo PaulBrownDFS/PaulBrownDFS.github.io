@@ -394,7 +394,6 @@
 /* Custom DFS Styles */
 section.col-sm-12.bestSellersWrapper {
     height: 565px;
-    display:none;
 }
 ul{
 list-style: none outside none;
