@@ -7,7 +7,7 @@ list-style: none outside none;
 .content-slider li{
   text-align: center;
 }
-.container {
+.slides_container {
 height:450px;
 
 }

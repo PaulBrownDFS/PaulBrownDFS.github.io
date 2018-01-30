@@ -9,7 +9,7 @@ templates['bestSellers'] = template({"1":function(container,depth0,helpers,parti
 },"3":function(container,depth0,helpers,partials,data) {
     var stack1;
 
-  return "        <li class=\"container\">\n          <ul class=\"bs_slides\">\n"
+  return "        <li class=\"slides_container\">\n          <ul class=\"bs_slides\">\n"
     + ((stack1 = helpers.each.call(depth0 != null ? depth0 : (container.nullContext || {}),depth0,{"name":"each","hash":{},"fn":container.program(4, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "          </ul>\n        </li>\n";
 },"4":function(container,depth0,helpers,partials,data) {
