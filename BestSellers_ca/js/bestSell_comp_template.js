@@ -37,9 +37,9 @@ templates['bestSellers'] = template({"1":function(container,depth0,helpers,parti
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
     var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
 
-  return "<div class=\"BestSellers_Carousel\">\n    <div class=\"item\">\n      "
+  return "<div class=\"BestSellers_Carousel\">\n  "
     + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.title : stack1),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "\n      <ul id=\"content-slider\" class=\"content-slider\">\n"
+    + "\n    <div class=\"item\">\n      <ul id=\"content-slider\" class=\"content-slider\">\n"
     + ((stack1 = helpers.each.call(alias1,((stack1 = (depth0 != null ? depth0.bestsellers_data : depth0)) != null ? stack1["0"] : stack1),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "    </ul>\n    </div>\n</div>\n";
 },"useData":true});
