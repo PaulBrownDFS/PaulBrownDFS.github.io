@@ -394,6 +394,7 @@
 /* Custom DFS Styles */
 section.col-sm-12.bestSellersWrapper {
     height: 565px;
+    display:none;
 }
 ul{
 list-style: none outside none;
@@ -409,8 +410,8 @@ list-style: none outside none;
 }
 
 .BestSellers_Carousel{
-width: 1170px;
-margin: 0 auto;
+  width: 1170px;
+  margin: 0 auto;
 }
 .bs_item p {
 font-size: 12px;
