@@ -403,7 +403,7 @@ list-style: none outside none;
   text-align: center;
 }
 .slides_container {
-  height:460px;
+  height:450px;
 }
 
 .BestSellers_Carousel{
@@ -424,7 +424,6 @@ padding-left: 10px;
 }
 .BestSellers_Carousel h2 {
 text-align: center;
-margin:10px 0;
 }
 /* END BS 3.3.7 */
 
