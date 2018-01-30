@@ -403,7 +403,7 @@ list-style: none outside none;
   text-align: center;
 }
 .slides_container {
-  height:565px;
+  height:480px;
 }
 
 .BestSellers_Carousel{
@@ -549,5 +549,5 @@ p.bs_primary {
   .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
     margin-right: -82px;
   }
-  
+
 }
