@@ -395,6 +395,43 @@
 section.col-sm-12.bestSellersWrapper {
     height: 565px;
 }
+.lSAction>a.lSNext {
+    width: 100px;
+    display: block;
+    top: 39.5%;
+    height: 70px;
+    background-image: url(//images.dfs.co.uk/i/dfs/carousel_nav_next_no_dis_v2?w=40);
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -16px;
+    opacity: 1;
+    -webkit-transition: opacity .35s linear 0s;
+    transition: opacity .35s linear 0s;
+}
+.lSAction>.lSNext {
+    background-position: 0px 0px;
+    right: -63px;
+}
+.lSAction>a.lSPrev {
+    width: 35px;
+    display: block;
+    top: 39.5%;
+    height: 70px;
+    background-image: url(//images.dfs.co.uk/i/dfs/carousel_nav_prev_no_dis_v2?w=40);
+    cursor: pointer;
+    position: absolute;
+    z-index: 9999;
+    margin-top: -16px;
+    opacity: 1;
+    -webkit-transition: opacity .35s linear 0s;
+    transition: opacity .35s linear 0s;
+}
+.lSAction>.lSPrev {
+    background-position: 0 0;
+    left: 5px;
+}
+
 ul{
 list-style: none outside none;
   padding-left: 0;
