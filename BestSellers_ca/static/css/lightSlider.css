@@ -426,6 +426,9 @@ padding-left: 10px;
 }
 .BestSellers_Carousel h2 {
 text-align: center;
+margin:10px 0;
+color:#666;
+font-family: "HelveticaNeueW01-Thin", Arial, sans-serif;
 }
 /* END BS 3.3.7 */
 
