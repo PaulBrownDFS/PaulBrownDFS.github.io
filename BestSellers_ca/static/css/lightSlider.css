@@ -424,6 +424,7 @@ padding-left: 10px;
 }
 .BestSellers_Carousel h2 {
 text-align: center;
+margin:10px 0;
 }
 /* END BS 3.3.7 */
 
@@ -437,7 +438,7 @@ text-align: center;
 }
 ul.bs_slides {
     list-style: none;
-    height: 480px;
+    height: 460px;
     padding-left:40px;
 }
 ul.bs_slides li {
