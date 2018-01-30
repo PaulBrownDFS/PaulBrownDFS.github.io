@@ -116,3 +116,13 @@ Handlebars.registerHelper('times', function(n, block) {
   var templateScript = Handlebars.templates.bestSellers(dfs.bestSellers);
   bestSellersTarget = dfs.bestSellers.variables[0].target;
   $('#'+ bestSellersTarget).append(templateScript);
+
+  $(document).ready(function() {
+ $("#content-slider").lightSlider({
+           item:1,
+           loop:true,
+           keyPress:true,
+           easing: 'cubic-bezier(0.01, 0.5, 0.5, 0.1)',
+           speed:1100
+       });
+});
