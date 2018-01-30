@@ -559,5 +559,11 @@ p.bs_primary {
   ul.bs_slides {
     height: 455px;
   }
+  a.lSPrev {
+    display: none !important;
+}
+a.lSNext {
+    display: none !important;
+}
 
 }
