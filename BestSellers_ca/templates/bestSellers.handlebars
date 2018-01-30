@@ -1,6 +1,6 @@
 <div class="BestSellers_Carousel">
+  {{#if variables.[0].title}}<h2 class="bs_title">{{variables.[0].title}}</h2>{{/if}}
     <div class="item">
-      {{#if variables.[0].title}}<h2 class="bs_title">{{variables.[0].title}}</h2>{{/if}}
       <ul id="content-slider" class="content-slider">
     {{#each bestsellers_data.[0]}}
         <li class="slides_container">
