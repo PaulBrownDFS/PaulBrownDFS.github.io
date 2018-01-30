@@ -409,7 +409,7 @@ section.col-sm-12.bestSellersWrapper {
     -webkit-transition: opacity .35s linear 0s;
     transition: opacity .35s linear 0s;
 }
-.lSAction>.lSNext {
+.lSAction>a.lSNext {
     background-position: 0px 0px;
     right: -63px;
 }
@@ -427,7 +427,7 @@ section.col-sm-12.bestSellersWrapper {
     -webkit-transition: opacity .35s linear 0s;
     transition: opacity .35s linear 0s;
 }
-.lSAction>.lSPrev {
+.lSAction>a.lSPrev {
     background-position: 0 0;
     left: 0px;
 }
