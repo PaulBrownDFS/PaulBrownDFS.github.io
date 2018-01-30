@@ -488,16 +488,7 @@ p.bs_price {
     position: relative;
     height: 55px;
 }
-.carousel-indicators li {
-    background: #422569 !important;
-    margin:0 5px;
-}
-.carousel-indicators .active {
-    width: 14px;
-    height: 14px;
-    position: relative;
-    top: 2px;
-}
+
 
 ul.bs_slides li a {
     text-decoration: none;
@@ -558,7 +549,5 @@ p.bs_primary {
   .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next {
     margin-right: -82px;
   }
-  .carousel-indicators {
-    bottom: 8px;
-  }
+  
 }
