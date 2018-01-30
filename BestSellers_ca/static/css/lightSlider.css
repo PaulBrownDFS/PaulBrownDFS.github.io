@@ -392,7 +392,9 @@
 }
 
 /* Custom DFS Styles */
-
+section.col-sm-12.bestSellersWrapper {
+    height: 595px;
+}
 ul{
 list-style: none outside none;
   padding-left: 0;
