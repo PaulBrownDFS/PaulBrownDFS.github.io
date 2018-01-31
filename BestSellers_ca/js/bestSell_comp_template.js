@@ -30,7 +30,7 @@ templates['bestSellers'] = template({"1":function(container,depth0,helpers,parti
     + "\">\n                  <div class=\"bs_item\">\n                    <h3>"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "</h3>\n                    <p>"
-    + alias2((helpers.truncate || (depth0 && depth0.truncate) || helpers.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.name : depth0),25,{"name":"truncate","hash":{},"data":data}))
+    + alias2((helpers.truncate || (depth0 && depth0.truncate) || helpers.helperMissing).call(depth0 != null ? depth0 : (container.nullContext || {}),(depth0 != null ? depth0.name : depth0),21,{"name":"truncate","hash":{},"data":data}))
     + "</p>\n                    <p class=\"bs_price\">"
     + alias2(alias1((depth0 != null ? depth0.price : depth0), depth0))
     + "</p>\n                    <div class=\"bs_button\">\n                      <p class=\"bs_primary\">Find out more</p>\n                    </div>\n                  </div>\n                </div>\n              </a>\n            </li>\n";
