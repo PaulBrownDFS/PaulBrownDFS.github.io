@@ -1,0 +1,30 @@
+<div class="BestSellers_Carousel">
+  {{#if variables.[0].title}}<h2 class="bs_title">{{variables.[0].title}}</h2>{{/if}}
+    <div class="item">
+      <ul id="content-slider" class="content-slider">
+    {{#each bestsellers_data.[0]}}
+        <li class="slides_container">
+          <ul class="bs_slides">
+            {{#each this}}
+            <li>
+              <a href="{{this.link}}" title="{{this.title}} {{this.name}}">
+                <div class="bs_wrapper">
+                  <img src="{{this.image}}" alt="{{this.title}} {{this.name}}">
+                  <div class="bs_item">
+                    <h3>{{this.title}}</h3>
+                    <p>{{truncate this.name 21}}</p>
+                    <p class="bs_price">{{this.price}}</p>
+                    <div class="bs_button">
+                      <p class="bs_primary">Find out more</p>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            </li>
+            {{/each}}
+          </ul>
+        </li>
+    {{/each}}
+    </ul>
+    </div>
+</div>

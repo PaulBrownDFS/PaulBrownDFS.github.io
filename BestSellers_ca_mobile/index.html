@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Best Sellers 2018</title>
+  <script src="js/jquery321.min.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="static/css/lightSlider.min.css?v1.2a">
+
+  <script src="js/x2Json.js" charset="utf-8"></script>
+
+  <script src="js/runtime.min.js"></script>
+
+</head>
+<body>
+
+<div id="innerWrap">
+  <div class="container">
+    <!-- Carousel
+    ================================================== -->
+    <div class="row">
+      <div id="bestSellers_container"></div>
+    </div>
+  </div>
+</div>
+<!-- BEST SELLERS EMBED CODE START // TO BE PLACED AT THE BOTTOM OF THE CONTENT RECORD -->
+<script>
+
+  if(!dfs){
+    var dfs = {}
+  }
+  // Only change varibale data below
+  dfs.bestSellers = {
+    variables: [{
+      index: 0,
+      target: 'bestSellers_container',
+      domain:'//www.dfs.co.uk',
+      title: 'Best Sellers Homepage Test',
+      storeId:10202,
+      catalogId:10101,
+      category: 'best-sellers-homepage',
+      templateId: 'bs_viewlister',
+      imageType: 'viewroomset',
+      bottomNav: true,
+      slidesPerPage: 4
+  // Only change variable data Above //
+    }],
+    urls:[],
+    bestsellers_data:[]
+
+  }
+
+</script>
+<!-- Handlebars Desktop template -->
+<script src="js/bestSell_comp_template.js?v1.2e"></script>
+<script src="static/js/lightSlider.min.js?v1.2"></script>
+<!--  BEST SELLERS EMBED CODE END -->
+
+</body>
+</html>
