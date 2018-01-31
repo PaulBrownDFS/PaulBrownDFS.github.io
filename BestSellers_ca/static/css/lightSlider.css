@@ -537,8 +537,8 @@ p.bs_primary {
 }
 
 @media (max-width: 1365px) {
-  #bsInnerWrap{
-    width:1024px;
+  .BestSellers_Carousel {
+    width: 1024px;
   }
   .bs_container {
     width: 1024px;
@@ -554,7 +554,7 @@ p.bs_primary {
   }
 
   p.bs_primary {
-    right: 10px;
+    right: 5px;
   }
   ul.bs_slides {
     height: 455px;
