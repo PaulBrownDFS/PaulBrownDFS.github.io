@@ -441,6 +441,10 @@ list-style: none outside none;
 .content-slider li{
   text-align: center;
 }
+ul.bs_slides li h3 {
+    text-align: left;
+    display: block;
+}
 .slides_container {
   height:450px;
 }
