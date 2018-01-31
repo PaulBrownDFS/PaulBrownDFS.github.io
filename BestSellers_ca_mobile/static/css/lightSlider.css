@@ -396,10 +396,10 @@ section.col-sm-12.bestSellersWrapper {
     height: 565px;
 }
 .lSAction>a.lSNext {
-    width: 35px;
+    width: 30px;
     display: block;
-    top: 39.5%;
-    height: 70px;
+    top: 41.33%;
+    height: 50px;
     background-image: url(//images.dfs.co.uk/i/dfs/carousel_nav_next_no_dis_v2?w=30);
     cursor: pointer;
     position: absolute;
@@ -416,7 +416,7 @@ section.col-sm-12.bestSellersWrapper {
 .lSAction>a.lSPrev {
     width: 30px;
     display: block;
-    top: 39.5%;
+    top: 41.33%;
     height: 50px;
     background-image: url(//images.dfs.co.uk/i/dfs/carousel_nav_prev_no_dis_v2?w=30);
     cursor: pointer;
