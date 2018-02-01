@@ -1144,10 +1144,10 @@ if(!dfs.bestSellers){
   dfs.bestSellers ={}
 }
 dfs.bestSellers.getbestSellersURL = function(){
-  var getDomain = window.location.hostname;
+  var getDomain = window.location.protocol + '//' + window.location.hostname;
     for(i in dfs.bestSellers.variables){
       var this_domain = dfs.bestSellers.variables[i].domain ? dfs.bestSellers.variables[i].domain : getDomain;
-      console.log('BestSellers URL:', this_domain);
+      console.log('BestSellers URL:', this_domain, getDomain);
       dfs.bestSellers.urls.
       push(
         this_domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
