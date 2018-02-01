@@ -1147,7 +1147,7 @@ dfs.bestSellers.getbestSellersURL = function(){
   var getDomain = window.location.protocol + '//' + window.location.hostname;
     for(i in dfs.bestSellers.variables){
       var this_domain = dfs.bestSellers.variables[i].domain ? dfs.bestSellers.variables[i].domain : getDomain;
-      console.log('BestSellers URL:', this_domain, getDomain);
+      // console.log('BestSellers URL:', this_domain, getDomain);
       dfs.bestSellers.urls.
       push(
         this_domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
@@ -1216,7 +1216,7 @@ dfs.bestSellers.getbestSellersURL = function(){
 
               }).fail(function (textStatus){
                  // show error
-                 console.log(textStatus.statusText);
+                 // console.log(textStatus.statusText);
                  console.log('Failed to load bestSellers XML Document');
 
          });
