@@ -1147,6 +1147,7 @@ dfs.bestSellers.getbestSellersURL = function(){
   var getDomain = window.location.hostname;
     for(i in dfs.bestSellers.variables){
       var this_domain = dfs.bestSellers.variables[i].domain ? dfs.bestSellers.variables[i].domain : getDomain;
+      console.log('BestSellers URL:', this_domain);
       dfs.bestSellers.urls.
       push(
         this_domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
@@ -1159,10 +1160,10 @@ dfs.bestSellers.getbestSellersURL = function(){
   };
   dfs.bestSellers.getXMLdata = function(){
     $.each(dfs.bestSellers.urls, function(index, sku){
-      var template = dfs.bestSellers.urls[index];
+      var this_url = dfs.bestSellers.urls[index];
 
       ajaxRequest = $.ajax({
-                  url: template,
+                  url: this_url,
                   type: "get",
                   async: false,
                   dataType: 'text'
