@@ -488,6 +488,7 @@ ul.bs_slides {
     list-style: none;
     height: 460px;
     margin-left:22px;
+    display:none;
 }
 ul.bs_slides li {
     float: left;
