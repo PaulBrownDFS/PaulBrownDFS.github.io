@@ -1274,4 +1274,5 @@ Handlebars.registerHelper('times', function(n, block) {
            easing: 'cubic-bezier(0.01, 0.5, 0.5, 0.1)',
            speed:1100
        });
+  $('.bs_slides').fadeIn(2000);
 });

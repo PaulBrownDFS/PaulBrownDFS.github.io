@@ -483,6 +483,7 @@ ul.bs_slides {
     height: 460px;
     padding-left:40px;
     width:1170px;
+    display:none;
 }
 ul.bs_slides li {
     float: left;
