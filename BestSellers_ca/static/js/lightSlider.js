@@ -1144,24 +1144,26 @@ if(!dfs.bestSellers){
   dfs.bestSellers ={}
 }
 dfs.bestSellers.getbestSellersURL = function(){
-    console.log('Building XML Request URL .. .. ..');
+  var getDomain = window.location.protocol + '//' + window.location.hostname;
     for(i in dfs.bestSellers.variables){
+      var this_domain = dfs.bestSellers.variables[i].domain ? dfs.bestSellers.variables[i].domain : getDomain;
+      // console.log('BestSellers URL:', this_domain, getDomain);
       dfs.bestSellers.urls.
       push(
-        dfs.bestSellers.variables[i].domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
+        this_domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
         dfs.bestSellers.variables[i].storeId + '&catalogid=' + dfs.bestSellers.variables[i].catalogId + '&category=' +
         dfs.bestSellers.variables[i].category + '&templateId=' + dfs.bestSellers.variables[i].templateId + '&imageType=' +
-        dfs.bestSellers.variables[i].imageType
+        dfs.bestSellers.variables[i]
       );
     }
     dfs.bestSellers.getXMLdata();
   };
   dfs.bestSellers.getXMLdata = function(){
     $.each(dfs.bestSellers.urls, function(index, sku){
-      var template = dfs.bestSellers.urls[index];
+      var this_url = dfs.bestSellers.urls[index];
 
       ajaxRequest = $.ajax({
-                  url: template,
+                  url: this_url,
                   type: "get",
                   async: false,
                   dataType: 'text'
@@ -1178,12 +1180,17 @@ dfs.bestSellers.getbestSellersURL = function(){
                 dfs.bestSellers.variables.data = [];
                 var slideNum = 0;
                 var pageNum = 0;
+                var totalSlidesNum = productsData.products.product.length;
+                dfs.bestSellers.variables[index].numOfSlides = dfs.bestSellers.variables[index].maxNumOfSlides ? dfs.bestSellers.variables[index].maxNumOfSlides : totalSlidesNum;
                 dfs.bestSellers.bestsellers_data[index][pageNum] = [];
 
 
                 for (i in productsData.products.product) {
                   slideNum++;
-                  if(slideNum > 8){
+                  if(i >= dfs.bestSellers.variables[index].numOfSlides) {
+                    break;
+                  }
+                  if(slideNum > dfs.bestSellers.variables[index].slidesPerPage){
                     pageNum++;
                     // console.log('paged', pageNum, slideNum);
                     dfs.bestSellers.bestsellers_data[index][pageNum] = [];
@@ -1209,7 +1216,7 @@ dfs.bestSellers.getbestSellersURL = function(){
 
               }).fail(function (textStatus){
                  // show error
-                 console.log(textStatus.statusText);
+                 // console.log(textStatus.statusText);
                  console.log('Failed to load bestSellers XML Document');
 
          });
