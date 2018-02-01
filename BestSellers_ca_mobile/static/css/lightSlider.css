@@ -536,15 +536,15 @@ p.bs_primary {
     background: -ms-linear-gradient(top, #9c65c3 0%, #5c2a83 100%);
     background: linear-gradient(to bottom, #9c65c3 0%, #5c2a83 100%);
     display: inline-block;
-    width: 100px;
-    padding: 12px 0;
+    width: 90px;
+    padding: 5px 0;
     text-align: center;
     text-shadow: #000 1px 1px 2px;
     color: #fff;
     float: right;
     position: absolute;
-    font-size: 12px;
-    font-family: HelveticaNeueW01-75Bold,Arial,sans-serif;
+    font-size: 13px;
+    line-height: 15px;
     bottom: 8px;
     right: 8px;
 }
