@@ -543,7 +543,8 @@ p.bs_primary {
     color: #fff;
     float: right;
     position: absolute;
-    font-size: 13px;
+    font-size: 12px;
+    font-family: HelveticaNeueW01-75Bold,Arial,sans-serif;
     bottom: 8px;
     right: 8px;
 }
