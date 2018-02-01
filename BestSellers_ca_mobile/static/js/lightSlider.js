@@ -1144,11 +1144,12 @@ if(!dfs.bestSellers){
   dfs.bestSellers ={}
 }
 dfs.bestSellers.getbestSellersURL = function(){
-    console.log('Building XML Request URL .. .. ..');
+  var getDomain = window.location.hostname;
     for(i in dfs.bestSellers.variables){
+      var this_domain = dfs.bestSellers.variables[i].domain ? dfs.bestSellers.variables[i].domain : getDomain;
       dfs.bestSellers.urls.
       push(
-        dfs.bestSellers.variables[i].domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
+        this_domain + '/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?storeId=' +
         dfs.bestSellers.variables[i].storeId + '&catalogid=' + dfs.bestSellers.variables[i].catalogId + '&category=' +
         dfs.bestSellers.variables[i].category + '&templateId=' + dfs.bestSellers.variables[i].templateId + '&imageType=' +
         dfs.bestSellers.variables[i].imageType + '&linktype=mobile'
@@ -1178,11 +1179,16 @@ dfs.bestSellers.getbestSellersURL = function(){
                 dfs.bestSellers.variables.data = [];
                 var slideNum = 0;
                 var pageNum = 0;
+                var totalSlidesNum = productsData.products.product.length;
+                dfs.bestSellers.variables[index].numOfSlides = dfs.bestSellers.variables[index].maxNumOfSlides ? dfs.bestSellers.variables[index].maxNumOfSlides : totalSlidesNum;
                 dfs.bestSellers.bestsellers_data[index][pageNum] = [];
 
 
                 for (i in productsData.products.product) {
                   slideNum++;
+                  if(i >= dfs.bestSellers.variables[index].numOfSlides) {
+                    break;
+                  }
                   if(slideNum > dfs.bestSellers.variables[index].slidesPerPage){
                     pageNum++;
                     // console.log('paged', pageNum, slideNum);

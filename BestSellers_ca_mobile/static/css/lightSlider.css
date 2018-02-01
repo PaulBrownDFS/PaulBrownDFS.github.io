@@ -444,6 +444,7 @@ list-style: none outside none;
 ul.bs_slides li h3 {
     text-align: left;
     display: block;
+    font-family: "HelveticaNeueW01-75Bold", Arial, sans-serif;
 }
 .slides_container {
   height:450px;
