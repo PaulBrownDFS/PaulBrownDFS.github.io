@@ -72,3 +72,6 @@ form#form7 header {
     font-family: "HelveticaNeueW01-45Ligh", Arial, sans-serif;
     margin-left:8px;
 }
+.wufoo li.focused {
+    background-color: #f1f1f1 !important;
+}
