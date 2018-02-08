@@ -58,3 +58,17 @@ li.buttons{
     text-align: center;
     margin-left:0;
 }
+li#fo7li2 div {
+    position: relative;
+    left: -10px;
+}
+form#form7 header {
+    display: none;
+}
+#wufoo_header h2 {
+    color: #b9b0da;
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "HelveticaNeueW01-45Ligh", Arial, sans-serif;
+    margin-left:8px;
+}
