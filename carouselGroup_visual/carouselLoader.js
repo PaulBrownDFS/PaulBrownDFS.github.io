@@ -1,5 +1,5 @@
 // ===========================================
-//  Carousel  Builder v1.0 PB
+//  Carousel  Builder v1.0 PB FEB 12 2018
 // ===========================================
 var slideData = {};
     slideData.slides = [],
@@ -96,7 +96,7 @@ if(!dfs) {
 }
 dfs.carouselText = function(target, text){
   var el = $('.' + target);
-  el.text(text);
+  el.html(text);
   if(el.length){
     return '.' + target + ' updated to ' + text;
   } else {
@@ -166,7 +166,7 @@ dfs.carouselText = function(target, text){
                       var line1 = "ENDS TODAY";
                     }
 
-                    var line2 = countDownOBj.hours + " Hrs " + countDownOBj.minutes + " Mins " + countDownOBj.seconds + " Secs",
+                    var line2 = countDownOBj.hours + "<span>hrs </span>" + countDownOBj.minutes + "<span>mins </span>" + countDownOBj.seconds + "<span>secs </span>",
                     line3 = countDownOBj.days === 0 ? messageC : "";
                     line4 = countDownOBj.days === 0 ? messageD : "";
 
