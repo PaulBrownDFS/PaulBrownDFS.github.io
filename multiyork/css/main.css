@@ -3,6 +3,13 @@
 body {
   font-family: "GillSansAlt1-Light", Helvetica,Arial,sans-serif;
 }
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #8498ac;
+    opacity: 0.3;
+}
 .headerCopy {
     background: #6c6f70;
 }
