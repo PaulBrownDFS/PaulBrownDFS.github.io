@@ -58,7 +58,7 @@
         callback: function (data) {
           var productSKU = data[0].productSku;
           if(productSKU) {
-            var data[0].productData = dfs.getXmlData(productSKU);
+            data[0].productData = dfs.getXmlData(productSKU);
           }
 
             var template = Handlebars.template(AmpCa.templates.bannerHomepage);
@@ -222,7 +222,7 @@ dfs.carouselText = function(target, text){
 dfs.getXmlData = function(productSKU) {
   //Product sku
   console.log('XML Request For Product SKU:',productSKU);
-  productsData = [];
+  var productsData = [];
   if(productSKU) {
     // DO Ajax Lookup
     var template = 'http://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + productSKU;
