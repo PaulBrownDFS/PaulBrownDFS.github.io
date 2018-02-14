@@ -88,21 +88,6 @@ dfs.carouselText = function(target, text){
     return 'Error Updating Carousel, Element Not Found! :(';
   }
 }
-
-// Carousel Functions
-if(!dfs) {
-  var dfs = {};
-}
-dfs.carouselText = function(target, text){
-  var el = $('.' + target);
-  el.text(text);
-  if(el.length){
-    return '.' + target + ' updated to ' + text;
-  } else {
-    return 'Error Updating Carousel, Element Not Found! :(';
-  }
-}
-
   // Countdowns
 
     if(!dfs){
