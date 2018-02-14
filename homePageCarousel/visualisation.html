@@ -225,7 +225,7 @@ dfs.getXmlData = function(productSKU) {
   var productsData = [];
   if(productSKU) {
     // DO Ajax Lookup
-    var template = 'http://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + productSKU;
+    var template = 'https://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + productSKU;
     ajaxRequest = $.ajax({
       url: template,
       type: "get",
