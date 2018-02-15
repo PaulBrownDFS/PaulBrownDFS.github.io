@@ -585,5 +585,12 @@ p.bs_primary:hover {
   .lSAction>a.lSNext {
       display: none !important;
   }
+  section.col-sm-12.bestSellersWrapper {
+    height: 540px;
+  }
+  ul.lSPager.lSpg {
+    position: relative;
+    top: -10px;
+  }
 
 }
