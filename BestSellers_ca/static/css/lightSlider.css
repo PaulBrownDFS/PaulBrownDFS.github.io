@@ -566,9 +566,6 @@ p.bs_primary:hover {
   ul.bs_slides li {
     width: 253px;
   }
-  ul.bs_slides {
-    padding-left: 10px;
-  }
   ul.bs_slides img {
     width: 96%;
   }
@@ -578,6 +575,7 @@ p.bs_primary:hover {
   }
   ul.bs_slides {
     height: 440px;
+    padding-left: 6px;
   }
   .lSAction>a.lSPrev {
     display: none !important;
