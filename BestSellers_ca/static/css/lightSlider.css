@@ -586,11 +586,11 @@ p.bs_primary:hover {
       display: none !important;
   }
   section.col-sm-12.bestSellersWrapper {
-    height: 540px;
+    height: 532px;
   }
   ul.lSPager.lSpg {
     position: relative;
-    top: -15px;
+    top: -20px;
   }
 
 }
