@@ -1,7 +1,7 @@
 <div class="BestSellers_Carousel">
   {{#if variables.[0].title}}<h2 class="bs_title">{{variables.[0].title}}</h2>{{/if}}
     <div class="item">
-      <ul id="content-slider" class="content-slider">
+      <ul id="content-slider" class="content-slider {{variables.[0].target}}">
     {{#each bestsellers_data.[0]}}
         <li class="slides_container">
           <ul class="bs_slides">
@@ -30,8 +30,8 @@
 </div>
 {{#iff variables.[0].rows '==' 1 }}
 <style>
-#{{variables.[0].target}} .slides_container {
-  height:225px !important;
+ul#content-slider.{{variables.[0].target}} .slides_container {
+    height: 225px !important;
 }
 #{{variables.[0].target}} .lSAction>a.lSNext, .lSAction>a.lSPrev {
   top: 33% !important;
@@ -41,7 +41,7 @@
 
 {{#iff variables.[0].rows '==' 3 }}
 <style>
-#{{variables.[0].target}} .slides_container {
+.ul#content-slider.{{variables.[0].target}} .slides_container {
   height:675px !important;
 }
 #{{variables.[0].target}} .lSAction>a.lSNext, .lSAction>a.lSPrev {
@@ -52,7 +52,7 @@
 
 {{#iff variables.[0].rows '==' 4 }}
 <style>
-#{{variables.[0].target}} .slides_container {
+ul#content-slider.{{variables.[0].target}} .slides_container {
   height:900px !important;
 }
 #{{variables.[0].target}} .lSAction>a.lSNext, .lSAction>a.lSPrev {
