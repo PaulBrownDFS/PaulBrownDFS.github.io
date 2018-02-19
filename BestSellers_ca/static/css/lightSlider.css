@@ -442,6 +442,9 @@ list-style: none outside none;
 .bs_slides_container {
     padding: 0 0 15px;
 }
+.slides_container {
+  height:450px;
+}
 
 .BestSellers_Carousel{
   width: 1170px;
