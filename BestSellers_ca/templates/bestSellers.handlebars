@@ -28,3 +28,52 @@
     </ul>
     </div>
 </div>
+{{#iff variables.[0].rows '===' 1 }}
+<style>
+#{{variables.[0].target}} .slides_container {
+  height:225px !important;
+}
+#{{variables.[0].target}} .lSAction>a.lSNext, .lSAction>a.lSPrev {
+  top: 33% !important;
+}
+</style>
+{{/iff}}
+
+{{#iff variables.[0].rows '===' 3 }}
+<style>
+#{{variables.[0].target}} .slides_container {
+  height:675px !important;
+}
+#{{variables.[0].target}} .lSAction>a.lSNext, .lSAction>a.lSPrev {
+  top: 45% !important;
+}
+</style>
+{{/iff}}
+
+{{#iff variables.[0].rows '===' 4 }}
+<style>
+#{{variables.[0].target}} .slides_container {
+  height:900px !important;
+}
+#{{variables.[0].target}} .lSAction>a.lSNext, .lSAction>a.lSPrev {
+  top: 47.5% !important;
+}
+</style>
+{{/iff}}
+
+
+{{#iff variables.[0].maxNumOfSlides '===' variables.[0].slidesPerPage }}
+<style>
+#{{variables.[0].target}} .lSSlideOuter .lSPager.lSpg li {
+  display: none;
+}
+</style>
+{{/iff}}
+
+{{#iff variables.[0].bottomNav '!=' true }}
+<style>
+#{{variables.[0].target}} .lSSlideOuter .lSPager.lSpg li {
+  display: none;
+}
+</style>
+{{/iff}}

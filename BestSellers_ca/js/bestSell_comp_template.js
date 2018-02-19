@@ -34,13 +34,52 @@ templates['bestSellers'] = template({"1":function(container,depth0,helpers,parti
     + "</p>\n                    <p class=\"bs_price\">"
     + alias2(alias1((depth0 != null ? depth0.price : depth0), depth0))
     + "</p>\n                    <div class=\"bs_button\">\n                      <p class=\"bs_primary\">Find out<br/>more</p>\n                    </div>\n                  </div>\n                </div>\n              </a>\n            </li>\n";
+},"6":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "<style>\n#"
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .slides_container {\n  height:225px !important;\n}\n#"
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .lSAction>a.lSNext, .lSAction>a.lSPrev {\n  top: 33% !important;\n}\n</style>\n";
+},"8":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "<style>\n#"
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .slides_container {\n  height:675px !important;\n}\n#"
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .lSAction>a.lSNext, .lSAction>a.lSPrev {\n  top: 45% !important;\n}\n</style>\n";
+},"10":function(container,depth0,helpers,partials,data) {
+    var stack1, alias1=container.lambda, alias2=container.escapeExpression;
+
+  return "<style>\n#"
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .slides_container {\n  height:900px !important;\n}\n#"
+    + alias2(alias1(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .lSAction>a.lSNext, .lSAction>a.lSPrev {\n  top: 47.5% !important;\n}\n</style>\n";
+},"12":function(container,depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<style>\n#"
+    + container.escapeExpression(container.lambda(((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.target : stack1), depth0))
+    + " .lSSlideOuter .lSPager.lSpg li {\n  display: none;\n}\n</style>\n";
 },"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
-    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {});
+    var stack1, alias1=depth0 != null ? depth0 : (container.nullContext || {}), alias2=helpers.helperMissing;
 
   return "<div class=\"BestSellers_Carousel\">\n  "
     + ((stack1 = helpers["if"].call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.title : stack1),{"name":"if","hash":{},"fn":container.program(1, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
     + "\n    <div class=\"item\">\n      <ul id=\"content-slider\" class=\"content-slider\">\n"
     + ((stack1 = helpers.each.call(alias1,((stack1 = (depth0 != null ? depth0.bestsellers_data : depth0)) != null ? stack1["0"] : stack1),{"name":"each","hash":{},"fn":container.program(3, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
-    + "    </ul>\n    </div>\n</div>\n";
+    + "    </ul>\n    </div>\n</div>\n"
+    + ((stack1 = (helpers.iff || (depth0 && depth0.iff) || alias2).call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.rows : stack1),"===",1,{"name":"iff","hash":{},"fn":container.program(6, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = (helpers.iff || (depth0 && depth0.iff) || alias2).call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.rows : stack1),"===",3,{"name":"iff","hash":{},"fn":container.program(8, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = (helpers.iff || (depth0 && depth0.iff) || alias2).call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.rows : stack1),"===",4,{"name":"iff","hash":{},"fn":container.program(10, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n\n"
+    + ((stack1 = (helpers.iff || (depth0 && depth0.iff) || alias2).call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.maxNumOfSlides : stack1),"===",((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.slidesPerPage : stack1),{"name":"iff","hash":{},"fn":container.program(12, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "")
+    + "\n"
+    + ((stack1 = (helpers.iff || (depth0 && depth0.iff) || alias2).call(alias1,((stack1 = ((stack1 = (depth0 != null ? depth0.variables : depth0)) != null ? stack1["0"] : stack1)) != null ? stack1.bottomNav : stack1),"!=",true,{"name":"iff","hash":{},"fn":container.program(12, data, 0),"inverse":container.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 })();
