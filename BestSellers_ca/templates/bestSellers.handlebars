@@ -28,7 +28,7 @@
     </ul>
     </div>
 </div>
-{{#iff variables.[0].rows '===' 1 }}
+{{#iff variables.[0].rows '==' 1 }}
 <style>
 #{{variables.[0].target}} .slides_container {
   height:225px !important;
@@ -39,7 +39,7 @@
 </style>
 {{/iff}}
 
-{{#iff variables.[0].rows '===' 3 }}
+{{#iff variables.[0].rows '==' 3 }}
 <style>
 #{{variables.[0].target}} .slides_container {
   height:675px !important;
@@ -50,7 +50,7 @@
 </style>
 {{/iff}}
 
-{{#iff variables.[0].rows '===' 4 }}
+{{#iff variables.[0].rows '==' 4 }}
 <style>
 #{{variables.[0].target}} .slides_container {
   height:900px !important;
@@ -62,7 +62,7 @@
 {{/iff}}
 
 
-{{#iff variables.[0].maxNumOfSlides '===' variables.[0].slidesPerPage }}
+{{#iff variables.[0].maxNumOfSlides '==' variables.[0].slidesPerPage }}
 <style>
 #{{variables.[0].target}} .lSSlideOuter .lSPager.lSpg li {
   display: none;
