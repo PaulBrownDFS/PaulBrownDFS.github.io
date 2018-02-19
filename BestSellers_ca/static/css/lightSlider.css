@@ -441,8 +441,8 @@ list-style: none outside none;
 .content-slider li{
   text-align: center;
 }
-.slides_container {
-  height:450px;
+.bs_slides_container {
+    padding: 0 0 15px;
 }
 
 .BestSellers_Carousel{
