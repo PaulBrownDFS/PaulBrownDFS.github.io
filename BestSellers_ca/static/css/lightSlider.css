@@ -392,9 +392,7 @@
 }
 
 /* Custom DFS Styles */
-section.col-sm-12.bestSellersWrapper {
-    height: 565px;
-}
+
 .lSAction>a.lSNext {
     width: 35px;
     display: block;
@@ -582,9 +580,6 @@ p.bs_primary:hover {
 }
   .lSAction>a.lSNext {
       display: none !important;
-  }
-  section.col-sm-12.bestSellersWrapper {
-    height: 532px;
   }
   ul.lSPager.lSpg {
     position: relative;
