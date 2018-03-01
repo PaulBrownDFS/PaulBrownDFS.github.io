@@ -342,21 +342,21 @@ Handlebars.registerHelper("finance", function(price, local) {
 Handlebars.registerHelper("csv", function(str, device) {
   var colors = str.split(',');
       if(device === 'M') {
-        if(colors[1] !== undefined ) {
+        if(colors[1] !== undefined && colors[1] !== false) {
           return colors[1];
         } else {
-          return '0000001';
+          return '000000';
         }
       }
 
         if(device === 'D') {
-          if(colors[0] !== undefined) {
+          if(colors[0] !== undefined && colors[0] !== false) {
             return colors[0];
           } else {
-            return '0000002';
+            return '000000';
           }
         }
         // NO Matches Return Default Black
-        return '000000!';
+        return '000000';
 
 });
