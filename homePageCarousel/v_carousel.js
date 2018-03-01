@@ -349,14 +349,13 @@ Handlebars.registerHelper("csv", function(str, device) {
         }
       }
 
-        if(device === 'D') {
-          if(colors[0] !== undefined && colors[0] !== false) {
-            return colors[0];
-          } else {
-            return '000000';
-          }
+      if(device === 'D') {
+        if(colors[0] !== undefined && colors[0] !== false) {
+          return colors[0];
+        } else {
+          return '000000';
         }
-        // NO Matches Return Default Black
-        return '000000';
-
+      }
+      // NO Matches Return Default Black
+      return '000000';
 });
