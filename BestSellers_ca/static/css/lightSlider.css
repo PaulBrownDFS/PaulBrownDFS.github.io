@@ -85,16 +85,17 @@
 .lSSlideOuter .lSPager.lSpg > li a {
     background-color: #fff;
     border-radius: 20px;
-    border:2px solid #5c2c91;
+    border:none;
     display: inline-block;
-    height: 10px;
+    height: 12px;
     overflow: hidden;
     text-indent: -999em;
-    width: 10px;
+    width: 12px;
     position: relative;
     z-index: 99;
     -webkit-transition: all 0.5s linear 0s;
     transition: all 0.5s linear 0s;
+    box-shadow: inset 1px 1px 1px #222;
 }
 .lSSlideOuter .lSPager.lSpg > li:hover a, .lSSlideOuter .lSPager.lSpg > li.active a {
     background-color: #5c2c91;
