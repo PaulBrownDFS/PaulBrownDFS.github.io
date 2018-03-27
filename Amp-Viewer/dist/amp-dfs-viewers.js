@@ -2771,7 +2771,7 @@ var IntegrationViewer = require('./integration-viewer/index');
 
 amp.createViewer = function viewerFactory(config) {
     var defaultConfig = {
-        server: 'https://i1.adis.ws',
+        server: 'https://images.dfs.co.uk',
         errImgName: 'img404',
         account: 'dfs',
         mobile: false,
