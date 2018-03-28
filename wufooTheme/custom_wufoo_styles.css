@@ -1,3 +1,4 @@
+
 input[type=checkbox], input[type=radio] {
     width: 2em;
     margin: 0;
@@ -74,4 +75,12 @@ form#form7 header {
 }
 .wufoo li.focused {
     background-color: #f1f1f1 !important;
+}
+
+@media (min-width: 1024px) {
+
+  .noI form li, .altInstruct form li {
+      width: 50% !important;
+      margin: 0 auto;
+  }
 }
