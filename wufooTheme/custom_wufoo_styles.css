@@ -81,3 +81,10 @@ form#form7 header {
     width: 50% !important;
     margin: 0 auto !important;
 }
+
+ @media (max-width: 1023px) {
+   .noI form li, .altInstruct form li {
+       width: auto !important;
+       margin: 0 auto !important;
+   }
+ }
