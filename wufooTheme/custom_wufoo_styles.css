@@ -76,15 +76,3 @@ form#form7 header {
 .wufoo li.focused {
     background-color: #f1f1f1 !important;
 }
-
-.noI form li, .altInstruct form li {
-    width: 50% !important;
-    margin: 0 auto !important;
-}
-
- @media (max-width: 1023px) {
-   .noI form li, .altInstruct form li {
-       width: auto !important;
-       margin: 0 auto !important;
-   }
- }
