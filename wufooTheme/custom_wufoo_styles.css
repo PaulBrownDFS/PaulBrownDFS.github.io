@@ -77,7 +77,7 @@ form#form7 header {
     background-color: #f1f1f1 !important;
 }
 
-@media (min-width: 1024px) {
+@media(min-width: 1024px) {
 
   .noI form li, .altInstruct form li {
       width: 50% !important;
