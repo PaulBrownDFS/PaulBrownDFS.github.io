@@ -1,6 +1,6 @@
 <div class="{{target}}_videoContainer">
   <video id="{{target}}" class="video-js vjs-big-play-centered vjs-default-skin" controls preload="none" width="{{width}}" height="{{height}}"
-    poster="{{src}}?{{queryStrings}}&protocol=https" data-render_version="1.02a">
+    poster="{{src}}?{{queryStrings}}&protocol=https" data-render_version="1.02b">
       <p class="vjs-no-js">
         To view this video please enable JavaScript, and consider upgrading to a web browser that
         <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
@@ -20,22 +20,22 @@ var {{target}} = videojs('{{target}}', {
 });
 {{target}}.updateSrc([
 
-  { src: "{{src}}/webm_480p?{{queryStrings}}",
+  { src: "{{src}}/webm_480p?{{queryStrings}}&protocol=https",
     type: "video/webm",res: 480,label: "480" },
 
-  { src: "{{src}}/webm_720p?{{queryStrings}}",
+  { src: "{{src}}/webm_720p?{{queryStrings}}&protocol=https",
     type: "video/webm",res: 720,label: "hd" },
 
-  { src: "{{src}}/webm_240p?{{queryStrings}}",
+  { src: "{{src}}/webm_240p?{{queryStrings}}&protocol=https",
     type: "video/webm",res: 240,label: "240" },
 
-  { src: "{{src}}/mp4_480p?{{queryStrings}}",
+  { src: "{{src}}/mp4_480p?{{queryStrings}}&protocol=https",
     type: "video/mp4",res: 480,label: "480" },
 
-  { src: "{{src}}/mp4_720p?{{queryStrings}}",
+  { src: "{{src}}/mp4_720p?{{queryStrings}}&protocol=https",
     type: "video/mp4",res: 720,label: "hd" },
 
-  { src: "{{src}}/mp4_240p?{{queryStrings}}",
+  { src: "{{src}}/mp4_240p?{{queryStrings}}&protocol=https",
     type: "video/mp4",res: 240,label: "240" }
 
 ]);
