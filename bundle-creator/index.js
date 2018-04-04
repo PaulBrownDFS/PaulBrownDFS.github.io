@@ -159,7 +159,7 @@ function getXML(sku_list){
               // Load Image with Params from Feed
 
               images.push({
-                src: product_image.replace("https://images.dfs.co.uk/i/dfs/", ""),
+                src: product_image.replace("http://images.dfs.co.uk/i/dfs/", ""),
                 link: link_url,
                 range: range_name,
                 product: product_name
