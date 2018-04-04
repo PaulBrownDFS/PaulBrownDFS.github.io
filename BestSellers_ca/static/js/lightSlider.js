@@ -1298,6 +1298,9 @@ Handlebars.registerHelper('times', function(n, block) {
  $("#content-slider").lightSlider({
            item:1,
            loop:true,
+           auto: true,
+           pause:6000,
+           pauseOnHover: true,
            keyPress:true,
            easing: 'cubic-bezier(0.01, 0.5, 0.5, 0.1)',
            speed:1100

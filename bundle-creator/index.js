@@ -137,7 +137,7 @@ function getXML(sku_list){
   var images =[];
 
   $.each(sku_list, function(index, sku){
-    var template = 'http://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + sku;
+    var template = 'https://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + sku;
     var ajaxRequest = 'ajaxRequest' + index;
     ajaxRequest = $.ajax({
                 url: template,
@@ -159,7 +159,7 @@ function getXML(sku_list){
               // Load Image with Params from Feed
 
               images.push({
-                src: product_image.replace("http://images.dfs.co.uk/i/dfs/", ""),
+                src: product_image.replace("https://images.dfs.co.uk/i/dfs/", ""),
                 link: link_url,
                 range: range_name,
                 product: product_name
@@ -176,7 +176,7 @@ function getXML(sku_list){
 }
 
 function renderImage(images){
-var template = 'http://x1.adis.ws/v1/media/graphics/i/dfs/clearance_bundle_template' + images.length;
+var template = 'https://x1.adis.ws/v1/media/graphics/i/dfs/clearance_bundle_template' + images.length;
 var params = '?fmt=jpg&';
 
 if(images.length === 4) {
