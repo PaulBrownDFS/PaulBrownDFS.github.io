@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lazy Loader with Amplience Images</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <style>
+
+  h1.text-center {
+    position: sticky;
+    top: 0;
+  }
+
+  img.lazyLoadMe {
+    opacity: 0.20;
+    transition: opacity 1s ease-in;
+  }
+  .imagesContainer {
+    height: 3000px;
+    width: 683px;
+    padding-top: 40px;
+    margin: 0 auto;
+  }
+  .imagesContainer img {
+    display: block;
+    margin: 20px 0;
+  }
+  .lazyImg {
+    width: 683px;
+    margin:10px 0;
+    height: 706px;
+    position: relative;
+  }
+  .lazyImg img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+</style>
+</head>
+<body>
+  <h1 class="text-center">Lazy Loader with Amplience Images</h1>
+
+  <div class="imagesContainer">
+    <h2 class="text-center">Earthy Colours</h2>
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_pinkparchment" src="/unveil/loading-image.gif"/>
+    </div>
+
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_naturaltaupe" src="/unveil/loading-image.gif"/>
+    </div>
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark" src="/unveil/loading-image.gif"/>
+    </div>
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_cinnamonsprinkle" src="/unveil/loading-image.gif"/>
+    </div>
+  </div>
+
+  <div class="imagesContainer">
+  <h2 class="text-center">Green Colours</h2>
+
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/greens_roomset_celticforest" src="/unveil/loading-image.gif"/>
+    </div>
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/greens_roomset_pineneedle" src="/unveil/loading-image.gif"/>
+    </div>
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/greens_roomset_salisburystone" src="/unveil/loading-image.gif"/>
+    </div>
+    <div class="lazyImg">
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/greens_roomset_freshartichoke" src="/unveil/loading-image.gif"/>
+    </div>
+
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="jquery.unveil.min.js" charset="utf-8"></script>
+  <script>
+  $(document).ready(function() {
+    $("img.lazyLoadMe").unveil(300,function() {
+      $(this).on('load',function() {
+      this.style.opacity = 1;
+      });
+    });
+  });
+  </script>
+</body>
+</html>
