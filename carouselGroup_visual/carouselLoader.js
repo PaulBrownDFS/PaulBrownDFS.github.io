@@ -1,16 +1,16 @@
 // ===========================================
-//  Carousel  Builder v1.0 PB FEB 12 2018
+//  Carousel  Builder v1.0 PB MAY 2nd 2018
 // ===========================================
 var slideData = {};
     slideData.slides = [],
     slideData.spec ={};
     var visualID = $('.js_banner_wrap').data('visualid'),
-        //isROI = $('.js_banner_wrap').data('roi');
+        isROI = $('.js_banner_wrap').data('roi');
 
     slideIDs=[];
     var cacheBuster = Math.random().toString(36).substr(2, 12);
 
-    slideGroupId = visualID ? visualID : '1e4c2dda-484b-498d-b4a5-0d7e38702162';
+    slideGroupId = visualID ? visualID : '6b90388f-554a-4651-ae89-a79576867a3f';
     console.log(slideGroupId);
 
     var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ slideGroupId +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
@@ -162,11 +162,19 @@ dfs.carouselText = function(target, text){
                     }
                     if(countDownOBj.days > 0) {
                       var line1 = "FINAL " + countDownOBj.days + " " + dayOrDays;
+                      var ampersand = true;
                     } else {
                       var line1 = "ENDS TODAY";
+                      var ampersand = false;
                     }
 
-                    var line2 = countDownOBj.hours + "<span>hrs </span>" + countDownOBj.minutes + "<span>mins </span>" + countDownOBj.seconds + "<span>secs </span>",
+                    if(ampersand) {
+                      var line2 = "& ";
+                    } else {
+                      var line2 = "";
+                    }
+
+                    line2 = countDownOBj.hours + "<span>hrs </span>" + countDownOBj.minutes + "<span>mins </span>" + countDownOBj.seconds + "<span>secs </span>",
                     line3 = countDownOBj.days === 0 ? messageC : "";
                     line4 = countDownOBj.days === 0 ? messageD : "";
 
