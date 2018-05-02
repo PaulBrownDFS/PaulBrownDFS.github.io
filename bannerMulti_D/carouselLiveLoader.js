@@ -162,19 +162,11 @@ dfs.carouselText = function(target, text){
                     }
                     if(countDownOBj.days > 0) {
                       var line1 = "FINAL " + countDownOBj.days + " " + dayOrDays;
-                      var ampersand = true;
                     } else {
                       var line1 = "ENDS TODAY";
-                      var ampersand = false;
                     }
 
-                    if(ampersand) {
-                      var line2 = "& ";
-                    } else {
-                      var line2 = "";
-                    }
-
-                    line2 += countDownOBj.hours + "<span>hrs </span>" + countDownOBj.minutes + "<span>mins </span>" + countDownOBj.seconds + "<span>secs </span>",
+                    var line2 = countDownOBj.hours + "<span>hrs </span>" + countDownOBj.minutes + "<span>mins </span>" + countDownOBj.seconds + "<span>secs </span>",
                     line3 = countDownOBj.days === 0 ? messageC : "";
                     line4 = countDownOBj.days === 0 ? messageD : "";
 
@@ -198,11 +190,15 @@ dfs.carouselText = function(target, text){
         //console.log('slide: ' + mID + ' Invalid Csv Data length, Skipping This Event! ('+ variance+ ')');
         return false;
       }
-      if(td){
-        var moment = new Date(td);
-      } else {
-        var moment = new Date();
-      }
+
+      // disable test date for live sites by commenting out the next 5 lines
+
+      // if(td){
+      //   var moment = new Date(td);
+      // } else {
+      //   var moment = new Date();
+      // }
+      var moment = new Date();
 
 
       var startDate = v1[0].split('/'), endDate = v1[1].split('/');
