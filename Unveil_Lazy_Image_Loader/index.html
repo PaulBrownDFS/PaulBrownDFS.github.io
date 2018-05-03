@@ -50,17 +50,17 @@
   <div class="imagesContainer">
     <h2 class="text-center">Earthy Colours</h2>
     <div class="lazyImg">
-      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_pinkparchment" src="loading-image.gif"/>
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_pinkparchment" data-smallsrc= "http://i1.adis.ws/i/dfs/earthy_roomset_pinkparchment?w=300" src="loading-image.gif"/>
     </div>
 
     <div class="lazyImg">
-      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_naturaltaupe" src="loading-image.gif"/>
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_naturaltaupe" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_naturaltaupe?w=300" src="loading-image.gif"/>
     </div>
     <div class="lazyImg">
-      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark" src="loading-image.gif"/>
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark?w=300"src="loading-image.gif"/>
     </div>
     <div class="lazyImg">
-      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_cinnamonsprinkle" src="loading-image.gif"/>
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_cinnamonsprinkle" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_cinnamonsprinkle?w=300" src="loading-image.gif"/>
     </div>
   </div>
 
@@ -87,7 +87,7 @@
   <script src="jquery.unveil.min.js" charset="utf-8"></script>
   <script>
   $(document).ready(function() {
-    $("img.lazyLoadMe").unveil(300,function() {
+    $("img.lazyLoadMe").unveil(200,function() {
       $(this).on('load',function() {
       this.style.opacity = 1;
       });

@@ -17,12 +17,17 @@
         retina = window.devicePixelRatio > 1,
         attrib = retina? "data-src-retina" : "data-src",
         images = this,
+        winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
         loaded;
+        if(winWidth <= 1365 && attrib == "data-src") {
+          attrib = "data-smallsrc";
+        }
 
     this.one("unveil", function() {
       var source = this.getAttribute(attrib);
       source = source || this.getAttribute("data-src");
       if (source) {
+        console.log('lazy loading',source);
         this.setAttribute("src", source);
         if (typeof callback === "function") callback.call(this);
       }
