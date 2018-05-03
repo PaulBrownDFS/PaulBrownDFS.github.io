@@ -330,6 +330,42 @@ if (typeof jQuery === 'undefined') {
         }[operator];
     });
 
+    Handlebars.registerHelper("finance", function(price, local) {
+      var this_price = price.match(/([1-9])+/g);
+      if(local === 'UK') {
+        return '&pound;' + Math.floor(parseFloat((this_price[0]) / 48) * 100) / 100 + ' a month for 4 years';
+      } else {
+        return '&euro;' + Math.floor(parseFloat((this_price[0]) / 36) * 100) / 100 + ' a month for 3 years';
+      }
+
+    });
+
+Handlebars.registerHelper("csv", function(str, device) {
+  var colors = str.split(',');
+      if(device === 'M') {
+        if(colors[1] !== undefined && colors[1] != false) {
+          return colors[1];
+        } else {
+          if(colors[0] !== undefined && colors[0] != false) {
+            return colors[0];
+          } else {
+            return '000000';
+          }
+
+        }
+      }
+
+      if(device === 'D') {
+        if(colors[0] !== undefined && colors[0] != false) {
+          return colors[0];
+        } else {
+          return '000000';
+        }
+      }
+      // No Matches Return Default Black
+      return '000000';
+});
+
 
 // Live Loader
 
