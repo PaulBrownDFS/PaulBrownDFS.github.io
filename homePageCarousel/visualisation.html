@@ -30,7 +30,7 @@
 <script src="v_carousel.min.js?v1.3c"></script>
 <script src="xml2json.min.js"></script>
 
-<script src="template.bannerHomepage.min.js?6thJune"></script>
+<script src="template.bannerHomepage.min.js?7thJune"></script>
 
 <script>
 
@@ -53,7 +53,7 @@
         url: getQueryVar('src'),
         auth: {
                     baseUrl: 'https://c1.adis.ws',
-                    id: 'f987aea7-d7b0-4958-9bad-0a36aa8ee4a9',
+                    id: '1bd14168-2dca-46e8-95d2-20bdf6a8cb43',
                     store: 'dfs'
                 },
         callback: function (data) {
@@ -159,8 +159,8 @@ dfs.carouselText = function(target, text){
                         var line2 = "";
                       }
                       line2 += countDownOBj.hours + "<span>hrs </span>" + countDownOBj.minutes + "<span>mins </span>" + countDownOBj.seconds + "<span>secs </span>",
-                      line3 = countDownOBj.days === 0 ? messageC : "";
-                      line4 = countDownOBj.days === 0 ? messageD : "";
+                      line3 = countDownOBj.days === 0 ? messageC : '';
+                      line4 = countDownOBj.days === 0 ? messageD : messageD;
 
                       dfs.carouselText('message' + messageID + "a", line1);
                       dfs.carouselText('message' + messageID + "b", line2);
