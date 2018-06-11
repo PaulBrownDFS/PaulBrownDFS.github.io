@@ -29,8 +29,8 @@ var slideData = {};
                     masterIDs.Carousel_slide1,
                     masterIDs.Carousel_slide2,
                     masterIDs.Carousel_slide3,
-                    masterIDs.Carousel_slide4,
-                    masterIDs.Carousel_slide5,
+                    masterIDs.Carousel_slide4
+                    // masterIDs.Carousel_slide5,
                     ];
         slideData.spec = {"roiPrices": isROI, "testDate" : masterIDs.testDate};
 
