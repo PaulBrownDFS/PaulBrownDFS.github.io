@@ -267,3 +267,36 @@ dfs.updateElement = function(){
 
 // start carousel if loaded..
 var PollElement = setInterval(dfs.updateElement, 500);
+
+// Carousel Swipe
+
+(function ($) {
+
+  var touchStartX = null;
+
+  $('.carousel').each(function () {
+      var $carousel = $(this);
+      $(this).on('touchstart', function (event) {
+          var e = event.originalEvent;
+          if (e.touches.length == 1) {
+              var touch = e.touches[0];
+              touchStartX = touch.pageX;
+          }
+      }).on('touchmove', function (event) {
+          var e = event.originalEvent;
+          if (touchStartX != null) {
+              var touchCurrentX = e.changedTouches[0].pageX;
+              if ((touchCurrentX - touchStartX) > 60) {
+                  touchStartX = null;
+                  $carousel.carousel('prev');
+              } else if ((touchStartX - touchCurrentX) > 60) {
+                  touchStartX = null;
+                  $carousel.carousel('next');
+              }
+          }
+      }).on('touchend', function () {
+          touchStartX = null;
+      });
+  });
+
+})(jQuery);
