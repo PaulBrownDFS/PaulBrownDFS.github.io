@@ -1,6 +1,6 @@
 var renderTypes = {
     "blog": "3f6a5662-1998-4cf0-b369-f8ee6a7f0e42",
-    "image": "f0b1f9c8-9fbd-4470-aeb2-543c3cb01f19",
+    "image": "23edf964-b9a4-4eba-b246-5ae726b719e9",
     "text": "c6fe6238-4752-47bc-bc5e-3413d0d08d30",
     "banner": "1dc05e15-e2cb-4b7a-84d6-354bc31aae7b",
     "link": "7b908316-30d9-409e-8ff7-c23fa8526cfe",
@@ -15,5 +15,5 @@ var renderTypes = {
     "homepage": "0f979a5f-67e7-49b5-9b19-7490fac44db6"
 };
 
-// "banner": "1dc05e15-e2cb-4b7a-84d6-354bc31aae7b",
-// "banner": "23edf964-b9a4-4eba-b246-5ae726b719e9",
+
+// "image": "f0b1f9c8-9fbd-4470-aeb2-543c3cb01f19",
