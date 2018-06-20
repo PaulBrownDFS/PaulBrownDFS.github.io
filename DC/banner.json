@@ -1,6 +1,6 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+  "id": "https://paulbrowndfs.github.io/DC/banner.json",
   "title": "Banner Accelerator",
   "description": "Banner Accelerator",
   "allOf": [
@@ -36,7 +36,7 @@
               "contentType": {
                 "title": "image",
                 "enum": [
-                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+                  "https://paulbrowndfs.github.io/DC/image.json"
                 ]
               }
             }
@@ -73,7 +73,7 @@
       "type": "object",
       "allOf": [
         {
-          "$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+          "$ref": "https://paulbrowndfs.github.io/DC/link.json"
         }
       ]
     },

@@ -1,6 +1,6 @@
 {
 	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-	"id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json",
+	"id": "https://paulbrowndfs.github.io/DC/link.json",
 
 	"title": "Link Accelerator",
 	"description": "Link Accelerator",

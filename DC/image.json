@@ -1,6 +1,6 @@
 {
 	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-	"id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+	"id": "https://paulbrowndfs.github.io/DC/image.json",
 
 	"title": "Image",
 	"description": "Image Accelerator",
@@ -45,7 +45,7 @@
 			"description": "Roundel Image",
 			"type": "array",
 			"items": {
-				"$ref": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/roundel.json"
+				"$ref": "https://paulbrowndfs.github.io/DC/roundel.json"
 			},
 			"minItems": 0,
 			"maxItems": 4,

@@ -1,6 +1,6 @@
 {
 	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-	"id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+	"id": "https://paulbrowndfs.github.io/DC/slider.json",
 
 	"title": "Slider Accelerator",
 	"description": "Slider Accelerator",
@@ -24,9 +24,8 @@
 							"contentType": {
 								"title": "slides",
 								"enum": [
-									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
-									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
-									"https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+									"https://paulbrowndfs.github.io/DC//banner.json",
+									"https://paulbrowndfs.github.io/DC//image.json"
 								]
 							}
 						}
