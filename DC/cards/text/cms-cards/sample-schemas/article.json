@@ -1,0 +1,82 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "id": "http://cms.amplience.com/customerX/schemas/article.json",
+    "meta": {
+        "name": "Article",
+        "description": "An article is a piece of dynamic media that has paragraphs and a main image",
+        "icons": [
+            {
+                "size": 64,
+                "url": "http://www.blah.com/myimg"
+            }
+        ],
+        "card": {
+            "uri": "http://cms.cards.amplience/amp/summary/index.html",
+            "mapping": {
+                "headline": "/paragraphs/0/credit",
+                "sub": "/paragraphs/0/content",
+                "image": "/image",
+                "image0": "/image",
+                "image1": "/paragraphs/0/image",
+                "image2": "/paragraphs/1/image",
+                "image3": "/paragraphs/2/image",
+                "label1": "/paragraphs/1/credit",
+                "data1": "/paragraphs/1/content",
+                "label2": "/paragraphs/2/credit",
+                "data2": "/paragraphs/2/content"
+            }
+        }
+    },
+    "definitions": {
+        "article": {
+            "type": "object",
+            "properties": {
+                "image": {
+                    "type": "object",
+                    "properties": {
+                        "url": {
+                            "type": "string"
+                        },
+                        "alt": {
+                            "type": "string"
+                        }
+                    }
+                },
+                "paragraphs": {
+                    "type": "array",
+                    "minItems": 1,
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "content":{
+                                "type": "string"
+                            },
+                            "credit":{
+                                "type": "string"
+                            },
+                            "creditLink":{
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "content",
+                            "credit",
+                            "creditLink"
+                        ],
+                        "additionalProperties": false
+                    }
+                },
+                "schema": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "image",
+                "paragraphs",
+                "schema"
+            ],
+            "additionalProperties": false
+        }
+    },
+    "$ref": "#/definitions/article"
+}

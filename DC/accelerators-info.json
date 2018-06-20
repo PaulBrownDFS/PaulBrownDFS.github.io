@@ -1,0 +1,112 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/accelerators-info.json",
+  "title": "Accelerator Info",
+  "description": "",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "name",
+    "inventoryImage",
+    "description",
+    "longDescription",
+    "github",
+    "demo",
+    "exampleModules"
+  ],
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Name",
+      "description": ""
+    },
+    "inventoryImage": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "image",
+              "enum": [
+                "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+              ]
+            }
+          }
+        }
+      ],
+      "title": "Inventory image",
+      "description": ""
+    },
+    "description": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Description",
+      "description": ""
+    },
+    "longDescription": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Long description",
+      "description": "Up to 2000 characters"
+    },
+    "github": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Link to github",
+      "description": ""
+    },
+    "demo": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Link to demo page",
+      "description": ""
+    },
+    "exampleModules": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "enum": [
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/banner.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/blog.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/externalblock.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/homepage.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/card.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/cardlist.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/promobanner.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/slider.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/splitblock.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/text.json",
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/video.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 0,
+      "maxItems": 12,
+      "title": "Modules",
+      "description": "To be shown in the inventory example pages"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "cms-card-common",
+  "version": "0.0.0",
+  "authors": [
+    "Chris Corbett <ccorbett@amplience.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "q": "1.4.1",
+    "json-pointer": "~1.1.0",
+    "handlebars": "~4.0.5"
+  }
+}

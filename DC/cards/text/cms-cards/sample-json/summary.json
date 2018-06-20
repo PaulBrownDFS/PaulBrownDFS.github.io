@@ -1,0 +1,36 @@
+{
+    "image": {
+        "url": "http://i1.adis.ws/i/playground/1hyDEofHQ0OX1mRnvhqw_IMG_1324 (1)",
+        "alt": "Girl Sitting"
+    },
+    "paragraphs": [
+        {
+            "content": "The Summary Card can be used for many kinds of web content, from blog posts and news articles, to products and restaurants. It is designed to give the reader a preview of the content before clicking through to your website. Our system recognizes when URLs are included in a tweet, and crawls your site to fetch the Card type and content.",
+            "credit": "Summary Card",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/womanwall",
+                "alt": "Girl Standing"
+            }
+        },
+        {
+            "content": "Lorium Ipsum",
+            "credit": "Credit",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/outdoors",
+                "alt": "Camping"
+            }
+        },
+        {
+            "content": "Lorium Ipsum",
+            "credit": "Credit",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/shutterstock_144293947",
+                "alt": "Glasses"
+            }
+        }
+    ],
+    "schema": "../../sample-schemas/article.json"
+}

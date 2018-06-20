@@ -1,0 +1,18 @@
+{
+    "image": {
+        "url": "http://i1.adis.ws/i/playground/unsplash_52cee67a5c618_1",
+        "alt": "Person in snow"
+    },
+    "paragraphs": [
+        {
+            "content": "Same as the Gallery Card which allows you to represent collections of photos within a Tweet. This Card type is designed to let the user know that there’s more than just a single image at the URL shared, but rather a gallery of related images.",
+            "credit": "Gallery Card Two Images",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/photo-1432807653616-37f5f5c2508e",
+                "alt": "Girl Standing"
+            }
+        }
+    ],
+    "schema": "../../sample-schemas/article.json"
+}

@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "id": "http://schema.cms.amplience.com/{{self.id}}",
+
+  "meta": {
+    "name": "Sample Visualization Schema",
+    "description": "An example schema containing a visualization card",
+    "icons": [
+      {
+        "size": 256,
+        "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYpjo-A1M8qqz9e9KGVj1uvcD0vDCu_egOiycbVVHd2wzJWLAA"
+      }
+    ],
+    "card": [
+      {
+        "id": "defaultcard",
+        "category": "card",
+        "default": true,
+        "label": "Default Card",
+        "uri": "//apps.dev-artifacts.adis.ws/cms-cards/develop/{{card.version}}/gallery/index.html",
+        "mapping": {
+          "headline": "/_title",
+          "image0": "/image"
+        }
+      },
+      {
+        "id": "defaultviz",
+        "category": "visualization",
+        "default": true,
+        "label": "Default Visualization",
+        "uri": "//apps.dev-artifacts.adis.ws/cms-cards/develop/{{card.version}}/handlebars/index.html",
+        "params": {
+          "templateUrl": "http://localhost:8000/sample-templates/handlebars-demo-template.html"
+        }
+      }
+    ],
+    "context": "http://context.cms.amplience.com/{{self.context.id}}"
+  },
+  "allOf": [
+    {
+      "$ref": "#/definitions/self"
+    },
+    {
+      "$ref": "http://schema.system.cms.amplience.com/{{schema.version}}#/content-base"
+    }
+  ],
+  "definitions": {
+    "self": {
+      "type": "object",
+      "properties": {
+        "image": {
+          "type": "object",
+          "allOf": [
+            {
+              "$ref": "http://schema.system.cms.amplience.com/{{schema.version}}#/di-asset-link"
+            },
+            {
+              "properties": {
+                "mediaType": {
+                  "enum": [
+                    "image"
+                  ]
+                }
+              }
+            }
+          ],
+          "_label": {
+            "value": "Image",
+            "hint": ""
+          },
+          "_semanticType": "http://semantic-type.cms.amplience.com/asset"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 100,
+          "_label": {
+            "value": "Text",
+            "hint": "",
+            "validation": ""
+          },
+          "_semanticType": "http://semantic-type.cms.amplience.com/text"
+        }
+      },
+      "required": [
+      ]
+    }
+  }
+}

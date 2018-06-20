@@ -1,0 +1,36 @@
+{
+    "image": {
+        "url": "http://media.very.co.uk/i/very/A101P_SP320_10_MW0SW/fossil-mens-chronograph-bracelet-watch.jpg",
+        "alt": "Watch"
+    },
+    "paragraphs": [
+        {
+            "content": "This Fossil Chrono Bracelet Mens Watch is ideal for adding a smart finish to your outfit.The gleaming silver strap has a classic linked design, lending this watch a timeless feel. This blends seamlessly with the sleek silver bezel that frames the deep black watch face to create a strong look.The white accents across the watch face have a great contemporary feel. The chronograph dial adds interesting detail and complements the white hands, batons and date window for a monochrome finish.This Fossil watch has a smart and contemporary look that can be worn night or day to ensure you&rsquo;re never late again.Useful info: Stainless steel linked braceletStainless steel bezelTachymeter frameDate windowChronograph dialWater resistant to 10 ATMFossil Chrono Bracelet Mens Watch. This Fossil Chrono Bracelet Mens Watch is ideal for adding a smart finish to your outfit.The gleaming silver strap has a classic linked design, lending this watch a timeless feel. This blends seamlessly with the sleek silver bezel that frames the deep black watch face to create a strong look.The white accents across the watch face have a great contemporary feel. The chronograph dial adds interesting detail and complements the white hands, batons and date window for a monochrome finish.This Fossil watch has a smart and contemporary look that can be worn night or day to ensure you&rsquo;re never late again.Useful info: Stainless steel linked braceletStainless steel bezelTachymeter frameDate windowChronograph dialWater resistant to 10 ATMFossil Chrono Bracelet Mens Watch.",
+            "credit": "Mens Chronograph Bracelet Watch",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/womanwall",
+                "alt": "Girl Standing"
+            }
+        },
+        {
+            "content": "&pound;85.00",
+            "credit": "Price",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/outdoors",
+                "alt": "Camping"
+            }
+        },
+        {
+            "content": "In Stock",
+            "credit": "Stock",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/shutterstock_144293947",
+                "alt": "Glasses"
+            }
+        }
+    ],
+    "schema": "../../sample-schemas/article.json"
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        html, body {
+            height: 100%;
+            width: 100%;
+        }
+        body{
+            background:#EFEFEF;
+        }
+        iframe {
+            width:361px;
+            min-height:180px;
+            border:0;
+            margin:10px;
+            box-shadow: 0 3px 1px -2px rgba(0,0,0,.14),0 2px 2px 0 rgba(0,0,0,.098),0 1px 5px 0 rgba(0,0,0,.084);
+        }
+        .big{
+            height:300px;
+        }
+        .visualization {
+            width: 50%;
+            height: 50%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<h1>Summary</h1>
+<iframe src="cards/summary/index.html?src=../../mock-delivery/picture.json"></iframe><br/>
+<h1>Summary Photo</h1>
+<iframe class="big" src="cards/summary-photo/index.html?src=../../mock-delivery/picture.json"></iframe><br/>
+<h1>Gallery</h1>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery.json"></iframe>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery-three.json"></iframe>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery-two.json"></iframe>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery-one.json"></iframe>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery-missing-content.json"></iframe><br/>
+<h2>Gallery - with card array</h2>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery-card-array.json&cardId=defaultcard"></iframe>
+<h2>Gallery - with dc mappings</h2>
+<iframe class="big" src="cards/gallery/index.html?src=../../mock-delivery/gallery-dc.json&headline=/title&image0=/gridList/0/image&image1=/gridList/1/image"></iframe>
+<h1>Photo</h1>
+<iframe class="big" src="cards/photo/index.html?src=../../mock-delivery/picture.json"></iframe>
+<h1>Text</h1>
+<iframe class="big" src="cards/text/index.html?src=../../mock-delivery/picture.json"></iframe><br/>
+<h1>Product</h1>
+<iframe class="big" src="cards/product/index.html?src=../../mock-delivery/product.json"></iframe>
+<h1>Visualization</h1>
+<iframe class="visualization" src="cards/handlebars/index.html?src=../../mock-delivery/handlebars.json&cardId=defaultviz&templateUrl=http%3A%2F%2Flocalhost%3A8000%2Fsample-templates%2Fcarousel-demo-template.hbs"></iframe>
+
+</body>
+</html>

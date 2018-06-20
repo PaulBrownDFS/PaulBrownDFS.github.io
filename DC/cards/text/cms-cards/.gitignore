@@ -1,0 +1,6 @@
+bower_components
+*.iml
+*.ipr
+*.iws
+node_modules
+dist

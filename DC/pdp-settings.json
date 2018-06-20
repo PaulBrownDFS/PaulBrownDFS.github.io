@@ -1,0 +1,84 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/pdp-settings.json",
+  "title": "PDP Settings",
+  "description": "Create settings fro PDP Viewer page",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "setClient",
+    "setName",
+    "setBasePath",
+    "productName",
+    "productDescription",
+    "productSwatchHex",
+    "oldPrice",
+    "currentPrice"
+  ],
+  "type": "object",
+  "properties": {
+    "setClient": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200,
+      "title": "DAM client name",
+      "description": ""
+    },
+    "setName": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 200,
+      "title": "Set Name",
+      "description": ""
+    },
+    "setBasePath": {
+      "type": "string",
+      "format": "uri",
+      "title": "Set url base path",
+      "description": ""
+    },
+    "productName": {
+      "type": "string",
+      "title": "Product Name",
+      "description": ""
+    },
+    "productDescription": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "title": "Description paragraph",
+        "description": "",
+        "minLength": 7,
+        "maxLength": 2000
+      },
+      "title": "Add description paragraph",
+      "description": "",
+      "minItems": 1,
+      "maxItems": 10
+    },
+    "productSwatchHex": {
+      "type": "string",
+      "minLength": 7,
+      "maxLength": 7,
+      "title": "Product swatch color",
+      "description": "e.g. #000000"
+    },
+    "oldPrice": {
+      "type": "number",
+      "title": "Old product price",
+      "description": "",
+      "minimum": 0.99,
+      "maximum": 10000000
+    },
+    "currentPrice": {
+      "type": "number",
+      "title": "Product price",
+      "description": "",
+      "minimum": 0.99,
+      "maximum": 10000000
+    }
+  }
+}

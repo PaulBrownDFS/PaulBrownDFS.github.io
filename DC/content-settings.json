@@ -1,0 +1,102 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/content-settings.json",
+  "title": "Content Settings",
+  "description": "Content Settings",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "tagName",
+    "logo",
+    "logoUrl",
+    "menuLinks",
+    "primaryColor",
+    "secondaryColor",
+    "webfont"
+  ],
+  "type": "object",
+  "properties": {
+    "tagName": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Account tag name",
+      "description": ""
+    },
+    "logo": {
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "logo",
+              "enum": [
+                "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/image.json"
+              ]
+            }
+          }
+        }
+      ],
+      "title": "Logo",
+      "description": "Select or create logo"
+    },
+    "logoUrl": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 255,
+      "title": "Logo link",
+      "description": ""
+    },
+    "menuLinks": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Menu link",
+                "enum": [
+                  "https://dev-solutions.s3.amazonaws.com/DynamicContentTypes/Accelerators/link.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 20,
+      "title": "Menu link",
+      "description": ""
+    },
+    "primaryColor": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50,
+      "title": "Primary color",
+      "description": ""
+    },
+    "secondaryColor": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 50,
+      "title": "Secondary color",
+      "description": ""
+    },
+    "webfont": {
+      "type": "string",
+      "minLength": 0,
+      "maxLength": 2000,
+      "title": "Webfont definition",
+      "description": ""
+    }
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "schemas": {
+    "http://schema.cms.amplience.com/0a8a3e98-56ee-489e-a82f-5cfb9cfa66eb": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/self"
+        },
+        {
+          "$ref": "http://schema.system.cms.amplience.com/v0.0#/content-base"
+        }
+      ],
+      "$schema": "http://json-schema.org/schema#",
+      "meta": {
+        "name": "Carousel",
+        "context": "http://context.cms.amplience.com/ef6eba2d-6d71-45d7-aa96-01de46bdba4b",
+        "description": "A fairly dumb carousel that just has a heading and bunch of asset links",
+        "icons": [
+          {
+            "size": 64,
+            "url": "//apps.dev-artifacts.adis.ws/cms-icons/develop/v0.4.0/256/ca-types-carousel.png"
+          }
+        ],
+        "card": [
+          {
+            "default": true,
+            "mapping": {
+              "image3": "/slides/3",
+              "image1": "/slides/1",
+              "headline": "/_title",
+              "image2": "/slides/2",
+              "image0": "/slides/0"
+            },
+            "id": "defaultcard",
+            "label": "Default Card",
+            "category": "card",
+            "uri": "//apps.dev-artifacts.adis.ws/cms-cards/develop/53/gallery/index.html"
+          },
+          {
+            "default": true,
+            "id": "defaultviz",
+            "label": "Default Visualization",
+            "category": "visualization",
+            "params": {
+              "css": [
+                "http://playground.amplience.com/sdk/dist/0.1.2/amplience-sdk-client.min.css"
+              ],
+              "scripts": {
+                "postRender": [
+                  "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js",
+                  "//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js",
+                  "http://playground.amplience.com/sdk/dist/0.1.2/amplience-sdk-client.min.js",
+                  "http://localhost:8000/sample-templates/carousel-demo-post-render.js"
+                ],
+                "preRender": [
+                  "http://localhost:8000/sample-templates/helpers.js"
+                ]
+              },
+              "templateUrl": "http://localhost:8000/sample-templates/carousel-demo-template.hbs"
+            },
+            "uri": "//apps.dev-artifacts.adis.ws/cms-cards/topic-handlebars-helpers/58/handlebars/index.html"
+          }
+        ]
+      },
+      "id": "http://schema.cms.amplience.com/0a8a3e98-56ee-489e-a82f-5cfb9cfa66eb",
+      "definitions": {
+        "self": {
+          "additionalProperties": false,
+          "type": "object",
+          "properties": {
+            "slides": {
+              "minItems": 1,
+              "_semanticType": "http://semantic-type.cms.amplience.com/list",
+              "type": "array",
+              "items": {
+                "allOf": [
+                  {
+                    "$ref": "http://schema.system.cms.amplience.com/v0.0#/di-asset-link"
+                  },
+                  {
+                    "properties": {
+                      "mediaType": {
+                        "enum": [
+                          "image"
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "_semanticType": "http://semantic-type.cms.amplience.com/asset"
+              },
+              "_label": {
+                "hint": "links to assets to use as slides",
+                "value": "Slides"
+              }
+            },
+            "heading": {
+              "_semanticType": "http://semantic-type.cms.amplience.com/text",
+              "type": "string",
+              "maxLength": 255,
+              "_label": {
+                "hint": "the main heading",
+                "value": "Heading"
+              }
+            }
+          },
+          "required": [
+            "heading",
+            "slides"
+          ]
+        }
+      }
+    }
+  },
+  "result": [
+    {
+      "@id": "http://content.cms.amplience.com/57c46ae4-7a60-4cfc-906d-f81323e27398"
+    }
+  ],
+  "@context": "http://context.system.cms.amplience.com/v1.0/api",
+  "@type": "QueryResponse",
+  "@graph": [
+    {
+      "slides": [
+        {
+          "@id": "http://image.cms.amplience.com/66030eae-5b47-4cb3-8e4c-27d49e83e15e"
+        },
+        {
+          "@id": "http://image.cms.amplience.com/1beb79c8-cdaf-4e2c-9525-f061a1e04381"
+        },
+        {
+          "@id": "http://image.cms.amplience.com/388a28dd-4b2e-4125-987d-390865be1f84"
+        },
+        {
+          "@id": "http://image.cms.amplience.com/d8b5e559-a165-4ed8-931d-ee1e4120a6c6"
+        },
+        {
+          "@id": "http://image.cms.amplience.com/d4d1009e-012f-43fa-8613-8ab990041058"
+        },
+        {
+          "@id": "http://image.cms.amplience.com/da02f41f-d281-4734-abde-6c7ceb764a04"
+        },
+        {
+          "@id": "http://image.cms.amplience.com/558a0e7d-3151-4a1c-ba1e-2662b14b24e2"
+        }
+      ],
+      "heading": "Sartorial Spring/Summer 2016 ",
+      "@type": "http://schema.cms.amplience.com/0a8a3e98-56ee-489e-a82f-5cfb9cfa66eb",
+      "_title": "Carousel: Anya Finn Suits SS2016",
+      "@id": "http://content.cms.amplience.com/57c46ae4-7a60-4cfc-906d-f81323e27398"
+    },
+    {
+      "mediaType": "image",
+      "name": "306843c1-c55f-43ab-85d2-c4c3d38126be",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/d8b5e559-a165-4ed8-931d-ee1e4120a6c6"
+    },
+    {
+      "mediaType": "image",
+      "name": "39111337-ff78-4d63-bbd5-6868783af8e8",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/66030eae-5b47-4cb3-8e4c-27d49e83e15e"
+    },
+    {
+      "mediaType": "image",
+      "name": "f28993ea-2be7-4fe1-bf9f-93dc5fa246f9",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/d4d1009e-012f-43fa-8613-8ab990041058"
+    },
+    {
+      "mediaType": "image",
+      "name": "66908679-f0b6-47aa-bf04-9be31761430b",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/558a0e7d-3151-4a1c-ba1e-2662b14b24e2"
+    },
+    {
+      "mediaType": "image",
+      "name": "b9650fdb-0579-4371-9e03-7925c4625717",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/1beb79c8-cdaf-4e2c-9525-f061a1e04381"
+    },
+    {
+      "mediaType": "image",
+      "name": "f9589d54-1917-4051-85cf-2c5eab99ac7f",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/388a28dd-4b2e-4125-987d-390865be1f84"
+    },
+    {
+      "mediaType": "image",
+      "name": "51f1726b-4de6-4dff-8655-fa04ec9e383d",
+      "endpoint": "portal",
+      "defaultHost": "qa-dam-images.adis.ws",
+      "@id": "http://image.cms.amplience.com/da02f41f-d281-4734-abde-6c7ceb764a04"
+    }
+  ]
+}

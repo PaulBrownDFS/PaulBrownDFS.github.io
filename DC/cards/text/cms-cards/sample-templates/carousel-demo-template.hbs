@@ -1,0 +1,91 @@
+<style>
+    html, body {
+        background-color: #fff;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        box-sizing: border-box;
+    }
+
+    body * {
+        box-sizing: inherit;
+    }
+
+    .visualization {
+        padding: 20px;
+    }
+
+    #carousel {
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-wrapper {
+        width: 100%;
+        position: relative;
+        padding-top: calc(100% * 9 / 16);
+    }
+
+    #carousel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    .nav-prev, .nav-next {
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        width: 50px;
+        height: 100px;
+        z-index: 101;
+        text-align: center;
+        font-size: 50px;
+        line-height: 100px;
+        color: white;
+        opacity: 0.8;
+        cursor: pointer;
+    }
+
+    .nav-prev:hover, .nav-next:hover {
+        background-color: rgba(0,0,0, 0.3);
+        opacity: 1;
+    }
+
+    .nav-prev {
+        left: 0;
+    }
+
+    .nav-prev:after {
+        content: '<';
+    }
+
+
+    .nav-next {
+        right: 0;
+    }
+
+    .nav-next:after {
+        content: '>';
+    }
+
+</style>
+
+<div class="visualization">
+    <h1>{{data.heading}}</h1>
+
+    <div class="carousel-wrapper">
+        <div class="nav-prev"></div>
+        <ul id="carousel">
+        {{#each data.slides}}
+            <li><img src="//{{defaultHost}}/i/{{endpoint}}/{{name}}?sm=aspect&aspect=16:9&w=1024}}"></li>
+        {{/each}}
+        </ul>
+        <div class="nav-next"></div>
+    </div>
+
+</div>

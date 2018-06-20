@@ -1,0 +1,41 @@
+{
+  "cards": [
+    {
+      "name": "gallery",
+      "previewUrl": "preview-thumbnails/gallery.png",
+      "fields": [
+        "headline",
+        "image0",
+        "image1",
+        "image2",
+        "image3",
+        "imageAlt0",
+        "imageAlt1",
+        "imageAlt2",
+        "imageAlt3"
+      ]
+    },
+    {
+      "name": "photo",
+      "previewUrl": "preview-thumbnails/photo.png",
+      "fields": [
+        "image",
+        "imageAlt"
+      ]
+    },
+    {
+      "name": "summary-photo",
+      "previewUrl": "preview-thumbnails/summary-photo.png",
+      "fields": [
+        "headline",
+        "image",
+        "imageAlt"
+      ]
+    },
+    {
+      "name": "text",
+      "previewUrl": "preview-thumbnails/text.png",
+      "fields": ["headline"]
+    }
+  ]
+}

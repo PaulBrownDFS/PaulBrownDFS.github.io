@@ -1,0 +1,27 @@
+{
+    "image": {
+        "url": "http://i1.adis.ws/i/playground/Vgu1RUfKT3WN1ZYxSWaR_14672519443_13d8873062_k",
+        "alt": "Girl Sitting"
+    },
+    "paragraphs": [
+        {
+            "content": "The Gallery Card allows you to represent collections of photos within a Tweet. This Card type is designed to let the user know that there’s more than just a single image at the URL shared, but rather a gallery of related images.",
+            "credit": "Gallery Card Three Images",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/photo-1427348693976-99e4aca06bb9",
+                "alt": "Girl Standing"
+            }
+        },
+        {
+            "content": "Lorium Ipsum",
+            "credit": "Credit",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/photo-1420802839049-174a867e426c",
+                "alt": "Camping"
+            }
+        }
+    ],
+    "schema": "../../sample-schemas/article.json"
+}

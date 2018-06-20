@@ -1,0 +1,36 @@
+{
+    "image": {
+        "url": "http://i1.adis.ws/i/playground/shutterstock_99500819",
+        "alt": "Girl Sitting"
+    },
+    "paragraphs": [
+        {
+            "content": "The Summary Card with Large Image features a large, full-width prominent image alongside a tweet. It is designed to give the reader a rich photo experience, and clicking on the image brings the user to your website.",
+            "credit": "Summary Card with Large Image",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/womanwall",
+                "alt": "Girl Standing"
+            }
+        },
+        {
+            "content": "Lorium Ipsum",
+            "credit": "Credit",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/outdoors",
+                "alt": "Camping"
+            }
+        },
+        {
+            "content": "Lorium Ipsum",
+            "credit": "Credit",
+            "creditLink": "http://someurl.com",
+            "image": {
+                "url": "http://i1.adis.ws/i/playground/shutterstock_144293947",
+                "alt": "Glasses"
+            }
+        }
+    ],
+    "schema": "../../sample-schemas/article.json"
+}
