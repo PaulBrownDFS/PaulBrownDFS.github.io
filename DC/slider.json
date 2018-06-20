@@ -20,6 +20,7 @@
 						"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
 					},
 					{
+						"properties": {
 							"contentType": {
 								"title": "slides",
 								"enum": [
@@ -28,6 +29,7 @@
 								]
 							}
 						}
+					}
 				]
 			},
 			"title": "Slides",
