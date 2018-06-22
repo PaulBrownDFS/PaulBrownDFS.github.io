@@ -61,6 +61,7 @@ function getQueryVar(variable) {
         },
         callback: function (data) {
             // data[0].renderTypes = renderTypes;
+            data[0].spec = {"roiPrices": data-[0].roi, "testDate" : data[0].testDate};
             var template = Handlebars.template(AmpCa.templates.bannerMulti);
             document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(data[0]);
 
