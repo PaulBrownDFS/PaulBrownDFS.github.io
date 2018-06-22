@@ -404,7 +404,7 @@ var slideData = {};
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-    contentTree.spec = {"roiPrices": contentTree.roi, "testDate" : contentTree.testDate};
+    contentTree.spec = {"roiPrices": isROI, "testDate" : contentTree.testDate};
 
 if (contentTree) {
   renderCarousel(contentTree);
