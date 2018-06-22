@@ -1,5 +1,5 @@
 // ===========================================
-//  Carousel  Builder v2.0 PB
+//  Carousel  Builder v2.0 PB JUNE 22nd 2018
 // ===========================================
 var slideData = {};
     var visualID = $('.js_banner_wrap').data('visualid'),
@@ -34,7 +34,6 @@ var slideData = {};
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-    console.log('CT',contentTree);
     contentTree.spec = {"roiPrices": contentTree.roi, "testDate" : contentTree.testDate};
 
 if (contentTree) {
@@ -190,17 +189,19 @@ dfs.carouselText = function(target, text){
     }
 
   dfs.getTimeRemaining = function(endtime, testDate){
-    if(testDate){
-      var current_time = new Date(),
-        hrs = current_time.getHours(),
-        mins = current_time.getMinutes(),
-        secs = current_time.getSeconds();
-        testDate += ' ' + hrs + ':' + mins + ':' + secs;
+    // if(testDate){
+    //   var current_time = new Date(),
+    //     hrs = current_time.getHours(),
+    //     mins = current_time.getMinutes(),
+    //     secs = current_time.getSeconds();
+    //     testDate += ' ' + hrs + ':' + mins + ':' + secs;
+    //
+    //   var t = Date.parse(endtime) - Date.parse(new Date(testDate));
+    // } else {
+    //   var t = Date.parse(endtime) - Date.parse(new Date());
+    // }
 
-      var t = Date.parse(endtime) - Date.parse(new Date(testDate));
-    } else {
-      var t = Date.parse(endtime) - Date.parse(new Date());
-    }
+  var t = Date.parse(endtime) - Date.parse(new Date());
 
   var seconds = Math.floor( (t/1000) % 60 );
   var minutes = Math.floor( (t/1000/60) % 60 );
