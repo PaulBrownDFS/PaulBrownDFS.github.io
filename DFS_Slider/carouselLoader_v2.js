@@ -6,14 +6,14 @@
     var dfs = {};
   }
 
-  dfs.DSlider = {
+  dfs.HPSlider = {
     visualID: $('.js_banner_wrap').data('visualid'),
     isROI: $('.js_banner_wrap').data('roi'),
     maxSlides: $('.js_banner_wrap').data('maxslides') || 5
   }
 
     var cacheBuster = Math.random().toString(36).substr(2, 12),
-        dfsSliderID = dfs.DSlider.visualID;
+        dfsSliderID = dfs.HPSlider.visualID;
 
     console.log('Fetching: contentID:', dfsSliderID);
 
@@ -41,10 +41,10 @@ function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
   // console.log('CTS',contentTree.slides);
-  if(contentTree.slides.length > dfs.DSlider.maxSlides) {
-    contentTree.slides.length = dfs.DSlider.maxSlides;
+  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
+    contentTree.slides.length = dfs.HPSlider.maxSlides;
   }
-    contentTree.spec = {"roiPrices": dfs.DSlider.isROI, "testDate" : contentTree.testDate};
+    contentTree.spec = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.testDate};
 
 if (contentTree) {
   renderCarousel(contentTree);
@@ -105,7 +105,7 @@ dfs.carouselText = function(target, text){
             // console.log(textVariance1,textVariance2,textVariance3,textVariance4);
             var countDownOBj = dfs.getTimeRemaining(deadline, testDate);
 
-            if(dfs.DSlider.isROI) {
+            if(dfs.HPSlider.isROI) {
               messageC = messageC.replace('£', '&euro;');
               messageD = messageD.replace('£', '&euro;');
             }
