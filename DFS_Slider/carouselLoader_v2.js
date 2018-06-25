@@ -1,17 +1,23 @@
 // ===========================================
-//  Carousel  Builder v2.0 PB JUNE 22nd 2018
+//  Carousel Builder v2.1 PB June 25th
 // ===========================================
-var slideData = {};
-    var visualID = $('.js_banner_wrap').data('visualid'),
-        isROI = $('.js_banner_wrap').data('roi');
 
-    slideIDs=[];
-    var cacheBuster = Math.random().toString(36).substr(2, 12);
+  if(!dfs) {
+    var dfs = {};
+  }
 
-    slideGroupId = visualID ? visualID : '6b90388f-554a-4651-ae89-a79576867a3f';
-    console.log('Fetching: contentID:', slideGroupId);
+  dfs.DSlider = {
+    visualID: $('.js_banner_wrap').data('visualid'),
+    isROI: $('.js_banner_wrap').data('roi'),
+    maxSlides: $('.js_banner_wrap').data('maxslides') || 5
+  }
 
-    var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ slideGroupId +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
+    var cacheBuster = Math.random().toString(36).substr(2, 12),
+        dfsSliderID = dfs.DSlider.visualID;
+
+    console.log('Fetching: contentID:', dfsSliderID);
+
+    var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ dfsSliderID +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
 
     // create and issue the content delivery request
       var masterRequest = $.ajax({
@@ -20,7 +26,7 @@ var slideData = {};
 
       masterRequest
       .done(function(data){
-        console.log('Ajax Data Fetch : Done');
+        console.log('Ajax Request Data Fetch : Done', dfsSliderID);
         renderContent(data);
 
       })
@@ -28,13 +34,17 @@ var slideData = {};
         console.log('Failed To Get Master ID Data');
         showErrorMessage();
       }).always(function(){
-        console.log('AJAX Has Completed');
+        console.log('AJAX Has Completed', dfsSliderID);
       });
 
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-    contentTree.spec = {"roiPrices": isROI, "testDate" : contentTree.testDate};
+  // console.log('CTS',contentTree.slides);
+  if(contentTree.slides.length > dfs.DSlider.maxSlides) {
+    contentTree.slides.length = dfs.DSlider.maxSlides;
+  }
+    contentTree.spec = {"roiPrices": dfs.DSlider.isROI, "testDate" : contentTree.testDate};
 
 if (contentTree) {
   renderCarousel(contentTree);
@@ -54,9 +64,7 @@ function showErrorMessage(err) {
 
 
 // Carousel Functions
-if(!dfs) {
-  var dfs = {};
-}
+
 dfs.carouselText = function(target, text){
   var el = $('.' + target);
   el.html(text);
@@ -97,7 +105,7 @@ dfs.carouselText = function(target, text){
             // console.log(textVariance1,textVariance2,textVariance3,textVariance4);
             var countDownOBj = dfs.getTimeRemaining(deadline, testDate);
 
-            if(isROI) {
+            if(dfs.DSlider.isROI) {
               messageC = messageC.replace('£', '&euro;');
               messageD = messageD.replace('£', '&euro;');
             }
@@ -166,11 +174,14 @@ dfs.carouselText = function(target, text){
         console.log('slide: ' + mID + ' Invalid Csv Data length, Skipping This Event! ('+ variance+ ')');
         return false;
       }
-      if(td){
-        var moment = new Date(td);
-      } else {
-        var moment = new Date();
-      }
+      // Disable TestDate
+      // if(td){
+      //   var moment = new Date(td);
+      // } else {
+      //   var moment = new Date(); // Added Below as default
+      // }
+
+      var moment = new Date();
 
 
       var startDate = v1[0].split('/'), endDate = v1[1].split('/');
@@ -189,6 +200,7 @@ dfs.carouselText = function(target, text){
     }
 
   dfs.getTimeRemaining = function(endtime, testDate){
+    // Disable TestDate
     // if(testDate){
     //   var current_time = new Date(),
     //     hrs = current_time.getHours(),
@@ -198,10 +210,10 @@ dfs.carouselText = function(target, text){
     //
     //   var t = Date.parse(endtime) - Date.parse(new Date(testDate));
     // } else {
-    //   var t = Date.parse(endtime) - Date.parse(new Date());
+    //   var t = Date.parse(endtime) - Date.parse(new Date()); // Added Below as default
     // }
 
-  var t = Date.parse(endtime) - Date.parse(new Date());
+    var t = Date.parse(endtime) - Date.parse(new Date());
 
   var seconds = Math.floor( (t/1000) % 60 );
   var minutes = Math.floor( (t/1000/60) % 60 );
