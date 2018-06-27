@@ -86,7 +86,7 @@
             store: 'dfs'
         },
         callback: function (data) {
-
+            console.log("vseDate:", data[0]);
             var template = Handlebars.template(AmpCa.templates.slider);
             document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data[0]);
 
@@ -99,25 +99,25 @@
         }
     });
 
-    var poi = new POI({
-        domain: 'http://i1.adis.ws',
-        account: 'dfs',
-        containerClass: 'amp-dc-slider-slide',
-        imgClass: 'amp-dc-image-pic',
-        images: [
-            {
-               name: "hoxton_fullcrop1",
-                hotspotCallbacks:[
-                    {
-                        target: "*",
-                        action: "click",
-                        callback: function(evt, settings){
-                            console.log('yay, i was clicked :)', settings);
-                        }
-                    }]
-            },
-          ]
-    });
+    // var poi = new POI({
+    //     domain: 'http://i1.adis.ws',
+    //     account: 'dfs',
+    //     containerClass: 'amp-dc-slider-slide',
+    //     imgClass: 'amp-dc-image-pic',
+    //     images: [
+    //         {
+    //            name: "hoxton_fullcrop1",
+    //             hotspotCallbacks:[
+    //                 {
+    //                     target: "*",
+    //                     action: "click",
+    //                     callback: function(evt, settings){
+    //                         console.log('yay, i was clicked :)', settings);
+    //                     }
+    //                 }]
+    //         },
+    //       ]
+    // });
     // poi.init();
     // this will add Hotspots to the image above
 </script>
