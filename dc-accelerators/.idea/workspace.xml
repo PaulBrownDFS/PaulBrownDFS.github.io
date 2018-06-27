@@ -1,0 +1,672 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2b954506-73aa-41ae-995f-43faf2efd6e3" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/dist/renders/all/libs.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/all/styles.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/all/templates.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/banner/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/text.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/text.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/text.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/text/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/video.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/video.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/video.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/dependencies/video/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/libs/showdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/blog/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/card/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/card.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/card.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/card.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/card/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/cardList/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/externalBlock/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/externalBlock/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/externalBlock/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/externalBlock/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/externalBlock/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/banner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/banner.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/banner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/banner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/banner.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/link.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/promobannersection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/banner/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/card.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/card.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/card.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/card.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/card.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/card/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/cardList.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/cardList.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/cardList.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/cardList.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/cardlist.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/cardList/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/externalBlock/externalBlock.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/externalBlock/externalBlock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/externalBlock/externalblock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/externalBlock/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/externalBlock/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/promoBanner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/promoBanner.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/promoBanner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/promoBanner.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/promobanner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/promobannersection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/section.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/promoBanner/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/slider.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/slider.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/slider.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/slider.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/slider.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/sliderHelper.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/slider/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/splitBlock.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/splitBlock.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/splitBlock.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/splitBlock.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/splitblock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/splitBlock/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/text.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/text.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/text.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/text/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/video.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/video.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/video.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/dependencies/video/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/libs/showdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/homepage/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/image/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/image/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/image/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/image/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/image/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/promoBanner/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/promoBanner/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/promoBanner/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/promoBanner/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/promoBanner/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/banner.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/banner.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/banner.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/banner.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/banner.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/link.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/promobannersection.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/banner/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/video.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/video.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/video.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/dependencies/video/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/slider/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/image.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/image.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/image.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/image.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/image.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/roundel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/roundel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/image/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/text.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/text.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/text.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/text.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/text.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/text/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/video.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/video.hbs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/video.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/video.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/video.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/visualisation.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/dependencies/video/visualisation_service.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/libs/showdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/splitBlock/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/text/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/text/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/text/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/text/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/text/package/libs/showdown.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/text/package/libs/utils.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/video/package/libs/cms-javascript-sdk.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/video/package/libs/handlebars.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/video/package/libs/handlebars_helpers.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/video/package/libs/lory.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/renders/video/package/libs/utils.js" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="image.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/renders/image/templates/image.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="160" selection-start-line="2" selection-start-column="160" selection-end-line="2" selection-end-column="160" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.hbs" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.hbs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="71">
+              <caret line="5" column="179" selection-start-line="5" selection-start-column="179" selection-end-line="5" selection-end-column="179" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation_service.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/image/package/visualisation_service.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/video/package/visualisation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="56" column="107" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="107" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/image/package/visualisation.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="visualisation_service.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/blog/package/visualisation_service.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="gulpfile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-304">
+              <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="image.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/dist/renders/image/package/visualisation_service.html" />
+        <option value="$PROJECT_DIR$/dist/renders/image/package/image.json" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths>
+      <path value="$PROJECT_DIR$/package.json" />
+    </packageJsonPaths>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-2454" />
+    <option name="y" value="-589" />
+    <option name="width" value="1350" />
+    <option name="height" value="963" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dc-accelerators" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dc-accelerators" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2b954506-73aa-41ae-995f-43faf2efd6e3" name="Default" comment="" />
+      <created>1528116372978</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1528116372978</updated>
+      <workItem from="1528116379430" duration="1272000" />
+      <workItem from="1528722447863" duration="4192000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="5464000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-2383" y="-350" width="1280" height="724" extended-state="0" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32854864" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32854864" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25282714" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25316456" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" id="Database" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32953367" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/renders/image/templates/image.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="66" selection-start-line="2" selection-start-column="58" selection-end-line="2" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/visualisation_service.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/all/libs.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10129" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.min.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="97" selection-start-line="1" selection-start-column="97" selection-end-line="1" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="71">
+          <caret line="5" column="179" selection-start-line="5" selection-start-column="179" selection-end-line="5" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/renders/image/templates/image.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="160" selection-start-line="2" selection-start-column="160" selection-end-line="2" selection-end-column="160" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/visualisation_service.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/image.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="51" column="12" selection-start-line="51" selection-start-column="12" selection-end-line="51" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/video/package/visualisation_service.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="66" column="10" lean-forward="true" selection-start-line="66" selection-start-column="10" selection-end-line="66" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/video/package/visualisation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="56" column="107" selection-start-line="56" selection-start-column="104" selection-end-line="56" selection-end-column="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/image/package/visualisation.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/renders/blog/package/visualisation_service.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-304">
+          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
