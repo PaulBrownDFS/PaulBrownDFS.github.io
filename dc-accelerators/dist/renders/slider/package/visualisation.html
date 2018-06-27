@@ -86,7 +86,7 @@
             store: 'dfs'
         },
         callback: function (data) {
-            console.log("vseDate:", data[0]);
+            console.log("vseData:", data[0]);
             var template = Handlebars.template(AmpCa.templates.slider);
             document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data[0]);
 
