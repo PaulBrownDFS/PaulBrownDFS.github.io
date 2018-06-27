@@ -9,7 +9,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["image", "imageAltText", "seoText", "roundel"],
+	"propertyOrder": ["image", "imageAltText", "seoText", "imageLink", "roundel"],
 
 	"type": "object",
 	"properties": {
@@ -30,6 +30,14 @@
 			"maxLength": 150,
 			"title": "Image alt text",
 			"description": "insert image alt text"
+		},
+
+		"imageLink": {
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 255,
+			"title": "Image Link",
+			"description": "e.g. /zinc"
 		},
 
 		"seoText": {
