@@ -53,6 +53,6 @@
 		  "maxLength": 100,
 		  "title": "Slider Id Name",
 		  "description": "Ie. \"ExclusiveBrands\" (No Spaces)"
-		},
+		}
 	}
 }
