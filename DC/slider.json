@@ -9,7 +9,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["slides","loadingColour","loadingPosition","loop","navigationDots"],
+	"propertyOrder": ["slides","loadingColour","loadingPosition", "sliderIdName", "loop","navigationDots"],
 
 	"type": "object",
 	"properties": {
@@ -46,6 +46,13 @@
 			"type": "boolean",
 			"title": "Navigation Dots",
 			"description": ""
-		}
+		},
+		"sliderIdName": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 100,
+		  "title": "Slider Id Name",
+		  "description": "Ie. \"ExclusiveBrands\" (No Spaces)"
+		},
 	}
 }
