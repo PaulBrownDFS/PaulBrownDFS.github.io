@@ -8,7 +8,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["roundel", "roundelRatio", "roundelPosition"],
+	"propertyOrder": ["roundel", "roundelRatio", "roundelLink", "roundelPosition"],
 
 	"type": "object",
 	"properties": {
@@ -22,6 +22,14 @@
 			"description": "A value between 0 and 10 e.g. 0.6",
 			"minimum": 0,
 			"maximum": 10
+		},
+
+		"roundelLink": {
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 255,
+			"title": "Roudel Link",
+			"description": "e.g. /zinc"
 		},
 
 		"roundelPosition": {
