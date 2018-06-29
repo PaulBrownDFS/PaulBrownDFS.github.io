@@ -9,7 +9,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["slides","loadingColour","loadingPosition", "sliderIdName", "loop","navigationDots"],
+	"propertyOrder": ["slides","loadingColour","loadingPosition", "sliderIdName", "sliderVersion","loop","navigationDots"],
 
 	"type": "object",
 	"properties": {
@@ -53,6 +53,17 @@
 		  "maxLength": 100,
 		  "title": "Slider Id Name",
 		  "description": "Ie. \"ExclusiveBrands\" (No Spaces)"
-		}
+		},
+		"sliderVersion": {
+		  "type": "string",
+		  "title": "Slider Locale",
+		  "description": "Preview: UK, ROI, NL, SP",
+		  "enum": [
+		    "UK",
+		    "ROI",
+		    "NL",
+				"SP"
+		  ]
+		},
 	}
 }
