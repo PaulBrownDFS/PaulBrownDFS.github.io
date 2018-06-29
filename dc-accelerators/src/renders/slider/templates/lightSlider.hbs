@@ -1,0 +1,42 @@
+<div class="lightSliderContainer {{sliderIdName}}">
+  <div class="item">
+    <div id="content-slider" class="content-slider">
+      {{#each slides}}
+      <div class="slide{{@index}}">
+        <picture>
+        {{#if bannerImage}}
+        <!-- WebP Banner Image Type -->
+          <!--600 Break Point-->
+          <source type="image/webp" media="(max-width: 1023px)"  srcset="//{{bannerImage.[0].image.defaultHost}}/i/{{bannerImage.[0].image.endpoint}}/{{escapeUrl bannerImage.[0].image.name}}_mobile{{#if bannerImage.[0].image.seoText}}/{{escapeUrl bannerImage.[0].image.seoText}}{{/if}}.webp?w=600" alt="{{bannerImage.[0].image.imageAltText}}">
+
+          <!--1366 Break Point-->
+          <source type="image/webp" media="(min-width: 1366px)"
+          srcset="//{{bannerImage.[0].image.defaultHost}}/i/{{bannerImage.[0].image.endpoint}}/{{escapeUrl bannerImage.[0].image.name}}{{#if bannerImage.[0].image.seoText}}/{{escapeUrl bannerImage.[0].image.seoText}}{{/if}}.webp?w=1366" alt="{{bannerImage.[0].image.imageAltText}}">
+
+          <!--1024 Break Point -->
+          <source type="image/webp" media="(max-width: 1365px)" srcset="//{{bannerImage.[0].image.defaultHost}}/i/{{bannerImage.[0].image.endpoint}}/{{escapeUrl bannerImage.[0].image.name}}{{#if bannerImage.[0].image.seoText}}/{{escapeUrl bannerImage.[0].image.seoText}}{{/if}}.webp?w=1024" alt="{{bannerImage.[0].image.imageAltText}}">
+
+          <!--Fallback BannerImage-->
+          <img src="//{{bannerImage.[0].image.defaultHost}}/i/{{bannerImage.[0].image.endpoint}}/{{escapeUrl bannerImage.[0].image.name}}{{#if bannerImage.[0].image.seoText}}/{{escapeUrl bannerImage.[0].image.seoText}}{{/if}}.webp?w=1306" alt="{{bannerImage.[0].image.imageAltText}}">
+        {{else}}
+          <!-- WebP Image Type -->
+          <!--600 Break Point -->
+          <source type="image/webp" media="(max-width: 1023px) "srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?w=600" alt="{{image.imageAltText}}">
+
+          <!--1366 Break Point -->
+          <source type="image/webp" media="(min-width: 1366px)"
+          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?w=1366" alt="{{image.imageAltText}}">
+
+          <!--1024 Break Point -->
+          <source type="image/webp" media="(max-width: 1365px) "srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?w=1024" alt="{{image.imageAltText}}">
+
+          <!--Fallback Image-->
+          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?" alt="{{image.imageAltText}}">
+        {{/if}}
+        </picture>
+      </div>
+      {{/each}}
+
+    </div>
+  </div>
+</div>
