@@ -35,7 +35,28 @@
 			"title": "Slides",
 			"description": "",
 			"minItems": 1,
-			"maxItems": 8
+			"maxItems": 5
+		},
+		"imageAttributes": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 255,
+		  "title": "1366w D.I. Params",
+		  "description": "crop=&w=&h= etc.. "
+		},
+		"imageAttributes24": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 255,
+		  "title": "1024w D.I. Params",
+		  "description": "crop=&w=&h= etc.. "
+		},
+		"imageAttributesMob": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 255,
+		  "title": "Mobile D.I. Params",
+		  "description": "crop=&w=&h= etc.. "
 		},
 		"loop": {
 			"type": "boolean",
