@@ -523,8 +523,8 @@ dfs.countdownv2 = {
 dfs.updateElement = function(){
   var test4Element = $('#myCarousel');
     if(test4Element.length) {
-          $('#myCarousel').carousel({ interval: 6000});
-          $('#myCarousel').carousel('pause');
+          $('#hpCarousel').carousel({ interval: 6000});
+          $('#hpCarousel').carousel('pause');
         clearInterval(PollElement);
         console.log('Carousel Ready and Initiated : ' + PollElement);
         // start Countdowns
