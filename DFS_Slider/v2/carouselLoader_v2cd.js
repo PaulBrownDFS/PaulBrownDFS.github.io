@@ -357,7 +357,7 @@ if (typeof jQuery === 'undefined') {
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-  console.log('CTS',contentTree.slides);
+  //console.log('CTS',contentTree.slides);
   if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
     contentTree.slides.length = dfs.HPSlider.maxSlides;
   }
@@ -521,7 +521,7 @@ dfs.countdownv2 = {
 };
 
 dfs.updateElement = function(){
-  var test4Element = $('#myCarousel');
+  var test4Element = $('#hpCarousel');
     if(test4Element.length) {
           $('#hpCarousel').carousel({ interval: 6000});
           $('#hpCarousel').carousel('pause');
