@@ -64,8 +64,7 @@
 		  "maxLength": 255,
 		  "title": "Mobile D.I. Params",
 		  "description": "crop=&w=&h= etc.. "
-		}
-
+		},
 		"roundel": {
 			"title": "Roundel",
 			"description": "Roundel Image",
