@@ -21,17 +21,17 @@
         {{else}}
           <!-- WebP Image Type -->
           <!--600 Break Point -->
-          <source type="image/webp" media="(max-width: 1023px) "srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?w=600" alt="{{image.imageAltText}}">
+          <source type="image/webp" media="(max-width: 1023px) "srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp{{#if image.imageAttributesMob}}?{{image.imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{image.imageAltText}}">
 
           <!--1366 Break Point -->
           <source type="image/webp" media="(min-width: 1366px)"
-          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?w=1366" alt="{{image.imageAltText}}">
+          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp{{#if image.imageAttributes}}?{{image.imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{image.imageAltText}}">
 
           <!--1024 Break Point -->
-          <source type="image/webp" media="(max-width: 1365px) "srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?w=1024" alt="{{image.imageAltText}}">
+          <source type="image/webp" media="(max-width: 1365px) "srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp{{#if image.imageAttributes24}}?{{image.imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{image.imageAltText}}">
 
           <!--Fallback Image-->
-          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp?" alt="{{image.imageAltText}}">
+          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if image.seoText}}/{{escapeUrl image.seoText}}{{/if}}.webp{{#if image.imageAttributes}}?{{image.imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{image.imageAltText}}">
         {{/if}}
         </picture>
       </div>
