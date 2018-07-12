@@ -9,7 +9,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["image", "imageAltText", "seoText", "imageLink","imageAttributes","imageAttributes24,", "imageAttributesMob", "roundel"],
+	"propertyOrder": ["image", "imageAltText", "seoText", "imageLink","imageAttributes","imageAttributes24", "imageAttributesMob", "roundel"],
 
 	"type": "object",
 	"properties": {
