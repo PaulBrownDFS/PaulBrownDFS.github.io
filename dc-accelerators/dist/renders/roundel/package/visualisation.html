@@ -59,7 +59,7 @@
         callback: function (data) {
           console.log('Data:', data[0]);
             var template = Handlebars.template(AmpCa.templates.roundel);
-            document.querySelectorAll(".js_image_wrap")[0].innerHTML = template(data[0]);
+            document.querySelectorAll(".js_roundel_wrap")[0].innerHTML = template(data[0]);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));
