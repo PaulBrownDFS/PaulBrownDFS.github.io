@@ -57,9 +57,8 @@
 		"sliderVersion": {
 		  "type": "string",
 		  "title": "Slider Locale",
-		  "description": "Preview: UK, ROI, NL, SP",
+		  "description": "Preview: None = UK",
 		  "enum": [
-		    "UK",
 		    "ROI",
 		    "NL",
 				"SP"
