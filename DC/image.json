@@ -66,16 +66,30 @@
 		  "description": "crop=x&w=y&h=z etc.. "
 		},
 		"roundel": {
-			"title": "Roundel",
-			"description": "Roundel Image",
 			"type": "array",
 			"items": {
-				"$ref": "https://paulbrowndfs.github.io/DC/roundel.json"
+				"allOf": [
+					{
+						"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+					},
+					{
+						"properties": {
+							"contentType": {
+								"title": "Roundel Content",
+								"enum": [
+									"https://paulbrowndfs.github.io/DC/roundel.json"
+								]
+							}
+						}
+					}
+				]
 			},
 			"minItems": 0,
 			"maxItems": 4,
-			"_interpolate": true
-		}
+			"title": "Roundels",
+			"_interpolate": true,
+			"description": ""
+			}
 
 	}
 }
