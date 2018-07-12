@@ -8,7 +8,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["roundel", "roundelRatio", "roundelLink", "roundelPosition"],
+	"propertyOrder": ["roundel", "roundelLink", "roundelPosition","UKRoundel","ROIRoundel","NLRoundel","ESRoundel"],
 
 	"type": "object",
 	"properties": {
