@@ -45,11 +45,11 @@
 </head>
 <body>
 
-<div class="js_slider_wrap" style="margin:0 auto;"></div>
+<div class="js_slider_wrap" style="margin:0 auto;" data-locale="ROI"></div>
 
-<!-- TODO REMOVE WHEN UPLOADED TO GITHUB -->
+<!-- TODO ONLY NEEDED FOR VISUALISATION-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<!-- TODO REMOVE WHEN UPLOADED TO GITHUB -->
+<!-- TODO ONLY NEEDED FOR VISUALISATION- -->
 
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/cms-javascript-sdk.min.js"></script>
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/handlebars.min.js"></script>
@@ -93,8 +93,10 @@
         },
         callback: function (data) {
             console.log("vseData:", data[0]);
+            var wrapper = document.querySelectorAll(".js_slider_wrap")[0];
+            data[0].sliderVersion = wrapper.dataset.locale;
             var template = Handlebars.template(AmpCa.templates.lightSlider);
-            document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data[0]);
+            wrapper.innerHTML = template(data[0]);
 
             $(document).ready(function() {
 

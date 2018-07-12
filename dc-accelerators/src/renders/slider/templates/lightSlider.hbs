@@ -35,28 +35,28 @@
         {{else}}
           <!-- WebP Image Type -->
           <!--600 Break Point -->
-          <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
 
           <!--1366 Break Point -->
           <source type="image/webp" media="(min-width: 1366px)"
-          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
 
           <!--1024 Break Point -->
-          <source type="image/webp" media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
+          <source type="image/webp" media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
 
           <!-- Jpeg Image Type -->
           <!--600 Break Point -->
-          <source media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+          <source media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
 
           <!--1366 Break Point -->
           <source media="(min-width: 1366px)"
-          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+          srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
 
           <!--1024 Break Point -->
-          <source media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
+          <source media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
 
           <!--Fallback Image-->
-          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
         </picture>
         {{/if}}
 
