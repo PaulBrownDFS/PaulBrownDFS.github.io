@@ -16,14 +16,6 @@
 			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
 		},
 
-		"roundelRatio": {
-			"type": "number",
-			"title": "Roundel Ratio",
-			"description": "A value between 0 and 10 e.g. 0.6",
-			"minimum": 0,
-			"maximum": 10
-		},
-
 		"roundelLink": {
 			"type": "string",
 			"minLength": 0,
@@ -42,6 +34,46 @@
 			],
 			"title": "Roundel Position",
 			"description": "Roundel Position"
+		},
+		"UKRoundel": {
+		  "type": "string",
+		  "title": "UK Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "UK,Mobile",
+		    "UK,Desktop",
+		    "UK,Mobile,Desktop"
+		  ]
+		},
+		"NLRoundel": {
+		  "type": "string",
+		  "title": "NL Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "NL,Mobile",
+		    "NL,Desktop",
+		    "NL,Mobile,Desktop"
+		  ]
+		},
+		"ROIRoundel": {
+		  "type": "string",
+		  "title": "ROI Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "ROI,Mobile",
+		    "ROI,Desktop",
+		    "ROI,Mobile,Desktop"
+		  ]
+		},
+		"ESRoundel": {
+		  "type": "string",
+		  "title": "ES Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "ES,Mobile",
+		    "ES,Desktop",
+		    "ES,Mobile,Desktop"
+		  ]
 		}
 	}
 }
