@@ -1,0 +1,35 @@
+<picture class="amp-dc-image">
+  <a title="{{escapeUrl roundel.name}}" href="{{roundel.roundelLink}}">
+    <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}" alt="{{roundel.name}}">
+  </a>
+</picture>
+<h2>Roundel Locale</h2>
+<h3>{{#if UKRoundel}}<span class="greenText">{{UKRoundel}}</span>{{else}}<span class="redText">UK: None</span>{{/if}},<br>
+{{#if ROIRoundel}}<span class="greenText">{{ROIRoundel}}</span>{{else}}<span class="redText">ROI: None</span>{{/if}},<br>
+{{#if NLRoundel}}<span class="greenText">{{NLRoundel}}</span>{{else}}<span class="redText">NL: None</span>{{/if}},<br>
+{{#if ESRoundel}}<span class="greenText">{{ESRoundel}}</span>{{else}}<span class="redText">ES: None</span>{{/if}}</h3>
+
+<style>
+.js_roundel_wrap {
+    padding: 20px 50px;
+}
+h2 {
+    font-size: 20px;
+    color: #fff;
+    background: #000;
+    width: 175px;
+    padding: 3px 5px;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+h3 {
+  font-size: 16px;
+}
+.greenText {
+  color:green;
+}
+.redText {
+  color:red;
+}
+</style>

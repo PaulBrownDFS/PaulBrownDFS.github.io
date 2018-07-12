@@ -1,0 +1,79 @@
+{
+	"$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+	"id": "https://paulbrowndfs.github.io/DC/roundel.json",
+	"title": "Roundel",
+	"description": "Roundel Accelerator",
+
+	"allOf": [{
+		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+	}],
+
+	"propertyOrder": ["roundel", "roundelLink", "roundelPosition","UKRoundel","ROIRoundel","NLRoundel","ESRoundel"],
+
+	"type": "object",
+	"properties": {
+		"roundel": {
+			"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+		},
+
+		"roundelLink": {
+			"type": "string",
+			"minLength": 0,
+			"maxLength": 255,
+			"title": "Roudel Link",
+			"description": "e.g. /zinc"
+		},
+
+		"roundelPosition": {
+			"type": "string",
+			"enum": [
+				"Top Left",
+				"Top Right",
+				"Bottom Left",
+				"Bottom Right"
+			],
+			"title": "Roundel Position",
+			"description": "Roundel Position"
+		},
+		"UKRoundel": {
+		  "type": "string",
+		  "title": "UK Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "UK,Mobile",
+		    "UK,Desktop",
+		    "UK,Mobile,Desktop"
+		  ]
+		},
+		"NLRoundel": {
+		  "type": "string",
+		  "title": "NL Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "NL,Mobile",
+		    "NL,Desktop",
+		    "NL,Mobile,Desktop"
+		  ]
+		},
+		"ROIRoundel": {
+		  "type": "string",
+		  "title": "ROI Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "ROI,Mobile",
+		    "ROI,Desktop",
+		    "ROI,Mobile,Desktop"
+		  ]
+		},
+		"ESRoundel": {
+		  "type": "string",
+		  "title": "ES Properties",
+		  "description": "select where to show this Roundel",
+		  "enum": [
+		    "ES,Mobile",
+		    "ES,Desktop",
+		    "ES,Mobile,Desktop"
+		  ]
+		}
+	}
+}
