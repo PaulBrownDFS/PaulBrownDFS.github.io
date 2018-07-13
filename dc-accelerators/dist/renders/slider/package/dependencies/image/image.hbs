@@ -1,4 +1,5 @@
-<picture class="amp-dc-image">
+<a href="{{imageLink}}">
+  <picture class="amp-dc-image">
   <!-- WebP Image Type -->
   <!--600 Break Point -->
   <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
@@ -23,7 +24,8 @@
 
   <!--Fallback Image-->
   <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
-</picture>
+  </picture>
+</a>
 
 {{#each roundel}}
 <div class="RoundelWrapper">
@@ -38,6 +40,14 @@
   position: absolute;
   {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
   {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
+}
+@media (max-width: 1365px) {
+  {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
+  {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
+}
+@media (max-width: 1023px) {
+  {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
+  {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
 }
 
 </style>
