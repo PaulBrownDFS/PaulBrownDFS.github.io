@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<div class="js_image_wrap"></div>
+<div class="js_image_wrap"n data-locale=""></div>
 
 
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/cms-javascript-sdk.min.js"></script>
@@ -31,7 +31,7 @@
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/handlebars_helpers.js"></script>
 
 
-<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/renders/image/template.image.min.js?v2.1b"></script>
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/renders/image/template.image.min.js?v2.1c"></script>
 
 <script>
     function getQueryVar(params) {
@@ -61,6 +61,9 @@
         url: getQueryVar(['vse', 'content']),
         callback: function (data) {
 
+          var wrapper = document.querySelectorAll(".js_image_wrap")[0];
+          data[0].imageVersion = data[0].imageVersion || wrapper.dataset.locale;
+
           //Data Transforms
 
           // roundels
@@ -80,19 +83,19 @@
               data[0].roundel[i].d1366Position = data[0].roundel[i].d1366Position.split(',');
             }
 
-            // Locales
-
-            if(data[0].roundel[i].UKRoundel) {
-              data[0].roundel[i].UKRoundel = data[0].roundel[i].UKRoundel.split(',');
-            }
-            if(data[0].roundel[i].ROIRoundel) {
-              data[0].roundel[i].ROIRoundel = data[0].roundel[i].ROIRoundel.split(',');
-            }
-            if(data[0].roundel[i].NLRoundel) {
-              data[0].roundel[i].NLRoundel = data[0].roundel[i].NLRoundel.split(',');
-            }
-            if(data[0].roundel[i].ESRoundel) {
-              data[0].roundel[i].ESRoundel = data[0].roundel[i].ESRoundel.split(',');
+            switch(data[0].imageVersion) {
+              case "":
+              data[0].roundel[i].deviceList = data[0].roundel[i].UKRoundel;
+              break;
+              case "ROI":
+              data[0].roundel[i].deviceList = data[0].roundel[i].ROIRoundel;
+              break;
+              case "NL":
+              data[0].roundel[i].deviceList = data[0].roundel[i].NLRoundel;
+              break;
+              case "ES":
+              data[0].roundel[i].deviceList = data[0].roundel[i].ESRoundel;
+              break;
             }
 
           }
@@ -104,7 +107,7 @@
           imageData = data[0];
           console.log(imageData)
             var template = Handlebars.template(AmpCa.templates.image);
-            document.querySelectorAll(".js_image_wrap")[0].innerHTML = template(data[0]);
+            wrapper.innerHTML = template(data[0]);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));

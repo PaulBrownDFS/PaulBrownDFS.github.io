@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div class="js_image_wrap" data-locale="UK"></div>
+<div class="js_image_wrap" data-locale=""></div>
 
 <!-- build:js ../../reusable/cms-javascript-sdk.min.js -->
 <script src="../../../node_modules/cms-javascript-sdk/dist/cms-javascript-sdk.min.js"></script>
@@ -72,6 +72,9 @@
 
           //Data Transforms
 
+          var wrapper = document.querySelectorAll(".js_image_wrap")[0];
+          data[0].imageVersion = wrapper.dataset.locale;
+
           // roundels
 
           for(var i = 0; i < data[0].roundel.length; i++) {
@@ -89,24 +92,23 @@
               data[0].roundel[i].d1366Position = data[0].roundel[i].d1366Position.split(',');
             }
 
-            // Locales
-
-            if(data[0].roundel[i].UKRoundel) {
-              data[0].roundel[i].UKRoundel = data[0].roundel[i].UKRoundel.split(',');
-            }
-            if(data[0].roundel[i].ROIRoundel) {
-              data[0].roundel[i].ROIRoundel = data[0].roundel[i].ROIRoundel.split(',');
-            }
-            if(data[0].roundel[i].NLRoundel) {
-              data[0].roundel[i].NLRoundel = data[0].roundel[i].NLRoundel.split(',');
-            }
-            if(data[0].roundel[i].ESRoundel) {
-              data[0].roundel[i].ESRoundel = data[0].roundel[i].ESRoundel.split(',');
+            switch(data[0].imageVersion) {
+              case "":
+              data[0].roundel[i].deviceList = data[0].roundel[i].UKRoundel;
+              break;
+              case "ROI":
+              data[0].roundel[i].deviceList = data[0].roundel[i].ROIRoundel;
+              break;
+              case "NL":
+              data[0].roundel[i].deviceList = data[0].roundel[i].NLRoundel;
+              break;
+              case "ES":
+              data[0].roundel[i].deviceList = data[0].roundel[i].ESRoundel;
+              break;
             }
 
           }
-          var wrapper = document.querySelectorAll(".js_image_wrap")[0];
-          data[0].imageVersion = wrapper.dataset.locale;
+
 
 
           imageData = data[0];

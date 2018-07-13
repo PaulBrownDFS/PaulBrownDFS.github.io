@@ -1,5 +1,8 @@
-<a href="{{imageLink}}">
-  <picture class="amp-dc-image">
+{{#if imageLink}}
+  <a href="{{imageLink}}">
+{{/if}}
+<!-- TODO change default host to images.dfs.co.uk when making live templates -->
+  <picture class="amp-dc-image {{#if imageVersion}}{{imageVersion}}{{else}}UK{{/if}}">
   <!-- WebP Image Type -->
   <!--600 Break Point -->
   <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
@@ -25,11 +28,13 @@
   <!--Fallback Image-->
   <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
   </picture>
-</a>
+{{#if imageLink}}
+  </a>
+{{/if}}
 
 {{#each roundel}}
 <div class="RoundelWrapper">
-  <picture class="amp-dc-roundel roundelID{{@index}}">
+  <picture class="amp-dc-roundel roundelID{{@index}} {{deviceList}}">
     <a title="{{{roundelToolTip}}}" href="{{roundelLink}}">
       <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}" alt="{{{roundelToolTip}}}">
     </a>
@@ -42,10 +47,26 @@
     margin: 0 auto;
 }
 
+{{#each UKRoundel}}
+.amp-dc-roundel.roundelID{{@index}}
+{{/each}}
+
 .amp-dc-roundel.roundelID{{@index}} {
   position: absolute;
   {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
   {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
+}
+.amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
+  display:block;
+}
+.amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
+  display:block;
+}
+.amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
+  display:block;
+}
+.amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
+  display:block;
 }
 
 @media (max-width: 1365px) {
@@ -67,9 +88,31 @@
   .js_image_wrap {
       width: 600px;
   }
+  .amp-dc-roundel.roundelID{{@index}}.UK.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ROI.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.NL.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ES.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
+    display:none;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
+    display:none;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
+    display:none;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
+    display:none;
+  }
+
 }
-
-
-
 </style>
 {{/each}}
