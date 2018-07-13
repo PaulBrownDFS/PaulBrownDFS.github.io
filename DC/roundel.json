@@ -8,7 +8,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["roundel", "roundelLink", "roundelPosition","UKRoundel","ROIRoundel","NLRoundel","ESRoundel"],
+	"propertyOrder": ["roundel", "roundelLink", "roundelPosition","UKRoundel","ROIRoundel","NLRoundel","ESRoundel","mobilePosition","d1024Position","d1366Position"],
 
 	"type": "object",
 	"properties": {
@@ -74,6 +74,27 @@
 		    "ES,Desktop",
 		    "ES,Mobile,Desktop"
 		  ]
+		},
+		"mobilePosition": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 100,
+		  "title": "Mobile Positioning",
+		  "description": "x=00,y=00 (x = hoizontal axsis, y = vertical axsis)"
+		},
+		"d1024Position": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 100,
+		  "title": "Desktop 1024 Positioning",
+		  "description": "x=00,y=00 (x = hoizontal axsis, y = vertical axsis)"
+		},
+		"d1366Position": {
+		  "type": "string",
+		  "minLength": 0,
+		  "maxLength": 100,
+		  "title": "Desktop 1366 Positioning",
+		  "description": "x=00,y=00 (x = hoizontal axsis, y = vertical axsis)"
 		}
 	}
 }

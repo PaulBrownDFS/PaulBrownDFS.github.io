@@ -45,7 +45,7 @@
 </head>
 <body>
 
-<div class="js_slider_wrap" style="margin:0 auto;" data-locale="ROI"></div>
+<div class="js_slider_wrap" style="margin:0 auto;" data-locale="" data-maxslides="4"></div>
 
 <!-- TODO ONLY NEEDED FOR VISUALISATION-->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -95,6 +95,10 @@
             console.log("vseData:", data[0]);
             var wrapper = document.querySelectorAll(".js_slider_wrap")[0];
             data[0].sliderVersion = wrapper.dataset.locale;
+            var maxSlides = wrapper.dataset.maxslides;
+            if( maxSlides < data[0].slides.length ) {
+              data[0].slides.length = maxSlides;
+            }
             var template = Handlebars.template(AmpCa.templates.lightSlider);
             wrapper.innerHTML = template(data[0]);
 
