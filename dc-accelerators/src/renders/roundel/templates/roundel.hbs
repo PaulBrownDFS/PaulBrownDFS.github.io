@@ -1,17 +1,34 @@
-<picture class="amp-dc-image">
-  <a title="{{escapeUrl roundel.name}}" href="{{roundel.roundelLink}}">
-    <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}" alt="{{roundel.name}}">
-  </a>
-</picture>
-<h2>Roundel Locale</h2>
-<h3>{{#if UKRoundel}}<span class="greenText">{{UKRoundel}}</span>{{else}}<span class="redText">UK: None</span>{{/if}},<br>
-{{#if ROIRoundel}}<span class="greenText">{{ROIRoundel}}</span>{{else}}<span class="redText">ROI: None</span>{{/if}},<br>
-{{#if NLRoundel}}<span class="greenText">{{NLRoundel}}</span>{{else}}<span class="redText">NL: None</span>{{/if}},<br>
-{{#if ESRoundel}}<span class="greenText">{{ESRoundel}}</span>{{else}}<span class="redText">ES: None</span>{{/if}}</h3>
+<div class="RoundelWrapper">
+  <picture class="amp-dc-image">
+    <a title="{{escapeUrl roundel.name}}" href="{{roundel.roundelLink}}">
+      <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}" alt="{{roundel.name}}">
+    </a>
+  </picture>
+</div>
+<div class="roundelLocale">
+  <h2>Roundel Locale</h2>
+  <h3>{{#if UKRoundel}}<span class="greenText">{{UKRoundel}}</span>{{else}}<span class="redText">UK: None</span>{{/if}},<br>
+  {{#if ROIRoundel}}<span class="greenText">{{ROIRoundel}}</span>{{else}}<span class="redText">ROI: None</span>{{/if}},<br>
+  {{#if NLRoundel}}<span class="greenText">{{NLRoundel}}</span>{{else}}<span class="redText">NL: None</span>{{/if}},<br>
+  {{#if ESRoundel}}<span class="greenText">{{ESRoundel}}</span>{{else}}<span class="redText">ES: None</span>{{/if}}</h3>
+</div>
+
 
 <style>
-.js_roundel_wrap {
+.roundelLocale {
     padding: 20px 50px;
+}
+.RoundelWrapper {
+    border: 2px dashed #f1f1f1;
+    min-height: 420px;
+    position: relative;
+    width:1366px;
+    margin:0 auto;
+}
+picture.amp-dc-image {
+    position: absolute;
+    {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
+    {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
 }
 h2 {
     font-size: 20px;
@@ -31,5 +48,26 @@ h3 {
 }
 .redText {
   color:red;
+}
+@media (max-width: 1365px) {
+  .RoundelWrapper {
+      width:1024px;
+  }
+  picture.amp-dc-image {
+      position: absolute;
+      {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
+      {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .RoundelWrapper {
+      width:600px;
+  }
+  picture.amp-dc-image {
+      position: absolute;
+      {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
+      {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
+  }
 }
 </style>
