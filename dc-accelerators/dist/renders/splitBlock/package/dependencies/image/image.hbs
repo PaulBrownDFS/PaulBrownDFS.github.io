@@ -36,18 +36,20 @@
   </picture>
 </div>
 <style>
-.amp-dc-roundel.roundelID{{@index}} {
-  position: absolute;
-  {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
-  {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
+
+@media (max-width: 1023px) {
+  {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
+  {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
 }
 @media (max-width: 1365px) {
   {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
   {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
 }
-@media (max-width: 1023px) {
-  {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
-  {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
+
+.amp-dc-roundel.roundelID{{@index}} {
+  position: absolute;
+  {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
+  {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
 }
 
 </style>
