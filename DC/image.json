@@ -9,7 +9,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["image", "imageAltText", "seoText", "imageLink","imageAttributes","imageAttributes24", "imageAttributesMob", "roundel"],
+	"propertyOrder": ["image", "imageAltText", "seoText", "imageLink","imageAttributes","imageAttributes24", "imageAttributesMob","imageVersion", "roundel"],
 
 	"type": "object",
 	"properties": {
@@ -65,7 +65,7 @@
 		  "title": "Mobile D.I. Params",
 		  "description": "crop=x&w=y&h=z etc.. "
 		},
-		"sliderVersion": {
+		"imageVersion": {
 		  "type": "string",
 		  "title": "Slider Locale",
 		  "description": "Preview: None = UK",
