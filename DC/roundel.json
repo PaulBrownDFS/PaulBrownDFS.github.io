@@ -47,9 +47,9 @@
 		  "title": "UK Properties",
 		  "description": "select where to show this Roundel",
 		  "enum": [
-		    "UK,Mobile",
-		    "UK,Desktop",
-		    "UK,Mobile,Desktop"
+		    "UK Mobile",
+		    "UK Desktop",
+		    "UK Mobile Desktop"
 		  ]
 		},
 		"NLRoundel": {
@@ -57,9 +57,9 @@
 		  "title": "NL Properties",
 		  "description": "select where to show this Roundel",
 		  "enum": [
-		    "NL,Mobile",
-		    "NL,Desktop",
-		    "NL,Mobile,Desktop"
+		    "NL Mobile",
+		    "NL Desktop",
+		    "NL Mobile Desktop"
 		  ]
 		},
 		"ROIRoundel": {
@@ -67,9 +67,9 @@
 		  "title": "ROI Properties",
 		  "description": "select where to show this Roundel",
 		  "enum": [
-		    "ROI,Mobile",
-		    "ROI,Desktop",
-		    "ROI,Mobile,Desktop"
+		    "ROI Mobile",
+		    "ROI Desktop",
+		    "ROI Mobile,Desktop"
 		  ]
 		},
 		"ESRoundel": {
@@ -77,9 +77,9 @@
 		  "title": "ES Properties",
 		  "description": "select where to show this Roundel",
 		  "enum": [
-		    "ES,Mobile",
-		    "ES,Desktop",
-		    "ES,Mobile,Desktop"
+		    "ES Mobile",
+		    "ES Desktop",
+		    "ES Mobile Desktop"
 		  ]
 		},
 		"mobilePosition": {
