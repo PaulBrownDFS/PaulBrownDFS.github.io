@@ -36,6 +36,12 @@
   </picture>
 </div>
 <style>
+.js_image_wrap {
+    position: relative;
+    width: 1366px;
+    margin: 0 auto;
+}
+
 .amp-dc-roundel.roundelID{{@index}} {
   position: absolute;
   {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
@@ -48,12 +54,18 @@
     {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
     {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
   }
+  .js_image_wrap {
+      width: 1024px;
+  }
 }
 
 @media (max-width: 1023px) {
   .amp-dc-roundel.roundelID{{@index}} {
     {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
     {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
+  }
+  .js_image_wrap {
+      width: 600px;
   }
 }
 
