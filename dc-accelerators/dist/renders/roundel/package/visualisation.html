@@ -72,7 +72,8 @@
           if(data[0].d1366Position) {
             data[0].d1366Position = data[0].d1366Position.split(',');
           }
-          console.log('Data:', data[0]);            var template = Handlebars.template(AmpCa.templates.roundel);
+          console.log('RoundelData:', data[0]);
+          var template = Handlebars.template(AmpCa.templates.roundel);
             document.querySelectorAll(".js_roundel_wrap")[0].innerHTML = template(data[0]);
         },
         formatData: function (data) {
