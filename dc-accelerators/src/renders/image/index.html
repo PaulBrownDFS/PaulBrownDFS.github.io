@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<div class="js_image_wrap"></div>
+<div class="js_image_wrap" data-locale="UK"></div>
 
 <!-- build:js ../../reusable/cms-javascript-sdk.min.js -->
 <script src="../../../node_modules/cms-javascript-sdk/dist/cms-javascript-sdk.min.js"></script>
@@ -105,12 +105,14 @@
             }
 
           }
+          var wrapper = document.querySelectorAll(".js_image_wrap")[0];
+          data[0].imageVersion = wrapper.dataset.locale;
 
 
           imageData = data[0];
           console.log(imageData)
             var template = Handlebars.template(AmpCa.templates.image);
-            document.querySelectorAll(".js_image_wrap")[0].innerHTML = template(data[0]);
+            wrapper.innerHTML = template(data[0]);
         },
         formatData: function (data) {
             return amp.inlineContent(JSON.parse(data));

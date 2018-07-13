@@ -65,6 +65,16 @@
 		  "title": "Mobile D.I. Params",
 		  "description": "crop=x&w=y&h=z etc.. "
 		},
+		"sliderVersion": {
+		  "type": "string",
+		  "title": "Slider Locale",
+		  "description": "Preview: None = UK",
+		  "enum": [
+		    "ROI",
+		    "NL",
+				"SP"
+		  ]
+		},
 		"roundel": {
 			"type": "array",
 			"items": {
