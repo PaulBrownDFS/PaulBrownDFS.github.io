@@ -32,8 +32,8 @@
 				"Bottom Left",
 				"Bottom Right"
 			],
-			"title": "Roundel Position",
-			"description": "Roundel Position"
+			"title": "Roundel Anchor",
+			"description": "Positioning Offset From"
 		},
 		"UKRoundel": {
 		  "type": "string",
