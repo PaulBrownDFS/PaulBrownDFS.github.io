@@ -67,7 +67,7 @@
 		},
 		"imageVersion": {
 		  "type": "string",
-		  "title": "Slider Locale",
+		  "title": "Image Locale",
 		  "description": "Preview: None = UK",
 		  "enum": [
 		    "ROI",
