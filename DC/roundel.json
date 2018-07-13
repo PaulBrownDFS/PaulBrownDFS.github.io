@@ -8,7 +8,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["roundel", "roundelLink", "roundelPosition","UKRoundel","ROIRoundel","NLRoundel","ESRoundel","mobilePosition","d1024Position","d1366Position"],
+	"propertyOrder": ["roundel", "roundelLink","UKRoundel","ROIRoundel","NLRoundel","ESRoundel","roundelAnchor","mobilePosition","d1024Position","d1366Position"],
 
 	"type": "object",
 	"properties": {
@@ -24,7 +24,7 @@
 			"description": "e.g. /zinc"
 		},
 
-		"roundelPosition": {
+		"roundelAnchor": {
 			"type": "string",
 			"enum": [
 				"Top Left",
