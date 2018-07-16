@@ -449,3 +449,7 @@ ul {
   margin: 0;
   padding: 70px 0;
 }
+
+picture.amp-dc-roundel {
+  display: none;
+}
