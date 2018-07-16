@@ -45,7 +45,7 @@
 </head>
 <body>
 
-<div class="js_slider_wrap" style="margin:0 auto;"></div>
+<div class="js_slider_wrap" data-locale="" data-maxslides="5" tyle="margin:0 auto;"></div>
 
 <!-- TODO REMOVE WHEN UPLOADED TO GITHUB -->
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@
 
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/handlebars_helpers.js"></script>
 
-<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/renders/slider/template.lightSlider.min.js?v2c"></script>
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/renders/slider/template.lightSlider.min.js?v2d"></script>
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/lightSlider.min.js"></script>
 
 
@@ -92,9 +92,71 @@
             store: 'dfs'
         },
         callback: function (data) {
-            console.log("vseData:", data[0]);
+
+          //Data Tranforms
+
+          var wrapper = document.querySelectorAll(".js_slider_wrap")[0];
+          var maxSlides = wrapper.dataset.maxslides;
+          if( maxSlides < data[0].slides.length ) {
+            data[0].slides.length = maxSlides;
+          }
+
+          // roundels
+
+
+          for(var s=0; s < data[0].slides.length; s++) {
+
+            data[0].slides[s].imageVersion = wrapper.dataset.locale;
+
+            // check for undefined roundel array and skip if undefined
+
+            if(typeof data[0].slides[s].roundel === 'undefined') {
+              // skip this slide
+              continue;
+            }
+
+            if(data[0].slides[s].roundel.length) {
+              for(var i = 0; i < data[0].slides[s].roundel.length; i++) {
+
+                  if(data[0].slides[s].roundel[i].roundelAnchor) {
+                    data[0].slides[s].roundel[i].roundelAnchor = data[0].slides[s].roundel[i].roundelAnchor.split(' ');
+                  }
+                  if(data[0].slides[s].roundel[i].mobilePosition) {
+                    data[0].slides[s].roundel[i].mobilePosition = data[0].slides[s].roundel[i].mobilePosition.split(',');
+                  }
+                  if(data[0].slides[s].roundel[i].d1024Position) {
+                    data[0].slides[s].roundel[i].d1024Position = data[0].slides[s].roundel[i].d1024Position.split(',');
+                  }
+                  if(data[0].slides[s].roundel[i].d1366Position) {
+                    data[0].slides[s].roundel[i].d1366Position = data[0].slides[s].roundel[i].d1366Position.split(',');
+                  }
+
+                  switch(data[0].slides[s].imageVersion) {
+                    case "":
+                    data[0].slides[s].roundel[i].deviceList = data[0].slides[s].roundel[i].UKRoundel;
+                    break;
+                    case "ROI":
+                    data[0].slides[s].roundel[i].deviceList = data[0].slides[s].roundel[i].ROIRoundel;
+                    break;
+                    case "NL":
+                    data[0].slides[s].roundel[i].deviceList = data[0].slides[s].roundel[i].NLRoundel;
+                    break;
+                    case "ES":
+                    data[0].slides[s].roundel[i].deviceList = data[0].slides[s].roundel[i].ESRoundel;
+                    break;
+                  }
+
+              }
+            }
+
+          }
+
+
+
+          console.log('type \'sliderData\' to view global data in console');
+          sliderData = data[0];
             var template = Handlebars.template(AmpCa.templates.lightSlider);
-            document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data[0]);
+            wrapper.innerHTML = template(data[0]);
 
             $(document).ready(function() {
 
