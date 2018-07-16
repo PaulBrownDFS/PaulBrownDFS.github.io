@@ -1,0 +1,114 @@
+{{#if imageLink}}
+  <a href="{{imageLink}}">
+{{/if}}
+<!-- TODO change default host to images.dfs.co.uk when making live templates -->
+  <picture class="amp-dc-image {{#if imageVersion}}{{imageVersion}}{{else}}UK{{/if}}">
+  <!-- WebP Image Type -->
+  <!--600 Break Point -->
+  <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+
+  <!--1366 Break Point -->
+  <source type="image/webp" media="(min-width: 1366px)"
+  srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+
+  <!--1024 Break Point -->
+  <source type="image/webp" media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
+
+  <!-- Jpeg Image Type -->
+  <!--600 Break Point -->
+  <source media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+
+  <!--1366 Break Point -->
+  <source media="(min-width: 1366px)"
+  srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+
+  <!--1024 Break Point -->
+  <source media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
+
+  <!--Fallback Image-->
+  <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if imageVersion}}_{{imageVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+  </picture>
+{{#if imageLink}}
+  </a>
+{{/if}}
+
+{{#each roundel}}
+<div class="RoundelWrapper">
+  <picture class="amp-dc-roundel roundelID{{@index}} {{deviceList}}">
+    <a title="{{{roundelToolTip}}}" href="{{roundelLink}}">
+      <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}{{#if ../imageVersion}}_{{../imageVersion}}{{/if}}" alt="{{{roundelToolTip}}}">
+    </a>
+  </picture>
+</div>
+<style>
+.js_image_wrap {
+    position: relative;
+    width: 1366px;
+    margin: 0 auto;
+}
+
+.amp-dc-roundel.roundelID{{@index}} {
+  position: absolute;
+  {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
+  {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
+}
+.amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
+  display:block;
+}
+.amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
+  display:block;
+}
+.amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
+  display:block;
+}
+.amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
+  display:block;
+}
+
+@media (max-width: 1365px) {
+
+  .amp-dc-roundel.roundelID{{@index}} {
+    {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
+    {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
+  }
+  .js_image_wrap {
+      width: 1024px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .amp-dc-roundel.roundelID{{@index}} {
+    {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
+    {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
+  }
+  .js_image_wrap {
+      width: 600px;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.UK.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ROI.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.NL.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ES.Mobile {
+    display:block !important;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
+    display:none;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
+    display:none;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
+    display:none;
+  }
+  .amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
+    display:none;
+  }
+
+}
+</style>
+{{/each}}
