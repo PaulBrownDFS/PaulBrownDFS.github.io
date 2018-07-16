@@ -1,4 +1,4 @@
-<div class="RoundelWrapper">
+<div class="RoundelWrapper" style="width:400px;">
   <picture class="amp-dc-image">
     <a title="{{{roundelToolTip}}}" href="{{roundelLink}}">
       <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}" alt="{{{roundelToolTip}}}">
@@ -23,7 +23,6 @@
     border: 2px dashed #ddd;
     min-height: 420px;
     position: relative;
-    width:1366px;
     margin:0 auto;
 }
 picture.amp-dc-image {
@@ -52,9 +51,7 @@ h3 {
 }
 
 @media (max-width: 1365px) {
-  .RoundelWrapper {
-      width:1024px;
-  }
+
   picture.amp-dc-image {
       position: absolute;
       {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
@@ -63,9 +60,7 @@ h3 {
 }
 
 @media (max-width: 1023px) {
-  .RoundelWrapper {
-      width:600px;
-  }
+
   picture.amp-dc-image {
       position: absolute;
       {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
