@@ -1,0 +1,76 @@
+<div class="RoundelWrapper">
+  <picture class="amp-dc-image">
+    <a title="{{{roundelToolTip}}}" href="{{roundelLink}}">
+      <img src="//{{roundel.defaultHost}}/i/{{roundel.endpoint}}/{{escapeUrl roundel.name}}" alt="{{{roundelToolTip}}}">
+    </a>
+  </picture>
+</div>
+<div class="roundelLocale">
+  <h2>Roundel Locale</h2>
+  <h3>{{#if UKRoundel}}<span class="greenText">{{UKRoundel}}</span>{{else}}<span class="redText">UK: None</span>{{/if}},<br>
+  {{#if ROIRoundel}}<span class="greenText">{{ROIRoundel}}</span>{{else}}<span class="redText">ROI: None</span>{{/if}},<br>
+  {{#if NLRoundel}}<span class="greenText">{{NLRoundel}}</span>{{else}}<span class="redText">NL: None</span>{{/if}},<br>
+  {{#if ESRoundel}}<span class="greenText">{{ESRoundel}}</span>{{else}}<span class="redText">ES: None</span>{{/if}}</h3>
+</div>
+
+
+<style>
+
+.roundelLocale {
+    padding: 20px 50px;
+}
+.RoundelWrapper {
+    border: 2px dashed #ddd;
+    min-height: 420px;
+    position: relative;
+    width:1366px;
+    margin:0 auto;
+}
+picture.amp-dc-image {
+    position: absolute;
+    {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
+    {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
+}
+h2 {
+    font-size: 20px;
+    color: #fff;
+    background: #000;
+    width: 175px;
+    padding: 3px 5px;
+    border-radius: 4px;
+    margin: 0 0 20px;
+    text-align: center;
+}
+h3 {
+  font-size: 16px;
+}
+.greenText {
+  color:green;
+}
+.redText {
+  color:red;
+}
+
+@media (max-width: 1365px) {
+  .RoundelWrapper {
+      width:1024px;
+  }
+  picture.amp-dc-image {
+      position: absolute;
+      {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
+      {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .RoundelWrapper {
+      width:600px;
+  }
+  picture.amp-dc-image {
+      position: absolute;
+      {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
+      {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
+  }
+}
+
+</style>
