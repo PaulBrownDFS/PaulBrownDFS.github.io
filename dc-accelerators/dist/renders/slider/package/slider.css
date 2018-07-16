@@ -453,3 +453,9 @@ ul {
 picture.amp-dc-roundel {
   display: none;
 }
+
+.RoundelWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
