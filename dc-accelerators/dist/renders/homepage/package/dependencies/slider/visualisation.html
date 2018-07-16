@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slider</title>
+
+    <link rel="stylesheet"
+          href="https://paulbrowndfs.github.io/dc-accelerators/dist/renders/slider/slider.min.css"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        video::-webkit-media-controls{
+            position:static;
+        }
+
+        video::-webkit-media-controls-enclosure{
+            width:100%;
+            position:absolute;
+            left:0;
+            bottom:0;
+        }
+        .lightSliderContainer {
+          width: 1306px;
+          margin:0 auto;
+        }
+        @media (max-width: 1365px) {
+          .lightSliderContainer {
+            width: 964px;
+          }
+        }
+        @media (max-width: 1023px) {
+          .lightSliderContainer {
+            width: 600px;
+          }
+        }
+
+    </style>
+    <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/poi.lib.min.js"></script>
+</head>
+<body>
+
+<div class="js_slider_wrap" style="margin:0 auto;"></div>
+
+<!-- TODO REMOVE WHEN UPLOADED TO GITHUB -->
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<!-- TODO REMOVE WHEN UPLOADED TO GITHUB -->
+
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/cms-javascript-sdk.min.js"></script>
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/handlebars.min.js"></script>
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/utils.js"></script>
+
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/handlebars_helpers.js"></script>
+
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/renders/slider/template.lightSlider.min.js?v2c"></script>
+<script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/lightSlider.min.js"></script>
+
+
+<script>
+    function getQueryVar(params) {
+        var paramsObj = {};
+        var currentParam = null;
+
+        for (var x = 0; x < params.length; x++) {
+            currentParam = window.location.href.match(new RegExp(params[x] + "=([a-zA-Z0-9-\._]+)"));
+            if (currentParam && currentParam.length > 1){
+                paramsObj[params[x]] = currentParam[1];
+            }
+
+            else{
+                console.warn('Param: ' + x + ' not found');
+            }
+        }
+        var url = 'https://' + paramsObj.vse + '/cms/content/query?fullBodyObject=true&scope=tree&store=any&query=%7B"sys.iri":"http://content.cms.amplience.com/' + paramsObj.content + '"%7D&v=' + Date.now();
+        return url;
+    }
+
+    Handlebars.partials = AmpCa.templates;
+
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getCaData({
+        url: getQueryVar(['vse', 'content']),
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: 'ccbb14d8-e8dc-461a-9752-009754a014b5', //'653d3a56-c433-4d94-a585-894c42418082'
+            store: 'dfs'
+        },
+        callback: function (data) {
+            console.log("vseData:", data[0]);
+            var template = Handlebars.template(AmpCa.templates.lightSlider);
+            document.querySelectorAll(".js_slider_wrap")[0].innerHTML = template(data[0]);
+
+            $(document).ready(function() {
+
+              $("#content-slider").lightSlider({
+                        loop:true,
+                        auto:true,
+                        keyPress:true,
+                        item:1,
+                        speed:900,
+                        pause: 6000,
+                        easing: 'cubic-bezier(.09,.88,1,-0.19)',
+                        pauseOnHover:true
+              });
+
+            });
+
+
+
+        },
+        formatData: function (data) {
+            return amp.inlineContent(JSON.parse(data));
+        }
+    });
+
+    // var poi = new POI({
+    //     domain: 'http://i1.adis.ws',
+    //     account: 'dfs',
+    //     containerClass: 'amp-dc-slider-slide',
+    //     imgClass: 'amp-dc-image-pic',
+    //     images: [
+    //         {
+    //            name: "hoxton_fullcrop1",
+    //             hotspotCallbacks:[
+    //                 {
+    //                     target: "*",
+    //                     action: "click",
+    //                     callback: function(evt, settings){
+    //                         console.log('yay, i was clicked :)', settings);
+    //                     }
+    //                 }]
+    //         },
+    //       ]
+    // });
+    // poi.init();
+    // this will add Hotspots to the image above
+</script>
+</body>
+</html>
