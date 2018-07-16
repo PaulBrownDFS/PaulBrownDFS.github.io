@@ -7,13 +7,6 @@
 	"allOf": [{
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
-    "cards": [
-      {
-        "label": "Card1",
-        "templatedUri": "https://paulbrowndfs.github.io/dc-accelerators/dist/renders/roundel/package/visualisation.html?vse={{vse.domain}}&content={{content.sys.id}}",
-        "default": true
-      }
-    ],
 
 	"propertyOrder": ["roundel", "roundelLink","roundelToolTip","UKRoundel","ROIRoundel","NLRoundel","ESRoundel","roundelAnchor","mobilePosition","d1024Position","d1366Position"],
 
