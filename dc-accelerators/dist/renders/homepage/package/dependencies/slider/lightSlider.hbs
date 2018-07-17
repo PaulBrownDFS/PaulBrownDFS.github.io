@@ -73,32 +73,28 @@
             </picture>
           </div>
           <style>
-          .js_image_wrap {
-              position: relative;
-              width: 1366px;
-              margin: 0 auto;
-          }
-          .amp-dc-roundel.roundelID{{@index}} {
+
+          .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
             position: absolute;
             {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
             {{roundelAnchor.[1]}}: {{replace d1366Position.[0] 'x=' ''}}px;
           }
-          .amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
+          .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
             display:block;
           }
-          .amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
+          .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
             display:block;
           }
-          .amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
+          .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
             display:block;
           }
-          .amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
+          .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
             display:block;
           }
 
           @media (max-width: 1365px) {
 
-            .amp-dc-roundel.roundelID{{@index}} {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
               {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
               {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
             }
@@ -108,35 +104,35 @@
           }
 
           @media (max-width: 1023px) {
-            .amp-dc-roundel.roundelID{{@index}} {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
               {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
               {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
             }
             .js_image_wrap {
                 width: 600px;
             }
-            .amp-dc-roundel.roundelID{{@index}}.UK.Mobile {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.UK.Mobile {
               display:block !important;
             }
-            .amp-dc-roundel.roundelID{{@index}}.ROI.Mobile {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.ROI.Mobile {
               display:block !important;
             }
-            .amp-dc-roundel.roundelID{{@index}}.NL.Mobile {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.NL.Mobile {
               display:block !important;
             }
-            .amp-dc-roundel.roundelID{{@index}}.ES.Mobile {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.ES.Mobile {
               display:block !important;
             }
-            .amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.UK.Desktop {
               display:none;
             }
-            .amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.ROI.Desktop {
               display:none;
             }
-            .amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.NL.Desktop {
               display:none;
             }
-            .amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
+            .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.ES.Desktop {
               display:none;
             }
 
@@ -151,3 +147,24 @@
     </div>
   </div>
 </div>
+<style>
+  .js_image_wrap {
+      position: relative;
+      width: 1366px;
+      margin: 0 auto;
+  }
+  .lightSliderContainer.{{sliderIdName}} {
+    width: 1306px;
+    margin:0 auto;
+  }
+  @media (max-width: 1365px) {
+    .lightSliderContainer.{{sliderIdName}} {
+      width: 964px;
+    }
+  }
+  @media (max-width: 1023px) {
+    .lightSliderContainer.{{sliderIdName}}{
+      width: 600px;
+    }
+  }
+</style>
