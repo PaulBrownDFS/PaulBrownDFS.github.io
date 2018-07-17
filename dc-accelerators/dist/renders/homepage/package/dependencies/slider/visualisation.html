@@ -87,12 +87,17 @@
             data[0].slides.length = maxSlides;
           }
 
+          // check for UK sliderVersion which is undefined
+          if(typeof data[0].sliderVersion === 'undefined') {
+            data[0].sliderVersion = '';
+          }
+
           // roundels
 
 
           for(var s=0; s < data[0].slides.length; s++) {
 
-            data[0].slides[s].imageVersion = wrapper.dataset.locale;
+            data[0].slides[s].imageVersion = data[0].sliderVersion;
 
             // check for undefined roundel array and skip if undefined
 
