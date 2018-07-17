@@ -1157,18 +1157,21 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
 
     function getQueryVar(params) {
         var paramsObj = {};
-        var currentParam = null;
+        //var currentParam = null;
 
-        for (var x = 0; x < params.length; x++) {
-            currentParam = window.location.href.match(new RegExp(params[x] + "=([a-zA-Z0-9-\._]+)"));
-            if (currentParam && currentParam.length > 1){
-                paramsObj[params[x]] = currentParam[1];
-            }
+        // for (var x = 0; x < params.length; x++) {
+        //     currentParam = window.location.href.match(new RegExp(params[x] + "=([a-zA-Z0-9-\._]+)"));
+        //     if (currentParam && currentParam.length > 1){
+        //         paramsObj[params[x]] = currentParam[1];
+        //     }
+        //
+        //     else{
+        //         console.warn('Param: ' + x + ' not found');
+        //     }
+        // }
 
-            else{
-                console.warn('Param: ' + x + ' not found');
-            }
-        }
+            paramsObj.vse = 'w59a4sqnbu301ot4nys8p4qo9.staging.bigcontent.io',
+            paramsObj.content = '3d43cbf8-6160-4e99-979b-82d3da6ee189';
         var url = 'https://' + paramsObj.vse + '/cms/content/query?fullBodyObject=true&scope=tree&store=any&query=%7B"sys.iri":"http://content.cms.amplience.com/' + paramsObj.content + '"%7D&v=' + Date.now();
         return url;
     }
