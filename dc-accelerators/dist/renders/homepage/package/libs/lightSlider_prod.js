@@ -1171,7 +1171,8 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
         // }
 
             paramsObj.vse = 'w59a4sqnbu301ot4nys8p4qo9.staging.bigcontent.io',
-            paramsObj.content = '3d43cbf8-6160-4e99-979b-82d3da6ee189';
+            sliderID = document.getElementsByClassName('js_slider_wrap'),
+            paramsObj.content = sliderID[0].getAttribute('data-sliderampid');
         var url = 'https://' + paramsObj.vse + '/cms/content/query?fullBodyObject=true&scope=tree&store=any&query=%7B"sys.iri":"http://content.cms.amplience.com/' + paramsObj.content + '"%7D&v=' + Date.now();
         return url;
     }
@@ -1184,7 +1185,7 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
         url: getQueryVar(['vse', 'content']),
         auth: {
             baseUrl: 'https://c1.adis.ws',
-            id: '3d43cbf8-6160-4e99-979b-82d3da6ee189', //'653d3a56-c433-4d94-a585-894c42418082'
+            id: '',
             store: 'dfs'
         },
         callback: function (data) {
