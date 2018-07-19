@@ -3,6 +3,9 @@
     <div id="content-slider" class="content-slider">
       {{#each slides}}
       <div class="slide{{@index}}" style="position:relative">
+        {{#if imageLink}}
+        <a href="{{imageLink}}">
+        {{/if}}
         <picture>
         {{#if bannerImage}}
         <!-- WebP Banner Image Type -->
@@ -57,8 +60,12 @@
 
           <!--Fallback Image-->
           <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
-        </picture>
         {{/if}}
+        </picture>
+        {{#if imageLink}}
+          </a>
+        {{/if}}
+
 
         {{#each roundel}}
           <div class="RoundelWrapper">
