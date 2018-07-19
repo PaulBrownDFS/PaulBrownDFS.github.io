@@ -98,9 +98,7 @@
               {{roundelAnchor.[0]}}: {{replace d1024Position.[1] 'y=' ''}}px;
               {{roundelAnchor.[1]}}: {{replace d1024Position.[0] 'x=' ''}}px;
             }
-            .js_image_wrap {
-                width: 1024px;
-            }
+
           }
 
           @media (max-width: 1023px) {
@@ -108,9 +106,7 @@
               {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
               {{roundelAnchor.[1]}}: {{replace mobilePosition.[0] 'x=' ''}}px;
             }
-            .js_image_wrap {
-                width: 600px;
-            }
+
             .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}}.UK.Mobile {
               display:block !important;
             }
@@ -148,7 +144,7 @@
   </div>
 </div>
 <style>
-  .js_image_wrap {
+  .js_slider_wrap {
       position: relative;
       width: 1366px;
       margin: 0 auto;
@@ -161,10 +157,16 @@
     .lightSliderContainer.{{sliderIdName}} {
       width: 1024px;
     }
+    .js_slider_wrap {
+        width: 1024px;
+    }
   }
   @media (max-width: 1023px) {
     .lightSliderContainer.{{sliderIdName}}{
       width: 600px;
+    }
+    .js_slider_wrap {
+        width: 600px;
     }
   }
 </style>
