@@ -22,7 +22,7 @@
 </head>
 <body>
 
-<div class="js_image_wrap"n data-locale=""></div>
+<div class="js_image_wrap" data-locale=""></div>
 
 
 <script src="https://paulbrowndfs.github.io/dc-accelerators/dist/reusable/cms-javascript-sdk.min.js"></script>
@@ -68,36 +68,39 @@
 
           // roundels
 
-          for(var i = 0; i < data[0].roundel.length; i++) {
+          if(typeof(data[0].roundel) !== 'undefined' ) {
 
-            if(data[0].roundel[i].roundelAnchor) {
-              data[0].roundel[i].roundelAnchor = data[0].roundel[i].roundelAnchor.split(' ');
-            }
-            if(data[0].roundel[i].mobilePosition) {
-              data[0].roundel[i].mobilePosition = data[0].roundel[i].mobilePosition.split(',');
-            }
-            if(data[0].roundel[i].d1024Position) {
-              data[0].roundel[i].d1024Position = data[0].roundel[i].d1024Position.split(',');
-            }
-            if(data[0].roundel[i].d1366Position) {
-              data[0].roundel[i].d1366Position = data[0].roundel[i].d1366Position.split(',');
-            }
+            for(var i = 0; i < data[0].roundel.length; i++) {
 
-            switch(data[0].imageVersion) {
-              case "":
-              data[0].roundel[i].deviceList = data[0].roundel[i].UKRoundel;
-              break;
-              case "ROI":
-              data[0].roundel[i].deviceList = data[0].roundel[i].ROIRoundel;
-              break;
-              case "NL":
-              data[0].roundel[i].deviceList = data[0].roundel[i].NLRoundel;
-              break;
-              case "ES":
-              data[0].roundel[i].deviceList = data[0].roundel[i].ESRoundel;
-              break;
-            }
+              if(data[0].roundel[i].roundelAnchor) {
+                data[0].roundel[i].roundelAnchor = data[0].roundel[i].roundelAnchor.split(' ');
+              }
+              if(data[0].roundel[i].mobilePosition) {
+                data[0].roundel[i].mobilePosition = data[0].roundel[i].mobilePosition.split(',');
+              }
+              if(data[0].roundel[i].d1024Position) {
+                data[0].roundel[i].d1024Position = data[0].roundel[i].d1024Position.split(',');
+              }
+              if(data[0].roundel[i].d1366Position) {
+                data[0].roundel[i].d1366Position = data[0].roundel[i].d1366Position.split(',');
+              }
 
+              switch(data[0].imageVersion) {
+                case "":
+                data[0].roundel[i].deviceList = data[0].roundel[i].UKRoundel;
+                break;
+                case "ROI":
+                data[0].roundel[i].deviceList = data[0].roundel[i].ROIRoundel;
+                break;
+                case "NL":
+                data[0].roundel[i].deviceList = data[0].roundel[i].NLRoundel;
+                break;
+                case "ES":
+                data[0].roundel[i].deviceList = data[0].roundel[i].ESRoundel;
+                break;
+              }
+
+            }
           }
 
 
