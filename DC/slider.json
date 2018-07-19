@@ -9,7 +9,7 @@
 		"$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
 	}],
 
-	"propertyOrder": ["slides","loadingColour","loadingPosition", "sliderIdName", "sliderVersion","loop","navigationDots"],
+	"propertyOrder": ["slides","loadingColour","loadingPosition", "sliderIdName", "sliderVersion"],
 
 	"type": "object",
 	"properties": {
@@ -36,16 +36,6 @@
 			"description": "",
 			"minItems": 1,
 			"maxItems": 5
-		},
-		"loop": {
-			"type": "boolean",
-			"title": "Loop slider",
-			"description": ""
-		},
-		"navigationDots": {
-			"type": "boolean",
-			"title": "Navigation Dots",
-			"description": ""
 		},
 		"sliderIdName": {
 		  "type": "string",
