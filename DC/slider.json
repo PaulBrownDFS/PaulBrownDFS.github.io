@@ -24,7 +24,6 @@
 							"contentType": {
 								"title": "slides",
 								"enum": [
-									"https://paulbrowndfs.github.io/DC/banner.json",
 									"https://paulbrowndfs.github.io/DC/image.json"
 								]
 							}
