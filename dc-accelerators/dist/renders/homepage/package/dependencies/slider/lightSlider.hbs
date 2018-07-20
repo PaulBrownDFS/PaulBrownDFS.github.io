@@ -163,32 +163,24 @@
   </div>
 </div>
 <style>
-{{#if ../showDesktop}}
+{{#if showDesktop}}
   .js_slider_wrap {
       position: relative;
-      width: 1366px;
-      margin: 0 auto;
   }
   .lightSliderContainer.{{sliderIdName}} {
-    width: 1366px;
+    width: {{imageWidth}}px;
     margin:0 auto;
   }
   @media (max-width: 1365px) {
     .lightSliderContainer.{{sliderIdName}} {
-      width: 1024px;
-    }
-    .js_slider_wrap {
-        width: 1024px;
+      width: {{imageWidth24}}px;
     }
   }
 {{/if}}
-  {{#if ../showMobile}}
+  {{#if showMobile}}
   @media (max-width: 1023px) {
     .lightSliderContainer.{{sliderIdName}}{
-      width: 600px;
-    }
-    .js_slider_wrap {
-        width: 600px;
+      width: {{imageWidthMob}}px;
     }
   }
   {{/if}}

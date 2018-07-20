@@ -90,6 +90,43 @@
             data[0].slides.length = maxSlides;
           }
 
+          // get image widths from Slide 1 DI params
+
+          if(data[0].slides[0].imageAttributes) {
+              if(data[0].slides[0].imageAttributes.match(/w=[0-9]+/)){
+                var this_width = data[0].slides[0].imageAttributes.match(/w=[0-9]+/);
+                data[0].imageWidth = this_width[0].replace('w=', '');
+              } else {
+                  data[0].imageWidth = "1366";
+                }
+          } else {
+              data[0].imageWidth = "1366";
+            }
+
+          if(data[0].slides[0].imageAttributes24) {
+              if(data[0].slides[0].imageAttributes24.match(/w=[0-9]+/)){
+                var this_width = data[0].slides[0].imageAttributes24.match(/w=[0-9]+/);
+                data[0].imageWidth24 = this_width[0].replace('w=', '');
+              } else {
+                  data[0].imageWidth24 = "1024";
+                }
+          } else {
+              data[0].imageWidth24 = "1024";
+            }
+
+          if(data[0].slides[0].imageAttributesMob) {
+              if(data[0].slides[0].imageAttributesMob.match(/w=[0-9]+/)){
+                var this_width = data[0].slides[0].imageAttributesMob.match(/w=[0-9]+/);
+                data[0].imageWidthMob = this_width[0].replace('w=', '');
+              } else {
+                  data[0].imageWidthMob = "600";
+                }
+          } else {
+              data[0].imageWidthMob = "600";
+            }
+
+
+
           // check for UK sliderVersion which is undefined
           if(typeof data[0].sliderVersion === 'undefined') {
             data[0].sliderVersion = '';

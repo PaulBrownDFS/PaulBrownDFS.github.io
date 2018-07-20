@@ -1195,7 +1195,7 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
             data[0].showMobile = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-mobile');
             data[0].showDesktop = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-desktop');
 
-            // convert to bool
+            // convert to boolean
 
             data[0].showMobile =  JSON.parse(data[0].showMobile);
             data[0].showDesktop =  JSON.parse(data[0].showDesktop);
@@ -1207,12 +1207,51 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
               data[0].slides.length = maxSlides;
             }
 
+            // get image widths from Slide 1 DI params
+
+            if(data[0].slides[0].imageAttributes) {
+                if(data[0].slides[0].imageAttributes.match(/w=[0-9]+/)){
+                  var this_width = data[0].slides[0].imageAttributes.match(/w=[0-9]+/);
+                  data[0].imageWidth = this_width[0].replace('w=', '');
+                } else {
+                    data[0].imageWidth = "1366";
+                  }
+            } else {
+                data[0].imageWidth = "1366";
+              }
+
+            if(data[0].slides[0].imageAttributes24) {
+                if(data[0].slides[0].imageAttributes24.match(/w=[0-9]+/)){
+                  var this_width = data[0].slides[0].imageAttributes24.match(/w=[0-9]+/);
+                  data[0].imageWidth24 = this_width[0].replace('w=', '');
+                } else {
+                    data[0].imageWidth24 = "1024";
+                  }
+            } else {
+                data[0].imageWidth24 = "1024";
+              }
+
+            if(data[0].slides[0].imageAttributesMob) {
+                if(data[0].slides[0].imageAttributesMob.match(/w=[0-9]+/)){
+                  var this_width = data[0].slides[0].imageAttributesMob.match(/w=[0-9]+/);
+                  data[0].imageWidthMob = this_width[0].replace('w=', '');
+                } else {
+                    data[0].imageWidthMob = "600";
+                  }
+            } else {
+                data[0].imageWidthMob = "600";
+              }
+
+
+
             // roundels
 
 
             for(var s=0; s < data[0].slides.length; s++) {
 
               data[0].slides[s].imageVersion = wrapper.dataset.locale;
+
+
 
               // check for undefined roundel array and skip if undefined
 
@@ -1257,7 +1296,7 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
 
             }
 
-            console.log(data[0]);
+            sliderData = data[0];
 
 
             // Debug - uncomment 2 lines below to add console debug data.
