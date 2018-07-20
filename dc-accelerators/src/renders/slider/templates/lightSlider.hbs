@@ -38,28 +38,38 @@
         {{else}}
           <!-- WebP Image Type -->
           <!--600 Break Point -->
+        {{#if ../showMobile}}
           <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+        {{/if}}
 
           <!--1366 Break Point -->
+        {{#if ../showDesktop}}
           <source type="image/webp" media="(min-width: 1366px)"
           srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
 
+
           <!--1024 Break Point -->
           <source type="image/webp" media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
+        {{/if}}
 
           <!-- Jpeg Image Type -->
           <!--600 Break Point -->
+        {{#if ../showMobile }}
           <source media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+        {{/if}}
 
           <!--1366 Break Point -->
+        {{#if ../showDesktop}}
           <source media="(min-width: 1366px)"
           srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
 
           <!--1024 Break Point -->
           <source media="(max-width: 1365px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes24}}?{{imageAttributes24}}{{else}}?w=1024{{/if}}" alt="{{imageAltText}}">
+        {{/if}}
 
           <!--Fallback Image-->
           <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+
         {{/if}}
         </picture>
         {{#if imageLink}}
@@ -80,7 +90,7 @@
             </picture>
           </div>
           <style>
-
+        {{#if ../showDesktop}}
           .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
             position: absolute;
             {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
@@ -107,7 +117,8 @@
             }
 
           }
-
+        {{/if}}
+        {{#if ../showMobile}}
           @media (max-width: 1023px) {
             .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
               {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;
@@ -140,6 +151,7 @@
             }
 
           }
+        {{/if}}
           </style>
         {{/each}}
 
@@ -151,6 +163,7 @@
   </div>
 </div>
 <style>
+{{#if ../showDesktop}}
   .js_slider_wrap {
       position: relative;
       width: 1366px;
@@ -168,6 +181,8 @@
         width: 1024px;
     }
   }
+{{/if}}
+  {{#if ../showMobile}}
   @media (max-width: 1023px) {
     .lightSliderContainer.{{sliderIdName}}{
       width: 600px;
@@ -176,4 +191,5 @@
         width: 600px;
     }
   }
+  {{/if}}
 </style>

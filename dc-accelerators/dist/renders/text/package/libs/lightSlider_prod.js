@@ -1170,9 +1170,9 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
         //     }
         // }
 
-            paramsObj.vse = 'w59a4sqnbu301ot4nys8p4qo9.staging.bigcontent.io',
-            sliderID = document.getElementsByClassName('js_slider_wrap'),
-            paramsObj.content = sliderID[0].getAttribute('data-sliderampid');
+            paramsObj.vse = 'w59a4sqnbu301ot4nys8p4qo9.staging.bigcontent.io';
+            paramsObj.content = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-sliderampid');
+
         var url = 'https://' + paramsObj.vse + '/cms/content/query?fullBodyObject=true&scope=tree&store=any&query=%7B"sys.iri":"http://content.cms.amplience.com/' + paramsObj.content + '"%7D&v=' + Date.now();
         return url;
     }
@@ -1191,6 +1191,15 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
         callback: function (data) {
 
             //Data Tranforms
+
+            data[0].showMobile = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-mobile');
+            data[0].showDesktop = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-desktop');
+
+            // convert to bool
+
+            data[0].showMobile =  JSON.parse(data[0].showMobile);
+            data[0].showDesktop =  JSON.parse(data[0].showDesktop);
+
 
             var wrapper = document.querySelectorAll(".js_slider_wrap")[0];
             var maxSlides = wrapper.dataset.maxslides;
@@ -1247,6 +1256,8 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
               }
 
             }
+
+            console.log(data[0]);
 
 
             // Debug - uncomment 2 lines below to add console debug data.
