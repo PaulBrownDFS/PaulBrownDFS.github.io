@@ -90,7 +90,8 @@
             </picture>
           </div>
           <style>
-        {{#if ../showDesktop}}
+          ShowDesktop= {{../../showDesktop}}
+        {{#if ../../showDesktop}}
           .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
             position: absolute;
             {{roundelAnchor.[0]}}: {{replace d1366Position.[1] 'y=' ''}}px;
@@ -118,7 +119,8 @@
 
           }
         {{/if}}
-        {{#if ../showMobile}}
+        ShowMObile = {{../../showMobile}}
+        {{#if ../../showMobile}}
           @media (max-width: 1023px) {
             .{{../../sliderIdName}} .amp-dc-roundel.roundelID{{@index}} {
               {{roundelAnchor.[0]}}: {{replace mobilePosition.[1] 'y=' ''}}px;

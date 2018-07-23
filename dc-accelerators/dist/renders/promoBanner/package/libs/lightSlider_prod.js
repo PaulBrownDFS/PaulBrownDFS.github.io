@@ -1250,6 +1250,7 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
             for(var s=0; s < data[0].slides.length; s++) {
 
               data[0].slides[s].imageVersion = wrapper.dataset.locale;
+              data[0].slides[s].image.defaultHost = "images.dfs.co.uk";
 
 
 
@@ -1296,12 +1297,12 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
 
             }
 
-            sliderData = data[0];
-
-
             // Debug - uncomment 2 lines below to add console debug data.
             //console.log('sliderData to view global data in console');
             //sliderData = data[0];
+
+
+
 
             var template = Handlebars.template(AmpCa.templates.lightSlider);
             wrapper.innerHTML = template(data[0]);
