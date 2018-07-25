@@ -1170,10 +1170,11 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
         //     }
         // }
 
-            paramsObj.vse = 'w59a4sqnbu301ot4nys8p4qo9.staging.bigcontent.io';
+            // paramsObj.vse = 'w59a4sqnbu301ot4nys8p4qo9.staging.bigcontent.io';
+            paramsObj.vse = 'c1.adis.ws';
             paramsObj.content = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-sliderampid');
 
-        var url = 'https://' + paramsObj.vse + '/cms/content/query?fullBodyObject=true&scope=tree&store=any&query=%7B"sys.iri":"http://content.cms.amplience.com/' + paramsObj.content + '"%7D&v=' + Date.now();
+        var url = 'https://' + paramsObj.vse + '/cms/content/query?fullBodyObject=true&scope=tree&store=dfs&query=%7B"sys.iri":"http://content.cms.amplience.com/' + paramsObj.content + '"%7D&v=' + Date.now();
         return url;
     }
 
