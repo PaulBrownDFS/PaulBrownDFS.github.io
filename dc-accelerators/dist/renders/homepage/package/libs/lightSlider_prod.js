@@ -1196,6 +1196,10 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
             data[0].showMobile = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-mobile');
             data[0].showDesktop = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-desktop');
 
+            // get Locale
+
+            data[0].sliderVersion = document.getElementsByClassName('js_slider_wrap')[0].getAttribute('data-locale');
+
             // convert to boolean
 
             data[0].showMobile =  JSON.parse(data[0].showMobile);
@@ -1299,8 +1303,8 @@ Handlebars.registerHelper('replace', function( string, to_replace, replacement )
             }
 
             // Debug - uncomment 2 lines below to add console debug data.
-            //console.log('sliderData to view global data in console');
-            //sliderData = data[0];
+            console.log('sliderData to view global data in console');
+            sliderData = data[0];
 
 
 
