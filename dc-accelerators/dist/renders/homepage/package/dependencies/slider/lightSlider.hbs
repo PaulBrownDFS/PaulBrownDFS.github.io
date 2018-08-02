@@ -1,4 +1,4 @@
-<div class="lightSliderContainer {{sliderIdName}}">
+<div class="lightSliderContainer {{sliderIdName}}" data-desktop="{{showDesktop}}" data-mobile="{{showMobile}}">
   <div class="item">
     <div id="content-slider" class="content-slider">
       {{#each slides}}
@@ -39,7 +39,7 @@
           <!-- WebP Image Type -->
           <!--600 Break Point -->
         {{#if ../showMobile}}
-          <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+          <source type="image/webp" media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}_mobile{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.webp{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
         {{/if}}
 
           <!--1366 Break Point -->
@@ -55,7 +55,7 @@
           <!-- Jpeg Image Type -->
           <!--600 Break Point -->
         {{#if ../showMobile }}
-          <source media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}_mobile{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
+          <source media="(max-width: 1023px)" srcset="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}_mobile{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributesMob}}?{{imageAttributesMob}}{{else}}?w=600{{/if}}" alt="{{imageAltText}}">
         {{/if}}
 
           <!--1366 Break Point -->
@@ -68,7 +68,7 @@
         {{/if}}
 
           <!--Fallback Image-->
-          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}?w=1366{{/if}}" alt="{{imageAltText}}">
+          <img src="//{{image.defaultHost}}/i/{{image.endpoint}}/{{escapeUrl image.name}}{{#if ../sliderVersion}}_{{../sliderVersion}}{{/if}}{{#if seoText}}/{{escapeUrl seoText}}{{/if}}.jpg{{#if imageAttributes}}?{{imageAttributes}}{{else}}{{#if ../showDesktop}}?w=1366{{else}}?w=600{{/if}}{{/if}}" alt="{{imageAltText}}">
 
         {{/if}}
         </picture>
