@@ -1,12 +1,12 @@
 {
     "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-    "id": "https://paulbrowndfs.github.io/DC/card.json",
+    "id": "https://paulbrowndfs.github.io/DC/card-list.json",
     "allOf": [
         {
             "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
         }
     ],
-    "title": "Card",
+    "title": "Card List",
     "description": "",
     "type": "object",
     "properties": {}
