@@ -1,6 +1,6 @@
 {
     "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-    "id": "https://paulbrowndfs.github.io/DC/roundel.json",
+    "id": "https://paulbrowndfs.github.io/CA/roundel.json",
     "allOf": [
         {
             "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
