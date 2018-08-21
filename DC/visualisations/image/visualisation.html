@@ -49,7 +49,7 @@
       url: "//" + getQueryVar('api') +
       "/cms/content/query?fullBodyObject=true&query=" +
       encodeURIComponent(JSON.stringify({
-        "sys.iri": "http://content.cms.amplience.com/"; + getQueryVar('content') })) +
+        "sys.iri": "http://content.cms.amplience.com/" + getQueryVar('content') })) +
         "&scope=tree&store=store",
 
         callback: function (data) {
