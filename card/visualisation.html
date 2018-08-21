@@ -48,12 +48,12 @@
     AmpCa.utils = new AmpCa.Utils();
 
     AmpCa.utils.getCaData({
-        url: getQueryVar('src'),
-        auth: {
-                    baseUrl: 'https://c1.adis.ws',
-                    id: '9fa72f0c-3a94-4cc9-9807-6a5ba44d5244',
-                    store: 'dfs'
-                },
+      url: "//" + getQueryVar('api') +
+      "/cms/content/query?fullBodyObject=true&query=" +
+      encodeURIComponent(JSON.stringify({
+        "sys.iri": "http://content.cms.amplience.com/" + getQueryVar('content')
+      })) +
+      "&scope=tree&store=store",
         callback: function (data) {
           // var productSKU = data[0].productSku;
           // if(productSKU) {
