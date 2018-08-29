@@ -497,7 +497,7 @@ dfs.countdownv2 = {
               }
             } else {
               // // no countdown text
-              $(_this).children('section').html('');
+              $(_this).children('section').html('').hide();
             }
           }
             ,1000);
