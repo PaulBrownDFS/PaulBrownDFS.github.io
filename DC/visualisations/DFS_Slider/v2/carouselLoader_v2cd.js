@@ -562,8 +562,6 @@ dfs.updateElement = function(){
             });
 
           })(jQuery);
-          dfs.carCountdown.init();
-
     }
 }
 
