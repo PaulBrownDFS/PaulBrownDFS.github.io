@@ -490,7 +490,7 @@ dfs.countdownv2 = {
                 dfs.countdownv2.stopTimer(index);
                 $(_this).css('display','none');
               }
-              $(_this).children('section').html(timerHtml);
+              $(_this).children('section').html(timerHtml).show();
               if( timer.days == 0 && !dfs.countdownv2.isMobile() ){
                 //show ending footer if last day and desktop
                 $(_this).next('div').css('display','block');
