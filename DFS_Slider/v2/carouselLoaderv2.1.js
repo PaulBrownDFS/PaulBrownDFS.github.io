@@ -357,7 +357,7 @@ if (typeof jQuery === 'undefined') {
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-  console.log('CTS',contentTree.slides);
+  console.log('HPSlider',contentTree.slides);
   if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
     contentTree.slides.length = dfs.HPSlider.maxSlides;
   }
@@ -490,14 +490,14 @@ dfs.countdownv2 = {
                 dfs.countdownv2.stopTimer(index);
                 $(_this).css('display','none');
               }
-              $(_this).children('section').html(timerHtml);
+              $(_this).children('section').html(timerHtml).show();
               if( timer.days == 0 && !dfs.countdownv2.isMobile() && !hideFinalMessage){
                 //show ending footer if last day and desktop
                 $(_this).next('div').css('display','block');
               }
             } else {
               // // no countdown text
-              $(_this).children('section').html('');
+              $(_this).children('section').html('').hide();
             }
           }
             ,1000);
