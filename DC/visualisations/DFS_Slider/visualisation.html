@@ -51,13 +51,14 @@ function getQueryVar(variable) {
     Handlebars.partials = AmpCa.templates;
 
     AmpCa.utils = new AmpCa.Utils();
+    var cacheBuster = Math.random().toString(36).substr(2, 12);
 
     AmpCa.utils.getCaData({
       url: "//" + getQueryVar('api') +
       "/cms/content/query?fullBodyObject=true&query=" +
       encodeURIComponent(JSON.stringify({
         "sys.iri": "http://content.cms.amplience.com/" + getQueryVar('content') })) +
-        "&scope=tree&store=store",
+        "&scope=tree&store=store&cacheBuster=" + cacheBuster,
 
         callback: function (data) {
             // data[0].renderTypes = renderTypes;
@@ -74,7 +75,7 @@ function getQueryVar(variable) {
         }
     });
 </script>
-<script src="v2/carouselLoaderv2.1.js?aug21"></script>
+<script src="v2/carouselLoader_v2cd.js?aug29"></script>
 
 </body>
 
