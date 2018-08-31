@@ -30,7 +30,7 @@
 <script src="../v_carousel.min.js?v1.3c"></script>
 <script src="../xml2json.min.js"></script>
 
-<script src="template.bannerHomepage.min.js?10July_f"></script>
+<script src="template.bannerHomepage.min.js?31Aug"></script>
 
 <script>
 
@@ -185,14 +185,14 @@ dfs.countdownv2 = {
                 dfs.countdownv2.stopTimer(index);
                 $(_this).css('display','none');
               }
-              $(_this).children('section').html(timerHtml);
+              $(_this).children('section').html(timerHtml).show();
               if( timer.days == 0 && !dfs.countdownv2.isMobile() && !hideFinalMessage){
                 //show ending footer if last day and desktop
                 $(_this).next('div').css('display','block');
               }
             } else {
               // // no countdown text
-              $(_this).children('section').html('');
+              $(_this).children('section').html('').hide();
             }
           }
             ,1000);
