@@ -1,0 +1,42 @@
+{
+    "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+    "id": "https://paulbrowndfs.github.io/CA/lib/roundel.json",
+    "title": "Roundel",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "roundel": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                }
+            ],
+            "title": "Roundel image",
+            "description": ""
+        },
+        "roundelRatio": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10,
+            "title": "Roundel Ratio",
+            "description": "A value between 0 and 10 e.g. 0.6"
+        },
+        "roundelPosition": {
+            "type": "string",
+            "enum": [
+                "Top Left",
+                "Top Right",
+                "Bottom Left",
+                "Bottom Right"
+            ],
+            "title": "Roundel Position",
+            "description": ""
+        }
+    },
+    "propertyOrder": [
+        "roundel",
+        "roundelRatio",
+        "roundelPosition"
+    ]
+}
