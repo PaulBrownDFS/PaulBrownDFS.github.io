@@ -1,0 +1,100 @@
+{
+    "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+    "id": "https://paulbrowndfs.github.io/CA/card.json",
+    "allOf": [
+        {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+        }
+    ],
+    "title": "Card",
+    "description": "",
+    "type": "object",
+    "properties": {
+        "image": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                },
+                {
+                    "properties": {
+                        "contentType": {
+                            "enum": [
+                                "https://paulbrowndfs.github.io/CA/image.json"
+                            ]
+                        }
+                    }
+                }
+            ],
+            "title": "image",
+            "description": ""
+        },
+        "cardName": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 50,
+            "title": "Card name",
+            "description": ""
+        },
+        "description": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 50,
+            "title": "Copy Text",
+            "description": ""
+        },
+        "copyFontSize": {
+            "type": "number",
+            "minimum": 10,
+            "maximum": 50,
+            "title": "Copy Font Size",
+            "description": "font size in px",
+            "errors": {
+                "maximum": "Min 10px , Max 50px",
+                "minimum": "Min 10px , Max 50px"
+            }
+        },
+        "copycolour": {
+            "type": "string",
+            "enum": [
+                "FFFFFF",
+                "000000"
+            ],
+            "title": "Copy Colour",
+            "description": "white or black"
+        },
+        "linkValue": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 25,
+            "title": "Button Text",
+            "description": "",
+            "errors": {
+                "maxLength": "Button text"
+            }
+        },
+        "link": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 255,
+            "title": "href URL",
+            "description": "/somelink"
+        },
+        "_title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "maxLength": 150
+        }
+    },
+    "propertyOrder": [
+        "_title",
+        "image",
+        "cardName",
+        "description",
+        "copyFontSize",
+        "copycolour",
+        "linkValue",
+        "link"
+    ]
+}
