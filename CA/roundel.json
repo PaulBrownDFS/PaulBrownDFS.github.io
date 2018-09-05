@@ -9,5 +9,46 @@
     "title": "Roundel",
     "description": "",
     "type": "object",
-    "properties": {}
+    "properties": {
+        "roundel": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                }
+            ],
+            "title": "Roundel image",
+            "description": ""
+        },
+        "roundelRatio": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 10,
+            "title": "Roundel Ratio",
+            "description": "A value between 0 and 10 e.g. 0.6"
+        },
+        "roundelPosition": {
+            "type": "string",
+            "enum": [
+                "Top Left",
+                "Top Right",
+                "Bottom Left",
+                "Bottom Right"
+            ],
+            "title": "Roundel Position",
+            "description": ""
+        },
+        "_title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "maxLength": 150
+        }
+    },
+    "propertyOrder": [
+        "_title",
+        "roundel",
+        "roundelRatio",
+        "roundelPosition"
+    ]
 }

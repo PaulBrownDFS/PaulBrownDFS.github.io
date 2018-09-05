@@ -9,5 +9,56 @@
     "title": "DFSSlider",
     "description": "",
     "type": "object",
-    "properties": {}
+    "properties": {
+        "slides": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+                    },
+                    {
+                        "properties": {
+                            "contentType": {
+                                "enum": [
+                                    "https://paulbrowndfs.github.io/CA/carousel-slide.json"
+                                ]
+                            }
+                        }
+                    }
+                ]
+            },
+            "minItems": 1,
+            "maxItems": 5,
+            "title": "Slides",
+            "description": ""
+        },
+        "roi": {
+            "type": "boolean",
+            "title": "ROI Yes / No",
+            "description": "Check To View ROI Slideshow"
+        },
+        "testDate": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 100,
+            "title": "Carousel Test Date",
+            "description": "Format Jan 1 2018",
+            "errors": {
+                "maxLength": "Character Length 0 - 100"
+            }
+        },
+        "_title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "maxLength": 150
+        }
+    },
+    "propertyOrder": [
+        "_title",
+        "slides",
+        "roi",
+        "testDate"
+    ]
 }

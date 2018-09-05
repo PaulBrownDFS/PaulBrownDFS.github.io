@@ -9,5 +9,84 @@
     "title": "Image",
     "description": "",
     "type": "object",
-    "properties": {}
+    "properties": {
+        "image": {
+            "type": "object",
+            "allOf": [
+                {
+                    "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+                }
+            ],
+            "title": "Image",
+            "description": ""
+        },
+        "imageAltText": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 50,
+            "title": "Image alt text",
+            "description": ""
+        },
+        "seoText": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 100,
+            "title": "SEO Text",
+            "description": "e.g. ladies-sunglasses"
+        },
+        "roundel": {
+            "type": "array",
+            "items": {
+                "allOf": [
+                    {
+                        "$ref": "https://paulbrowndfs.github.io/CA/lib/roundel.json#"
+                    },
+                    {
+                        "title": "Roundel",
+                        "description": ""
+                    }
+                ]
+            },
+            "minItems": 0,
+            "maxItems": 1,
+            "_interpolate": true,
+            "title": "Roundel",
+            "description": ""
+        },
+        "CaptionText": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 256,
+            "title": "Image Caption Text",
+            "description": "Text To Be Shown Along With The Image",
+            "errors": {
+                "maxLength": "Caption must not exceed 256 characters"
+            }
+        },
+        "image_link": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 256,
+            "title": "URL to link to",
+            "description": "Where do you want this image to link to",
+            "errors": {
+                "maxLength": "URL must not exceed 256 characters, leave blank for no link"
+            }
+        },
+        "_title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "maxLength": 150
+        }
+    },
+    "propertyOrder": [
+        "_title",
+        "image",
+        "imageAltText",
+        "seoText",
+        "roundel",
+        "CaptionText",
+        "image_link"
+    ]
 }
