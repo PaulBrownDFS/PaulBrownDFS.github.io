@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Desktop Navs</title>
+
+  <link rel="stylesheet" href="https://www.dfs.co.uk/wcsstore8.00.00.942/DFSStorefrontAssetStore/css/dfs-common-css-min.css" media="screen, print" />
+  <link rel="stylesheet" href="css/fonts.css" media="screen, print" />
+  <link rel="stylesheet" href="https://www.dfs.co.uk/wcsstore8.00.00.942/DFSStorefrontAssetStore/css/amp-dfs-viewer.min.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+
+  <!-- <script src="js/d_variables.js"></script> -->
+  <script type="text/javascript" src="https://c1.adis.ws/c/dfs/jQuery-3.2.1.min"></script>
+  <script src="https://www.dfs.co.uk/wcsstore8.00.00.942/DFSStorefrontAssetStore/javascript/amp.cms.handlebars.min.js"></script>
+  <script src="//c1.adis.ws/c/dfs/ampVideoTemplate"></script>
+  <script src="//c1.adis.ws/c/dfs/video_renderer.min"></script>
+  <script src="https://www.dfs.co.uk/wcsstore8.00.00.942/DFSStorefrontAssetStore/javascript/video.amp.min.js"></script>
+  <!-- <script src="https://www.dfs.co.uk/wcsstore8.00.00.942/DFSStorefrontAssetStore/javascript/dfs-light-deploy-min.js"></script> -->
+
+  <!--  Converts the XML to JSON for Handlebars -->
+  <!-- <script src="//c1.adis.ws/c/dfs/Xml2json.min"></script> -->
+
+  <!--  ======= Sass File Below ======= -->
+  <link rel='stylesheet' href='css/desktop_nav.css'>
+</head>
+<body>
+  <h1>Desktop Navs V1.0</h1>
+  <hr>
+  <!--  ======= CONTENT STARTS HERE ======= -->
+  <div id="navs">
+    <div class="spacer FabricSofas"><h2>Fabric NAV</h2></div>
+    <!--  ======= FABRIC NAV ESPOTS ======= -->
+    <div class="submenu-espots FabricSofas">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p></p>
+            <a class="btn" href="/content/exclusive-brands">Shop now</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="spacer"><h2>Leather NAV</h2></div>
+
+    <!--  ======= LEATHER NAV ESPOTS ======= -->
+    <div class="submenu-espots LeatherSofas">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Sofa care</p>
+            <a class="btn" href="/content/sofacare">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Trust Pilot</p>
+            <a class="btn" href="/content/testimonials">Read reviews</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+    <div class="spacer"><h2>Corners NAV</h2></div>
+
+    <!--  ======= Corner NAV ESPOTS ======= -->
+    <div class="submenu-espots CornerSofas">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p>Design<br>your space</p>
+            <a class="btn" href="/content/dfs-planning-app">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="spacer"><h2>Recliners NAV</h2></div>
+
+    <!--  ======= Recliner NAV ESPOTS ======= -->
+    <div class="submenu-espots ReclinerSofas">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Sofa experts</p>
+            <a class="btn" href="/content/discover-dfs ">Meet the team</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Trust Pilot</p>
+            <a class="btn" href="/content/testimonials">Read reviews</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="spacer"><h2>Sofabeds NAV</h2></div>
+
+    <!--  ======= SofaBeds NAV ESPOTS ======= -->
+    <div class="submenu-espots Sofabeds">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p>Design<br>your space</p>
+            <a class="btn" href="/content/dfs-planning-app">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Sofa experts</p>
+            <a class="btn" href="/content/discover-dfs ">Meet the team</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="spacer"><h2>Dining NAV</h2></div>
+
+    <!--  ======= Dining NAV ESPOTS ======= -->
+    <div class="submenu-espots Dining">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p>Dining<br>buying guide</p>
+            <a class="btn" href="/content/dining-furniture-buying-guide">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Sofa experts</p>
+            <a class="btn" href="/content/discover-dfs ">Meet the team</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="spacer"><h2>Bedroom NAV</h2></div>
+
+    <!--  ======= Bedroom NAV ESPOTS ======= -->
+    <div class="submenu-espots Bedroom">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p>Bed<br>buying guide</p>
+            <a class="btn" href="/content/bedroom-furniture-buying-guide">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p>Emma<br>mattress</p>
+            <a class="btn" href="/emma/emmamdema">Shop now</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="spacer"><h2>Accessories NAV</h2></div>
+
+    <!--  ======= Accessories NAV ESPOTS ======= -->
+    <div class="submenu-espots Accessories">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p>Chair<br>buying guide</p>
+            <a class="btn" href="/content/chairs-buying-guide">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="spacer"><h2>Clearance NAV</h2></div>
+
+    <!--  ======= Clearance NAV ESPOTS ======= -->
+    <div class="submenu-espots Clearance">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p class="centerText">All sofa offers</p>
+            <a class="btn" href="/offers/fabric-sofa-offers">Shop now</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Sofa experts</p>
+            <a class="btn" href="/content/discover-dfs">Meet the team</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Trust Pilot</p>
+            <a class="btn" href="/content/testimonials">Read reviews</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+    <div class="spacer"><h2>Express Delivery NAV</h2></div>
+
+    <!--  ======= ND_ExpressDelivery NAV ESPOTS ======= -->
+    <div class="submenu-espots ND_ExpressDelivery">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p>Ex showroom<br>display models</p>
+            <a class="btn" href="/content/colour-inspiration">Shop now</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+
+
+    <div class="spacer"><h2>Help NAV</h2></div>
+
+    <!--  ======= Help NAV ESPOTS ======= -->
+    <div class="submenu-espots help">
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI1">
+            <p><strong>@dfs</strong><br>Sneek a peek</p>
+            <a class="btn" href="/content/gallery">View gallery</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3 hide1024">
+        <div class="promo">
+          <div class="promoImage pI2">
+            <p class="centerText">Inspiration</p>
+            <a class="btn" href="/content/colour-inspiration">Get Inspired</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI3">
+            <p class="centerText">Trust Pilot</p>
+            <a class="btn" href="/content/testimonials">Read reviews</a>
+          </div>
+        </div>
+      </div>
+      <div class="mm_ESpot col-md-3">
+        <div class="promo">
+          <div class="promoImage pI4">
+            <p>4 years<br>interest free</p>
+            <a class="btn" href="/content/finance">Find out more</a>
+          </div>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+
+  </div> <!--  ======= END #nav ======= -->
+
+
+  <!--  ======= CONTENT ENDS HERE ======= -->
+
+
+</body>
+</html>

@@ -1,0 +1,7 @@
+#navs h1, #navs h2, #navs h3, #navs h4, #navs h5, #navs h6, #navs p, #navs a { margin: 0; float: none; }
+
+body { width: 1366px; margin: 0 auto; }
+
+div#navs { width: 700px; float: right; }
+
+.mm_ESpot { background: #ebebeb; height: 150px; }

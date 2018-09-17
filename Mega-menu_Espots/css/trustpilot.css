@@ -1,0 +1,30 @@
+body { width: 1366px; margin: 0 auto; }
+
+.spacer h2 { color: #999999; font-size: 24px; }
+
+h1 { color: #666666; }
+
+@media (max-width: 1365px) { body { width: 1023px; } }
+
+#trustPilotWedge { background: url(//images.dfs.co.uk/i/dfs/trust-pilot-background) no-repeat; height: 131px; width: 1284px; position: relative; }
+
+/* TrustPilot */
+.TPWrapper { width: 575px; margin: 0 auto; position: relative; top: 15px; }
+
+.TPText h2 { color: #000; font-size: 30px; width: 500px; font-family: "HelveticaNeueW01-75Bold", Arial, sans-serif; font-weight: 300; display: inline; margin: 0; position: relative; top: 0px; }
+
+ul.trustPilotRating li { width: 41px; height: 41px; padding-top: 2px; padding-left: 3px; float: left; margin: 3px; border-radius: 3px; }
+
+ul.trustPilotRating li.greenstar { background: #73b143; }
+
+ul.trustPilotRating li.greystar { background: #ccc; }
+
+.TPLogo { width: 188px; float: left; position: relative; top: 12px; }
+
+.TPRating { width: 250px; float: left; }
+
+.TPText { width: 137px; float: left; position: relative; top: 2px; }
+
+a.TPButton { width: 190px; border: 2px solid #000; padding: 8px; color: #000; text-align: center; font-size: 18px; float: none; margin: 0 auto; position: relative; display: block; top: 10px; left: 20px; }
+
+a.TPButton:hover { background: rgba(0, 0, 0, 0.15); }

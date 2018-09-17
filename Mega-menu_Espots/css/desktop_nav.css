@@ -1,0 +1,130 @@
+body { width: 1366px; margin: 0 auto; }
+
+.spacer h2 { color: #999999; font-size: 24px; }
+
+h1 { color: #666666; }
+
+.promo p strong { font-family: "HelveticaNeueW01-75Bold", Arial, sans-serif; }
+
+/* START RULES HERE */
+div#navs { width: 657px; float: right; margin-right: 50px; }
+
+.promo a.btn { color: #000; }
+
+.promo { height: 170px; width: 150px; background: #ebebeb; }
+
+.promoImage { width: 100%; height: 80px; }
+
+.promoImage p { padding-top: 74px; width: 100%; line-height: 21px; margin: 0; text-align: center; font-size: 18px; font-family: "HelveticaNeueW01-45Ligh", Arial, sans-serif; }
+
+.promoImage .btn { background: 0; border: 2px solid #000; border-radius: 0px; margin: 6px auto; text-align: center; width: 120px; font-size: 14px; font-family: "HelveticaNeueW01-75Bold", Arial, sans-serif; padding: 8px 0px; display: block; position: absolute; bottom: 2px; left: 30px; }
+
+.promoImage .btn:hover { background: #d1d1d1; }
+
+.promoImage a:focus { outline: none; }
+
+.promoImage p.centerText { padding-top: 85px; }
+
+/*! Fabric submenu-espots  */
+.submenu-espots.FabricSofas .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/gallery_fabrics_mm) no-repeat center; }
+
+.submenu-espots.FabricSofas .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.FabricSofas .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/exclusive_brands_mm) no-repeat center; height: 130px; }
+
+.submenu-espots.FabricSofas .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Leather submenu-espots */
+.submenu-espots.LeatherSofas .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/gallery_leather_mm) no-repeat center; }
+
+.submenu-espots.LeatherSofas .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/sofacare_mm) no-repeat center; }
+
+.submenu-espots.LeatherSofas .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/trustpilot5_mm?v2) no-repeat center; }
+
+.submenu-espots.LeatherSofas .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Corner submenu-espots */
+.submenu-espots.CornerSofas .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/gallery_corners_mm) no-repeat center; }
+
+.submenu-espots.CornerSofas .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.CornerSofas .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/design_your_space_mm) no-repeat center; }
+
+.submenu-espots.CornerSofas .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Recliner submenu-espots */
+.submenu-espots.ReclinerSofas .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/gallery_recliners_mm) no-repeat center; }
+
+.submenu-espots.ReclinerSofas .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/sofa_experts_mm) no-repeat center; }
+
+.submenu-espots.ReclinerSofas .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/trustpilot5_mm?v2) no-repeat center; }
+
+.submenu-espots.ReclinerSofas .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Sofabeds submenu-espots */
+.submenu-espots.Sofabeds .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/design_your_space_mm) no-repeat center; }
+
+.submenu-espots.Sofabeds .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/sofa_experts_mm) no-repeat center; }
+
+.submenu-espots.Sofabeds .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.Sofabeds .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Dining submenu-espots */
+.submenu-espots.Dining .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/dining_buying_guide_mm) no-repeat center; }
+
+.submenu-espots.Dining .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/sofa_experts_mm) no-repeat center; }
+
+.submenu-espots.Dining .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.Dining .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Bedroom submenu-espots */
+.submenu-espots.Bedroom .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/bed_buying_guide_mm) no-repeat center; }
+
+.submenu-espots.Bedroom .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/emma_mattress_mm) no-repeat center; }
+
+.submenu-espots.Bedroom .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.Bedroom .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Accessories submenu-espots */
+.submenu-espots.Accessories .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/chair_buying_guide_mm) no-repeat center; }
+
+.submenu-espots.Accessories .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/gallery_fabrics_mm) no-repeat center; }
+
+.submenu-espots.Accessories .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.Accessories .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/*! Clearance submenu-espots */
+.submenu-espots.Clearance .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/campaign_gxd_mm) no-repeat center; }
+
+.submenu-espots.Clearance .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/sofa_experts_mm) no-repeat center; }
+
+.submenu-espots.Clearance .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/trustpilot5_mm?v2) no-repeat center; }
+
+.submenu-espots.Clearance .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/* Express DeliveryNav */
+.submenu-espots.ND_ExpressDelivery .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/gallery_fabrics_mm) no-repeat center; }
+
+.submenu-espots.ND_ExpressDelivery .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/clearance_yellow_mm) no-repeat center; }
+
+.submenu-espots.ND_ExpressDelivery .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.ND_ExpressDelivery .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+/* help Nav */
+.submenu-espots.help .promoImage.pI1 { background: url(//images.dfs.co.uk/i/dfs/gallery_fabrics_mm) no-repeat center; }
+
+.submenu-espots.help .promoImage.pI2 { background: url(//images.dfs.co.uk/i/dfs/inspiration_mm) no-repeat center; }
+
+.submenu-espots.help .promoImage.pI3 { background: url(//images.dfs.co.uk/i/dfs/trustpilot5_mm) no-repeat center; }
+
+.submenu-espots.help .promoImage.pI4 { background: url(//images.dfs.co.uk/i/dfs/zero_percentAPR_mm) no-repeat center; }
+
+@media (max-width: 1365px) { body { width: 1023px; }
+  .mm_ESpot.hide1024 { display: none; }
+  div#navs { width: 473px; margin-right: 5px; }
+  .mm_ESpot.col-md-3 { width: 33.33337%; float: left; } }
