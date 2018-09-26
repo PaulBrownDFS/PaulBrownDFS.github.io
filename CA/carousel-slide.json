@@ -492,6 +492,11 @@
             "title": "Show On Mobile",
             "description": "Ticked = True"
         },
+        "espot1hasownmobileimage": {
+            "type": "boolean",
+            "title": "Show On Mobile",
+            "description": "Ticked = True"
+        },
         "EspotImage_right": {
             "type": "number",
             "minimum": 0,
@@ -543,6 +548,11 @@
             "description": ""
         },
         "espot2mobile": {
+            "type": "boolean",
+            "title": "Show On Mobile",
+            "description": "Ticked = True"
+        },
+        "espot2hasownmobileimage": {
             "type": "boolean",
             "title": "Show On Mobile",
             "description": "Ticked = True"
