@@ -494,7 +494,7 @@
         },
         "espot1hasownmobileimage": {
             "type": "boolean",
-            "title": "Show On Mobile",
+            "title": "Espot 1 has Own Mobile Image",
             "description": "Ticked = True"
         },
         "EspotImage_right": {
@@ -554,7 +554,7 @@
         },
         "espot2hasownmobileimage": {
             "type": "boolean",
-            "title": "Show On Mobile",
+            "title": "Epost2 Has Own Mobile Image",
             "description": "Ticked = True"
         },
         "EspotImage2_right": {
@@ -750,12 +750,14 @@
         "textVariance4",
         "EspotImage",
         "espot1mobile",
+        "espot1hasownmobileimage",
         "EspotImage_right",
         "EspotImage_top",
         "EspotImage_mobileright",
         "EspotImage_mobiletop",
         "EspotImage2",
         "espot2mobile",
+        "espot1hasownmobileimage",
         "EspotImage2_right",
         "EspotImage2_top",
         "anchorDEspot2Left",
