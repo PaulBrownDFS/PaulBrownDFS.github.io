@@ -319,66 +319,6 @@ if (typeof jQuery === 'undefined') {
 //  Carousel Builder v2.1 PB OCT 3 2018
 // ===========================================
 
-  if(!dfs) {
-    var dfs = {};
-  }
-
-  dfs.HPSlider = {
-    visualID: $('.js_banner_wrap').data('visualid'),
-    isROI: $('.js_banner_wrap').data('roi'),
-    maxSlides: $('.js_banner_wrap').data('maxslides') || 5
-  }
-
-    var cacheBuster = Math.random().toString(36).substr(2, 12),
-        dfsSliderID = dfs.HPSlider.visualID;
-
-    console.log('Fetching: contentID:', dfsSliderID);
-
-    var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ dfsSliderID +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
-
-    // create and issue the content delivery request
-      var masterRequest = $.ajax({
-        url: masterDeliveryUrl,
-      });
-
-      masterRequest
-      .done(function(data){
-        console.log('Ajax Request Data Fetch : Done', dfsSliderID);
-        renderContent(data);
-
-      })
-      .fail(function(){
-        console.log('Failed To Get Master ID Data');
-        showErrorMessage();
-      }).always(function(){
-        console.log('AJAX Has Completed', dfsSliderID);
-      });
-
-function renderContent(data) {
-// use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
-var contentTree = amp.inlineContent(data)[0];
-  console.log('CTS',contentTree.slides);
-  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
-    contentTree.slides.length = dfs.HPSlider.maxSlides;
-  }
-    contentTree.spec = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.testDate};
-
-if (contentTree) {
-  renderCarousel(contentTree);
-  }
-}
-
-function renderCarousel(contentTree) {
-  var template = Handlebars.template(AmpCa.templates.bannerMulti);
-  document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(contentTree);
-}
-
-
-function showErrorMessage(err) {
-  console.log('Delivery API Request Failure', err);
-  $(document.body).append('<div class="error">An error occurred retrieving your content.<br/><br/>Please ensure that it is published.<br/><br/>Details of the error have been saved to the browser console.</div>');
-}
-
 
 // Carousel Functions
 if(!dfs){
