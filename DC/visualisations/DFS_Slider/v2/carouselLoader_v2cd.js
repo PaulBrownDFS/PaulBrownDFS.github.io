@@ -316,79 +316,78 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 // ===========================================
-//  Carousel Builder v2.1 PB June 25th
+//  Carousel Builder v2.1 PB JULY 10th 2018
 // ===========================================
 
-//   if(!dfs) {
-//     var dfs = {};
-//   }
-//
-//   dfs.HPSlider = {
-//     visualID: $('.js_banner_wrap').data('visualid'),
-//     isROI: $('.js_banner_wrap').data('roi'),
-//     maxSlides: $('.js_banner_wrap').data('maxslides') || 5
-//   }
-//
-//     var cacheBuster = Math.random().toString(36).substr(2, 12),
-//         dfsSliderID = dfs.HPSlider.visualID;
-//
-//     console.log('Fetching: contentID:', dfsSliderID);
-//
-//     var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ dfsSliderID +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
-//
-//     // create and issue the content delivery request
-//       var masterRequest = $.ajax({
-//         url: masterDeliveryUrl,
-//       });
-//
-//       masterRequest
-//       .done(function(data){
-//         console.log('Ajax Request Data Fetch : Done', dfsSliderID);
-//         renderContent(data);
-//
-//       })
-//       .fail(function(){
-//         console.log('Failed To Get Master ID Data');
-//         showErrorMessage();
-//       }).always(function(){
-//         console.log('AJAX Has Completed', dfsSliderID);
-//       });
-//
-// function renderContent(data) {
-// // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
-// var contentTree = amp.inlineContent(data)[0];
-//   //console.log('CTS',contentTree.slides);
-//   if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
-//     contentTree.slides.length = dfs.HPSlider.maxSlides;
-//   }
-//     contentTree.spec = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.testDate};
-//
-// if (contentTree) {
-//   renderCarousel(contentTree);
-//   }
-// }
-//
-// function renderCarousel(contentTree) {
-//   var template = Handlebars.template(AmpCa.templates.bannerMulti);
-//   document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(contentTree);
-// }
-//
-//
-// function showErrorMessage(err) {
-//   console.log('Delivery API Request Failure', err);
-//   $(document.body).append('<div class="error">An error occurred retrieving your content.<br/><br/>Please ensure that it is published.<br/><br/>Details of the error have been saved to the browser console.</div>');
-// }
+  if(!dfs) {
+    var dfs = {};
+  }
+
+  dfs.HPSlider = {
+    visualID: $('.js_banner_wrap').data('visualid'),
+    isROI: $('.js_banner_wrap').data('roi'),
+    maxSlides: $('.js_banner_wrap').data('maxslides') || 5
+  }
+
+    var cacheBuster = Math.random().toString(36).substr(2, 12),
+        dfsSliderID = dfs.HPSlider.visualID;
+
+    console.log('Fetching: contentID:', dfsSliderID);
+
+    var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ dfsSliderID +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
+
+    // create and issue the content delivery request
+      var masterRequest = $.ajax({
+        url: masterDeliveryUrl,
+      });
+
+      masterRequest
+      .done(function(data){
+        console.log('Ajax Request Data Fetch : Done', dfsSliderID);
+        renderContent(data);
+
+      })
+      .fail(function(){
+        console.log('Failed To Get Master ID Data');
+        showErrorMessage();
+      }).always(function(){
+        console.log('AJAX Has Completed', dfsSliderID);
+      });
+
+function renderContent(data) {
+// use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
+var contentTree = amp.inlineContent(data)[0];
+  console.log('CTS',contentTree.slides);
+  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
+    contentTree.slides.length = dfs.HPSlider.maxSlides;
+  }
+    contentTree.spec = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.testDate};
+
+if (contentTree) {
+  renderCarousel(contentTree);
+  }
+}
+
+function renderCarousel(contentTree) {
+  var template = Handlebars.template(AmpCa.templates.bannerMulti);
+  document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(contentTree);
+}
+
+
+function showErrorMessage(err) {
+  console.log('Delivery API Request Failure', err);
+  $(document.body).append('<div class="error">An error occurred retrieving your content.<br/><br/>Please ensure that it is published.<br/><br/>Details of the error have been saved to the browser console.</div>');
+}
 
 
 // Carousel Functions
-
 if(!dfs){
   var dfs = {};
 }
 dfs.countdownv2 = {
   timerID: [],
   isMobile: function(){
-    if(window.location.origin.indexOf('https://m.dfs') > -1 ) {
+    if(window.location.origin.indexOf('https://m.') > -1 ) {
       return true;
     }
     return false;
@@ -445,9 +444,13 @@ dfs.countdownv2 = {
   addCountdown: function() {
     $('div.countdown_v2').each(function (index, value) {
       var _this = this,
-          data = $(_this).data(),
-          startDays = data.startdays,
-          deadline = data.deadline;
+          deadline = [],
+          startDays = [],
+          hideFinalMessage = [],
+          data = $(_this).data();
+          hideFinalMessage[index] = data.hidefinalmessage;
+          deadline[index] = data.deadline;
+          startDays[index] = data.startdays;
 
           if(data.testdate) {
             var testDate = dfs.countdownv2.convertDate(data.testdate);
@@ -482,22 +485,22 @@ dfs.countdownv2 = {
 
 
             // process countdown
-            var jdate = dfs.countdownv2.convertDate(deadline);
+            var jdate = dfs.countdownv2.convertDate(deadline[index]);
             var timer = dfs.countdownv2.timeRemaining(jdate, testDate);
-            if(startDays >= timer.days) {
+            if(startDays[index] >= timer.days) {
               var timerHtml = "<p><span class=\"cdDays\">" + timer.days + "</span> Days</p><p><span class=\"cdHours\">" + timer.hours + "</span> Hours</p><p><span class=\"cdMinutes\">" + timer.minutes + "</span> Minutes</p><p><span class=\"seconds\">" + timer.seconds + "</span> Seconds</p><div class=\"clearfix\"></div>";
               if(timer.days < 0) {
                 dfs.countdownv2.stopTimer(index);
                 $(_this).css('display','none');
               }
-              $(_this).children('section').html(timerHtml).show();
-              if( timer.days == 0 && !dfs.countdownv2.isMobile() ){
+              $(_this).children('section').html(timerHtml);
+              if( timer.days == 0 && !dfs.countdownv2.isMobile() && !hideFinalMessage[index]){
                 //show ending footer if last day and desktop
                 $(_this).next('div').css('display','block');
               }
             } else {
               // // no countdown text
-              $(_this).children('section').html('').hide();
+              $(_this).children('section').html('');
             }
           }
             ,1000);
@@ -562,12 +565,13 @@ dfs.updateElement = function(){
             });
 
           })(jQuery);
+          dfs.carCountdown.init();
+
     }
 }
 
 // start carousel if loaded..
 var PollElement = setInterval(dfs.updateElement, 500);
-
 
 // Additional Handlbars Helpers
 
@@ -619,6 +623,3 @@ var PollElement = setInterval(dfs.updateElement, 500);
       // No Matches Return Default Black
       return '000000';
 });
-
-
-// Live Loader
