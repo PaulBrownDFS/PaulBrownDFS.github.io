@@ -412,6 +412,11 @@
             "title": "Banner Has JS Countdown",
             "description": "True / False"
         },
+        "hideFinalMessage": {
+            "type": "boolean",
+            "title": "Hide Final Day Messaging",
+            "description": "True / False"
+        },
         "countdownClassName": {
             "type": "string",
             "enum": [
@@ -741,6 +746,7 @@
         "pricingImageCrop",
         "productURL",
         "hasCountdown",
+        "hideFinalMessage",
         "countdownClassName",
         "countdownDeadline",
         "daysBeforeEnd",
