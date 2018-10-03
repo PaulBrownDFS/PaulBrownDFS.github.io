@@ -358,9 +358,7 @@ function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
 
-  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
-    contentTree.slides.length = dfs.HPSlider.maxSlides;
-  }
+
     contentTree.spec = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.testDate};
 
 if (contentTree) {
