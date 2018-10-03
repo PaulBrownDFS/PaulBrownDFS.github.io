@@ -316,7 +316,7 @@ if (typeof jQuery === 'undefined') {
 }(jQuery);
 
 // ===========================================
-//  Carousel Builder v2.1 PB OCT 3rd 2018
+//  Carousel Builder v2.1 PB OCT 3 2018
 // ===========================================
 
   if(!dfs) {
@@ -357,8 +357,10 @@ if (typeof jQuery === 'undefined') {
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-
-
+  console.log('CTS',contentTree.slides);
+  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
+    contentTree.slides.length = dfs.HPSlider.maxSlides;
+  }
     contentTree.spec = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.testDate};
 
 if (contentTree) {
@@ -563,7 +565,7 @@ dfs.updateElement = function(){
             });
 
           })(jQuery);
-          dfs.carCountdown.init();
+
 
     }
 }
