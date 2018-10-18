@@ -1,0 +1,33 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://paulbrowndfs.github.io/DC/slots/homepageCarousel.json",
+  "title": "Homepage Carousel slot",
+  "description": "Slot to contain the feature banner",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "bannerslot": {
+      "title": "Homepage Carousel slot",
+      "description": "The first slot on the website, which houses the Carousel",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "content",
+              "enum": [
+                "https://paulbrowndfs.github.io/CA/dfsslider.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
