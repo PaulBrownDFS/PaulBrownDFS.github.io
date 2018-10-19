@@ -10,7 +10,7 @@
   ],
   "type": "object",
   "properties": {
-    "bannerslot": {
+    "carouselslot": {
       "title": "Homepage Carousel slot",
       "description": "The first slot on the website, which houses the Carousel",
       "allOf": [
