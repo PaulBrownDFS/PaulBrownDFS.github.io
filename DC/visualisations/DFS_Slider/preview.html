@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page Desktop Carousel</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="bannerMulti.min.css?sept26"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+<!-- New CA Carousel PB -->
+<div class="js_banner_wrap"></div>
+<!-- New CA Carousel PB -->
+
+<script src="cms-javascript-sdk.min.js"></script>
+
+<script src="handlebars.runtime.min.js"></script>
+
+<script src="amp_utils.min.js"></script>
+
+<script src="handlebars-helpers.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- This is a compiled template-->
+<script src="template.bannerMulti.min.js?sept26"></script>
+
+<script src="carousel.min.js?aug21"></script>
+
+<script>
+// Visual Loader
+function getQueryVar(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) == variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return false;
+    }
+
+    Handlebars.partials = AmpCa.templates;
+
+    AmpCa.utils = new AmpCa.Utils();
+    var cacheBuster = Math.random().toString(36).substr(2, 12);
+
+    AmpCa.utils.getCaData({
+      url: "//" + getQueryVar('api')
+                                  + "/cms/content/query?fullBodyObject=true&query="
+                                  + encodeURIComponent(JSON.stringify({"sys.iri":"http://content.cms.amplience.com/" + "c9363fde-aaa0-4b8f-850b-b1ce0005c732"}))
+                                  + "&scope=tree&store=dfs&cacheBuster=" + cacheBuster,
+
+        callback: function (data) {
+            // data[0].renderTypes = renderTypes;
+            data[0].spec = {"roiPrices": data[0].roi, "testDate" : data[0].testDate};
+            console.log('dataSaved: to SLData');
+            SLData = data[0];
+            var template = Handlebars.template(AmpCa.templates.bannerMulti);
+            document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(data[0]);
+
+            // loryHelpers.initSliders(document.querySelectorAll(".js_slider"));
+            AmpCa.utils.postProcessing.exec('slider', {});
+
+        },
+        formatData: function (data) {
+            return amp.inlineContent(JSON.parse(data));
+        }
+    });
+</script>
+<script src="v2/carouselLoader_v2cd.js?oct3New"></script>
+
+</body>
+
+</html>
