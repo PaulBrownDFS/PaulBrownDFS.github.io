@@ -334,50 +334,49 @@ if (typeof jQuery === 'undefined') {
 
     console.log('Fetching: contentID:', dfsSliderID);
 
-    var masterDeliveryUrl = '//c1.adis.ws/cms/content/query?fullBodyObject=true&query=%7B"sys.iri"%3A"http%3A%2F%2Fcontent.cms.amplience.com%2F'+ dfsSliderID +'"%7D&scope=tree&store=dfs&cacheBuster=' + cacheBuster;
+    // Visual Loader
+    function getQueryVar(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split('&');
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split('=');
+                if (decodeURIComponent(pair[0]) == variable) {
+                    return decodeURIComponent(pair[1]);
+                }
+            }
+            return false;
+        }
 
-    // create and issue the content delivery request
-      var masterRequest = $.ajax({
-        url: masterDeliveryUrl,
-      });
+        Handlebars.partials = AmpCa.templates;
 
-      masterRequest
-      .done(function(data){
-        console.log('Ajax Request Data Fetch : Done', dfsSliderID);
-        renderContent(data);
+        AmpCa.utils = new AmpCa.Utils();
+        var cacheBuster = Math.random().toString(36).substr(2, 12);
 
-      })
-      .fail(function(){
-        console.log('Failed To Get Master ID Data');
-        showErrorMessage();
-      }).always(function(){
-        console.log('AJAX Has Completed', dfsSliderID);
-      });
+        AmpCa.utils.getCaData({
+          url: "//" + getQueryVar('api')
+                                      + "/cms/content/query?fullBodyObject=true&query="
+                                      + encodeURIComponent(JSON.stringify({"sys.iri":"http://content.cms.amplience.com/" + "c9363fde-aaa0-4b8f-850b-b1ce0005c732"}))
+                                      + "&scope=tree&store=dfs&cacheBuster=" + cacheBuster,
 
-function renderContent(data) {
-// use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
-var contentTree = amp.inlineContent(data)[0];
-  console.log('HPSlider',contentTree.slides);
-  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
-    contentTree.slides.length = dfs.HPSlider.maxSlides;
-  }
-    contentTree.carouselslot.roi = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.carouselslot.testDate};
+            callback: function (data) {
+                // data[0].renderTypes = renderTypes;
+                if(data[0].carouselslot.slides.length > dfs.HPSlider.maxSlides) {
+                  data[0].carouselslot.length = dfs.HPSlider.maxSlides;
+                }
+                  data[0].carouselslot.roi = {"roiPrices": dfs.HPSlider.isROI, "testDate" : data[0].carouselslot.testDate};
+                console.log('dataSaved: to SLData');
+                SLData = data[0];
+                var template = Handlebars.template(AmpCa.templates.bannerMulti_preview);
+                document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(data[0]);
 
-if (contentTree) {
-  renderCarousel(contentTree);
-  }
-}
+                // loryHelpers.initSliders(document.querySelectorAll(".js_slider"));
+                AmpCa.utils.postProcessing.exec('slider', {});
 
-function renderCarousel(contentTree) {
-  var template = Handlebars.template(AmpCa.templates.bannerMulti_hpslot);
-  document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(contentTree);
-}
-
-
-function showErrorMessage(err) {
-  console.log('Delivery API Request Failure', err);
-  $(document.body).append('<div class="error">An error occurred retrieving your content.<br/><br/>Please ensure that it is published.<br/><br/>Details of the error have been saved to the browser console.</div>');
-}
+            },
+            formatData: function (data) {
+                return amp.inlineContent(JSON.parse(data));
+            }
+        });
 
 
 // Carousel Functions
