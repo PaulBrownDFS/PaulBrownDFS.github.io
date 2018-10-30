@@ -1,8 +1,8 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
-  "id": "https://paulbrowndfs.github.io/DC/slots/homepageCarousel_ROI.json",
+  "id": "https://paulbrowndfs.github.io/DC/slots/homepageCarousel_roi.json",
   "title": "Homepage Carousel slot",
-  "description": "Slot to contain the feature banner",
+  "description": "ROI Slot to contain the hp Carousel",
   "allOf": [
     {
       "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
