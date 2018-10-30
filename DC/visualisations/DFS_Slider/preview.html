@@ -61,7 +61,7 @@ function getQueryVar(variable) {
 
         callback: function (data) {
             // data[0].renderTypes = renderTypes;
-            data[0].spec = {"roiPrices": data[0].roi, "testDate" : data[0].testDate};
+            data[0].spec = {"roiPrices": data[0].carouselslot.roi, "testDate" : data[0].carouselslot.testDate};
             console.log('dataSaved: to SLData');
             SLData = data[0];
             var template = Handlebars.template(AmpCa.templates.bannerMulti_preview);
