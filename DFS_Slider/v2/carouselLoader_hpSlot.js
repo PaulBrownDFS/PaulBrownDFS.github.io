@@ -357,9 +357,9 @@ if (typeof jQuery === 'undefined') {
 function renderContent(data) {
 // use the Amplience CMS JavaScript SDK to manipulate the JSON-LD into a content tree
 var contentTree = amp.inlineContent(data)[0];
-  console.log('HPSlider',contentTree.slides);
-  if(contentTree.slides.length > dfs.HPSlider.maxSlides) {
-    contentTree.slides.length = dfs.HPSlider.maxSlides;
+  console.log('HPSlider',contentTree.carouselslot.slides);
+  if(contentTree.carouselslot.slides.length > dfs.HPSlider.maxSlides) {
+    contentTree.carouselslot.slides.length = dfs.HPSlider.maxSlides;
   }
     contentTree.carouselslot.roi = {"roiPrices": dfs.HPSlider.isROI, "testDate" : contentTree.carouselslot.testDate};
 
