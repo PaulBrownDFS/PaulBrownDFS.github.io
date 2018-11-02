@@ -1,6 +1,6 @@
 // Carousel
 /* ========================================================================
- * Bootstrap: transition.js v3.3.7 (PB1)
+ * Bootstrap: transition.js v3.3.7 (PB2)
  * http://getbootstrap.com/javascript/#transitions
  * ========================================================================
  * Copyright 2011-2016 Twitter, Inc.
@@ -472,6 +472,7 @@ dfs.countdownv2 = {
                   //process daterange
                   var thisDateRange = data[i].split(',');
                   if(!thisDateRange.length) {
+                    console.log('Empty Array: ', thisDateRange);
                     continue;
                   }
                   // 0 = startDate / 1 = endDate / 2 = headerText / 3 = footerText / 4 = imageSwapTarget
