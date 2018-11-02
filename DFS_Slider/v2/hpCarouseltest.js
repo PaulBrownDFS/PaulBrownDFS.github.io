@@ -471,6 +471,9 @@ dfs.countdownv2 = {
                 if (i.indexOf('daterange') > -1) {
                   //process daterange
                   var thisDateRange = data[i].split(',');
+                  if(!thisDateRange.length) {
+                    break;
+                  }
                   // 0 = startDate / 1 = endDate / 2 = headerText / 3 = footerText / 4 = imageSwapTarget
                   var startDate = dfs.countdownv2.convertDate(thisDateRange[0].trim()),
                       endDate = dfs.countdownv2.convertDate(thisDateRange[1].trim());
