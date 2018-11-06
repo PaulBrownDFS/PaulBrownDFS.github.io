@@ -387,7 +387,7 @@ if(!dfs){
 dfs.countdownv2 = {
   timerID: [],
   isMobile: function(){
-    if(window.location.origin.indexOf('https://m.dfs') > -1 ) {
+    if(window.location.origin.indexOf('https://m.dfs') > -1 || window.location.origin.indexOf('https://m.stage.live.dfs') > -1 ) {
       return true;
     }
     return false;
