@@ -421,7 +421,9 @@
             "type": "string",
             "enum": [
                 "HPcd-default",
-                "HPcd_EarlyBird"
+                "HPcd_EarlyBird",
+                "HPcd_WS2Large",
+                "HPcd_WS2Special"
             ],
             "title": "Countdown Css Style",
             "description": "Css Class Name"
