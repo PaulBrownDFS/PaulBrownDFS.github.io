@@ -1,7 +1,7 @@
 {
   "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
   "id": "https://paulbrowndfs.github.io/DC/slots/homepage-CLD1.json",
-  "title": "Homepage Cardlist A1 slot",
+  "title": "Homepage Cardlist D1 slot",
   "description": "Slot to contain the 1st Cardlist of TYPE D",
   "allOf": [
     {
