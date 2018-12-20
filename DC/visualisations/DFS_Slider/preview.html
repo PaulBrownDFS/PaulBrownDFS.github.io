@@ -61,7 +61,19 @@ function getQueryVar(variable) {
 
         callback: function (data) {
             // data[0].renderTypes = renderTypes;
-            data[0].spec = {"roiPrices": data[0].carouselslot.roi, "testDate" : data[0].carouselslot.testDate};
+            // get preview date
+            data[0].previewDate = getQueryVar('api').match(/\d{13,}/);
+            if(data[0].previewDate) {
+              var this_timeStamp = data[0].previewDate[0];
+              data[0].testDate = new Date(Number(this_timeStamp));
+            } else {
+              data[0].testDate = "";
+            }
+
+
+
+
+            data[0].spec = {"roiPrices": data[0].carouselslot.roi, "testDate" : data[0].testDate};
             console.log('dataSaved: to SLData');
             SLData = data[0];
             var template = Handlebars.template(AmpCa.templates.bannerMulti_preview);
