@@ -48,11 +48,10 @@
     var cacheBuster = Math.random().toString(36).substr(2, 12);
 
     AmpCa.utils.getCaData({
-      url: "//" + getQueryVar('api') +
-      "/cms/content/query?fullBodyObject=true&query=" +
-      encodeURIComponent(JSON.stringify({
-        "sys.iri": "http://content.cms.amplience.com/" + getQueryVar('content') })) +
-        "&scope=tree&store=dfs&cacheBuster=" + cacheBuster,
+      url: "//" + getQueryVar('api')
+                                  + "/cms/content/query?fullBodyObject=true&query="
+                                  + encodeURIComponent(JSON.stringify({"sys.iri":"http://content.cms.amplience.com/" + "d1c8929a-b64b-4891-8ab0-e883e39baae1"}))
+                                  + "&scope=tree&store=dfs&cacheBuster=" + cacheBuster,
 
         callback: function (data) {
           // var productSKU = data[0].productSku;
