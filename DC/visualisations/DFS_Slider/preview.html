@@ -65,7 +65,8 @@ function getQueryVar(variable) {
             data[0].previewDate = getQueryVar('api').match(/\d{13,}/);
             if(data[0].previewDate) {
               var this_timeStamp = data[0].previewDate[0];
-              data[0].testDate = new Date(Number(this_timeStamp));
+              var dateString = new Date(Number(this_timeStamp));
+              data[0].testDate = dateString.getDate() + '/' + (dateString.getMonth() + 1) + '/' + dateString.getFullYear();
             } else {
               data[0].testDate = "";
             }
