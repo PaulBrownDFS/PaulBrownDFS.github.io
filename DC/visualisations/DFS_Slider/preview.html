@@ -17,7 +17,7 @@
 </head>
 <body>
 <!-- New CA Carousel PB -->
-<div class="js_banner_wrap"></div>
+<div class="js_banner_wrap" data-roi="false"></div>
 <!-- New CA Carousel PB -->
 
 <script src="cms-javascript-sdk.min.js"></script>
@@ -71,10 +71,11 @@ function getQueryVar(variable) {
               data[0].testDate = "";
             }
 
+            data[0].spec = {"roiPrices": $('.js_banner_wrap').data('roi'), "testDate" : data[0].testDate};
+            if(getQueryVar('roi')){ data[0].carouselslot.roi = getQueryVar('roi'); } else {
+              data[0].carouselslot.roi = $('.js_banner_wrap').data('roi');
+            }
 
-
-
-            data[0].spec = {"roiPrices": data[0].carouselslot.roi, "testDate" : data[0].testDate};
             console.log('dataSaved: to SLData');
             SLData = data[0];
             var template = Handlebars.template(AmpCa.templates.bannerMulti_preview);
