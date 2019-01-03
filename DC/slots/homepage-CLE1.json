@@ -1,0 +1,33 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://paulbrowndfs.github.io/DC/slots/homepage-CLE1.json",
+  "title": "Homepage Cardlist E1 slot",
+  "description": "HP Slot to contain the 1st Cardlist of TYPE E Gallery",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "type": "object",
+  "properties": {
+    "cardlistslot": {
+      "title": "Homepage Cardlist E1 slot",
+      "description": "1st Cardlist of TYPE E",
+      "allOf": [
+        {
+          "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+        },
+        {
+          "properties": {
+            "contentType": {
+              "title": "content",
+              "enum": [
+                "https://paulbrowndfs.github.io/CA/card-list.json"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  }
+}
