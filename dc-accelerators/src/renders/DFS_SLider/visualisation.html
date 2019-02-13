@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page Desktop Carousel</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="DFS_SLider.min.css?v1.2b"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+    </style>
+</head>
+<body>
+<!-- New CA Carousel PB -->
+<div class="js_banner_wrap"></div>
+<!-- New CA Carousel PB -->
+
+<script src="../../../reusable/cms-javascript-sdk.min.js"></script>
+
+<script src="../../../reusable/handlebars.runtime.min.js"></script>
+
+<script src="../../../reusable/utils.js"></script>
+
+<script src="../../../reusable/handlebars_helpers.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+<!-- This is a compiled template-->
+<script src="../template.bannerMulti.min.js"></script>
+
+<script src="../../../reusable/carousel.min.js?v1.1c"></script>
+
+<script>
+// Visual Loader
+function getQueryVar(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split('=');
+            if (decodeURIComponent(pair[0]) == variable) {
+                return decodeURIComponent(pair[1]);
+            }
+        }
+        return false;
+    }
+
+    Handlebars.partials = AmpCa.templates;
+
+    AmpCa.utils = new AmpCa.Utils();
+
+    AmpCa.utils.getCaData({
+        url: getQueryVar('src'),
+        auth: {
+            baseUrl: 'https://c1.adis.ws',
+            id: 'aee75096-2ab1-4e66-93e3-0b2b66b0ac3c', //'653d3a56-c433-4d94-a585-894c42418082'
+            store: 'dfs'
+        },
+        callback: function (data) {
+            // data[0].renderTypes = renderTypes;
+            data[0].spec = {"roiPrices": data[0].roi, "testDate" : data[0].testDate};
+            var template = Handlebars.template(AmpCa.templates.bannerMulti);
+            document.querySelectorAll(".js_banner_wrap")[0].innerHTML = template(data[0]);
+
+            // loryHelpers.initSliders(document.querySelectorAll(".js_slider"));
+            AmpCa.utils.postProcessing.exec('slider', {});
+
+        },
+        formatData: function (data) {
+            return amp.inlineContent(JSON.parse(data));
+        }
+    });
+</script>
+
+<script src="../../../reusable/carouselLoader_v2cd.min.js"></script>
+</body>
+
+</html>

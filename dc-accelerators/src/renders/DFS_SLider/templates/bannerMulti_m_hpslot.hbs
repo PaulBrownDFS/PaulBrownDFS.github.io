@@ -1,0 +1,186 @@
+{{#with carouselslot}}
+<div class="carouselContainer">
+    <div id="hpCarousel" class="carousel slide" data-ride="carousel" data-isroi="{{roi}}">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        {{#each slides}}
+          <li data-target="#hpCarousel" data-slide-to="{{@index}}" {{#if @first}} class="active"{{/if}}></li>
+        {{/each}}
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+        {{#each slides}}
+          <div class="item {{#if @first}} active {{/if}} slideIndex{{inc @index}}" data-roi="{{../roi}}">
+            <a href="{{productURL}}">
+              <picture>
+                <!-- WebP -->
+
+                <source type="image/webp" media="(max-width: 1023px)"  srcset="https://{{image.defaultHost}}/i/dfs/?layer0=[canvas=600,462]&layer1=[src=/i/dfs/{{productImage.name}}{{#if mobileproductimage}}_mobile{{/if}}&{{#if mobileMImageCrop}}{{mobileMImageCrop}}&{{/if}}{{#if mobilepimagefullheight}}anchor=tl&w=600{{else if mobileSidebarImage.name}}w=600&h=384&anchor=tl&top=78{{/if}}]{{#if mobileSidebarImage.name}}&layer2=[/i/dfs/{{mobileSidebarImage.name}}&w=600]{{/if}}{{#if sideBarCharOnMobile }}&layer3=[/i/dfs/{{sidebarCharacter.name}}&{{mobileCharacterCrop}}&{{mobileCharacterSize}}&bottom={{sideBarCBottomMob}}&left={{sideBarCLeftMob}}&anchor=bl]{{/if}}&layer4=[src=/i/dfs/{{#if ../roi }}ROI_{{/if}}{{pricingImage.name}}{{#if pricingImageCrop}}&{{pricingImageCrop}}{{/if}}&anchor=br&right=0&bottom=30]{{#if EspotImage.name}}{{#if espot1mobile}}&layer5=[src=/i/dfs/{{EspotImage.name}}{{#if espot1hasownmobileimage}}_mobile{{/if}}&anchor=tr&right={{EspotImage_mobileright}}&top={{EspotImage_mobiletop}}]{{/if}}{{/if}}&qlt={{#if mobileslidequality}}{{mobileslidequality}}{{else}}60{{/if}}&fmt.jpeg.chroma=1,1,1&fmt.jpeg.interlaced=true&fmt=webp">
+
+
+
+                <!-- Jpg -->
+                <source media="(max-width: 1023px)"  srcset="https://{{image.defaultHost}}/i/dfs/?layer0=[canvas=600,462]&layer1=[src=/i/dfs/{{productImage.name}}{{#if mobileproductimage}}_mobile{{/if}}&{{#if mobileMImageCrop}}{{mobileMImageCrop}}&{{/if}}{{#if mobilepimagefullheight}}anchor=tl&w=600{{else if mobileSidebarImage.name}}w=600&h=384&anchor=tl&top=78{{/if}}]{{#if mobileSidebarImage.name}}&layer2=[/i/dfs/{{mobileSidebarImage.name}}&w=600]{{/if}}{{#if sideBarCharOnMobile }}&layer3=[/i/dfs/{{sidebarCharacter.name}}&{{mobileCharacterCrop}}&{{mobileCharacterSize}}&bottom={{sideBarCBottomMob}}&left={{sideBarCLeftMob}}&anchor=bl]{{/if}}&layer4=[src=/i/dfs/{{#if ../roi }}ROI_{{/if}}{{pricingImage.name}}{{#if pricingImageCrop}}&{{pricingImageCrop}}{{/if}}&anchor=br&right=0&bottom=30]{{#if EspotImage.name}}{{#if espot1mobile}}&layer5=[src=/i/dfs/{{EspotImage.name}}{{#if espot1hasownmobileimage}}_mobile{{/if}}&anchor=tr&right={{EspotImage_mobileright}}&top={{EspotImage_mobiletop}}]{{/if}}{{/if}}&qlt={{#if mobileslidequality}}{{mobileslidequality}}{{else}}60{{/if}}&fmt.jpeg.chroma=1,1,1">
+
+
+
+                <img src="https://{{image.defaultHost}}/i/dfs/?layer0=[canvas=600,462]&layer1=[src=/i/dfs/{{productImage.name}}{{#if mobileproductimage}}_mobile{{/if}}&{{#if mobileMImageCrop}}{{mobileMImageCrop}}&{{/if}}{{#if mobilepimagefullheight}}anchor=tl&w=600{{else if mobileSidebarImage.name}}w=600&h=384&anchor=tl&top=78{{/if}}]{{#if mobileSidebarImage.name}}&layer2=[/i/dfs/{{mobileSidebarImage.name}}&w=600]{{/if}}{{#if sideBarCharOnMobile }}&layer3=[/i/dfs/{{sidebarCharacter.name}}&{{mobileCharacterCrop}}&{{mobileCharacterSize}}&bottom={{sideBarCBottomMob}}&left={{sideBarCLeftMob}}&anchor=bl]{{/if}}&layer4=[src=/i/dfs/{{#if ../roi }}ROI_{{/if}}{{pricingImage.name}}{{#if pricingImageCrop}}&{{pricingImageCrop}}{{/if}}&anchor=br&right=0&bottom=30]{{#if EspotImage.name}}{{#if espot1mobile}}&layer5=[src=/i/dfs/{{EspotImage.name}}{{#if espot1hasownmobileimage}}_mobile{{/if}}&anchor=tr&right={{EspotImage_mobileright}}&top={{EspotImage_mobiletop}}]{{/if}}{{/if}}&qlt={{#if mobileslidequality}}{{mobileslidequality}}{{else}}60{{/if}}&fmt.jpeg.chroma=1,1,1">
+              </picture>
+
+              <div class="bannerTextContainer {{countdownClassName}}{{#if hasCountdown}} carCountdown{{/if}}" data-messageid=slide_{{inc @index}}>
+                <!-- START:: V2 CountDown (PB) July 2nd 2018-->
+                  <div class="countdownContainer countdown_v2 {{countdownClassName}} {{#if hasCountdown}} {{else}} nonCDText{{/if}}"
+                        data-deadline="{{countdownDeadline}}"
+                        data-startdays="{{daysBeforeEnd}}"
+                        data-daterange1="{{textVariance1}}"
+                        data-daterange2="{{textVariance2}}"
+                        data-daterange3="{{textVariance3}}"
+                        data-daterange4="{{textVariance4}}"
+                        data-hidefinalmessage="{{#if hideFinalMessage}}true{{else}}false{{/if}}"
+                        data-testdate="">
+                    <h6 class="cdHeader"><!-- DEFAULT HEADER TEXT--></h6>
+                      <section class="timer {{#if hasCountdown}} showCountdown{{else}}hideCountdown{{/if}}">
+                        <img src="//dfs.a.bigcontent.io/v1/static/loading_please_wait?v30" alt="loading..">
+                      </section>
+                    <h6 class="cdFooter"><!-- DEFAULT FOOTER TEXT--></h6>
+                  </div>
+                  <div style="display:none;" class="cdEndMessage {{countdownClassName}}">
+                    <h3>ENDS TODAY<br>Order direct until midnight</h3>
+                  </div>
+                <!-- END:: V2 CountDown (PB) July 2nd 2018-->
+              </div>
+            </a>
+            {{#if EspotImage2.name }}
+            <div class="linkableRoundel2">
+              {{#if espot2URL }}
+                <a href="{{espot2URL}}">
+              {{/if}}
+              <picture>
+                <!-- webp -->
+
+                  <!-- 600 Mobile roundel 2-->
+                  <source type="image/webp" media="(max-width: 1023px)"  srcset="//images.dfs.co.uk/i/dfs/{{#if ../roi }}ROI_{{/if}}{{EspotImage2.name}}{{#if espot2hasownmobileimage}}_mobile{{/if}}?w=80%&qlt=100&fmt.jpeg.chroma=1,1,1&fmt.jpeg.interlaced=true&fmt=webp" />
+
+                <!-- Jpg -->
+
+                  <!-- 600 Mobile roundel 2-->
+                    <source media="(max-width: 1023px)"  srcset="//images.dfs.co.uk/i/dfs/{{#if ../roi }}ROI_{{/if}}{{EspotImage2.name}}{{#if espot2hasownmobileimage}}_mobile{{/if}}?w=80%&qlt=100" />
+
+                  <img src="//images.dfs.co.uk/i/dfs/{{#if ../roi }}ROI_{{/if}}{{EspotImage2.name}}?w=80%&qlt=100" alt ="{{EspotImage2.name}}"/>
+              </picture>
+            {{#if espot2URL }}
+              </a>
+            {{/if}}
+          </div>
+          {{/if}}
+          </div>
+        {{/each}}
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#hpCarousel" data-slide="prev">
+        <span></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#hpCarousel" data-slide="next">
+        <span></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <style>
+  /*  13th June 2018 v2 */
+  .uk, .roi {
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+  }
+  .hideCountdown {
+    display:none;
+  }
+  .bannerTextContainer.carCountdown {
+    display: table;
+  }
+  .bannerTextWrapper{
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .bannerTextWrapper h2.cdText span {
+    margin: 0 1px;
+    font-size: 15px !important;
+  }
+  {{#each slides}}
+  .bannerTextContainer[data-messageid="slide_{{inc @index}}"] {
+    bottom: {{textBottomPositionS}}px;
+    left:{{textLeftPositionS}}px;
+  }
+  .item.slideIndex{{inc @index}} .linkableRoundel2 {
+    position: absolute;
+    top: {{EspotImage2_top}}px ;
+    {{#if anchorDEspot2Left}}left:{{else}}right:{{/if}} {{EspotImage2_right}}px;
+  }
+
+  .slideIndex{{inc @index}} .countdown_v2.HPcd-default.nonCDText h6.cdHeader {
+    font-size: {{#if textAFontSize}}{{textAFontSize}}{{else}}20{{/if}}px !important;
+    line-height: {{#if textAFontSize}}{{textAFontSize}}{{else}}20{{/if}}px !important;
+    color:#{{#if textAColour }}{{csv textAColour 'D'}}{{else}}000000{{/if}} !important;
+  }
+  .slideIndex{{inc @index}} .countdown_v2.HPcd-default.nonCDText h6.cdFooter {
+    font-size: {{#if textBFontSize}}{{textBFontSize}}{{else}}18{{/if}}px !important;
+    line-height: {{#if textBFontSize}}{{textBFontSize}}{{else}}18{{/if}}px !important;
+    color:#{{#if textBColour}}{{ csv textBColour 'D'}}{{else}}000000{{/if}} !important;
+  }
+
+  @media (max-width: 1365px) {
+
+    .bannerTextWrapper h2.cdText span {
+      margin: 0 1px;
+      font-size: 15px !important;
+    }
+    .bannerTextContainer[data-messageid="slide_{{inc @index}}"] {
+      bottom: {{textBottomPositionS}}px;
+      left:{{textLeftPositionS}}px;
+    }
+    .item.slideIndex{{inc @index}} .linkableRoundel2 {
+      position: absolute;
+      top: {{EspotImage2_top1024}}px ;
+      {{#if anchorDEspot2Left}}left:{{else}}right:{{/if}} {{EspotImage2_right1024}}px;
+    }
+    .slideIndex{{inc @index}} .countdown_v2.HPcd-default.nonCDText h6.cdHeader {
+      font-size:{{#if textAFontSize}}{{math textAFontSize "-" 5}}{{else}}14{{/if}}px !important;
+      line-height:{{#if textAFontSize}}{{math textAFontSize "-" 5}}{{else}}14{{/if}}px !important;
+    }
+    .slideIndex{{inc @index}} .countdown_v2.HPcd-default.nonCDText h6.cdFooter {
+      font-size:{{#if textBFontSize}}{{math textBFontSize "-" 5}}{{else}}14{{/if}}px !important;
+      line-height:{{#if textBFontSize}}{{math textBFontSize "-" 5}}{{else}}14{{/if}}px !important;
+    }
+
+  }
+  @media (max-width: 1023px) {
+    .bannerTextContainer[data-messageid="slide_{{inc @index}}"] {
+      bottom: {{textBottomPositionS}}px;
+      left:{{textLeftPositionS}}px;
+    }
+    .item.slideIndex{{inc @index}} .linkableRoundel2 {
+      position: absolute;
+      top: {{Espot2Image_mobiletop}}px ;
+      {{#if anchorMEspot2Left}}left:{{else}}right:{{/if}} {{Espot2Image_mobileright}}px;
+    }
+
+
+    {{#if espot2mobile}}
+      .item.slideIndex{{inc @index}} .linkableRoundel2 {
+        display:block;
+      }
+    {{else}}
+      .item.slideIndex{{inc @index}} .linkableRoundel2 {
+        display:none;
+      }
+    {{/if}}
+  }
+  {{/each}}
+
+  </style>
+{{/with}}

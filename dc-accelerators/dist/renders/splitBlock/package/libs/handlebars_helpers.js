@@ -260,6 +260,127 @@
 
                 return new Handlebars.SafeString(text);
             });
+
+            Handlebars.registerHelper('ampCaVideo', function () {
+                var s = ' data-is-firefox=';
+                s += +!!(window.navigator.userAgent.indexOf('Firefox') >= 0);
+
+                var dataElement = '<script type="text/plain" class="video-settings"' + s + ' ></script>';
+                return new Handlebars.SafeString(dataElement);
+            });
+
+            Handlebars.registerHelper("csv", function(str, device) {
+              var colors = str.split(',');
+                  if(device === 'M') {
+                    if(colors[1] !== undefined && colors[1] != false) {
+                      return colors[1];
+                    } else {
+                      if(colors[0] !== undefined && colors[0] != false) {
+                        return colors[0];
+                      } else {
+                        return '000000';
+                      }
+
+                    }
+                  }
+
+              if(device === 'D') {
+                if(colors[0] !== undefined && colors[0] != false) {
+                  return colors[0];
+                } else {
+                  return '000000';
+                }
+              }
+              // No Matches Return Default Black
+              return '000000';
+            });
+
+            Handlebars.registerHelper("finance", function(price, local) {
+              var this_price = price.match(/([1-9])+/g);
+              if(local === 'UK') {
+                return '&pound;' + Math.floor(parseFloat((this_price[0]) / 48) * 100) / 100 + ' a month for 4 years';
+              } else {
+                return '&euro;' + Math.floor(parseFloat((this_price[0]) / 36) * 100) / 100 + ' a month for 3 years';
+              }
+
+            });
+
+
+            Handlebars.registerHelper('times', function(n, block) {
+            var accum = '';
+            for(var i = 0; i < n; ++i) {
+                block.data.index = i;
+                block.data.first = i === 0;
+                block.data.last = i === (n - 1);
+                accum += block.fn(this);
+            }
+                return accum;
+            });
+
+            Handlebars.registerHelper("inc", function(value, options) {
+                return parseInt(value) + 1;
+            });
+
+            Handlebars.registerHelper("getWidth", function(card_type, device) {
+
+              if(card_type === 'Type_A') {
+
+                switch (device) {
+                  case "M":
+                  return '255';
+
+                  case "D4":
+                  return '213';
+
+                  case "D6":
+                  return '291';
+                }
+              }
+
+              if(card_type === 'Type_B') {
+
+                switch (device) {
+                  case "M":
+                  return '255';
+
+                  case "D4":
+                  return '294';
+
+                  case "D6":
+                  return '401';
+                }
+
+              }
+
+              if(card_type === 'Type_C' || card_type === 'Type_D') {
+
+                switch (device) {
+                  case "M":
+                  return '540';
+
+                  case "D4":
+                  return '456';
+
+                  case "D6":
+                  return '622';
+                }
+
+              }
+
+              if(card_type === 'Type_E') {
+                switch (device) {
+                  case "M":
+                  return '151';
+
+                  case "D4":
+                  return '151';
+
+                  case "D6":
+                  return '151';
+                }
+              }
+
+            });
         }
 
         else {
@@ -267,7 +388,3 @@
         }
     }
 }));
-
-
-
-
