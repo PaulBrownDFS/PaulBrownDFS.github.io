@@ -934,3 +934,59 @@ section.timer {
       color: #fff;
   }
 }
+
+// Large Center Countdown
+.bannerTextContainer.HPcd-LargeCenter.carCountdown .countdownContainer {
+    width: 454px;
+}
+
+.countdownContainer.countdown_v2.HPcd-LargeCenter {
+    background: none;
+}
+
+.countdownContainer.countdown_v2.HPcd-LargeCenter p {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: normal;
+    float:left;
+    position: relative;
+    width:110px;
+}
+
+.countdownContainer.countdown_v2.HPcd-LargeCenter p span {
+    display: block;
+    color: #fff;
+    font-size: 44px;
+}
+.countdownContainer.countdown_v2.HPcd-LargeCenter p:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 33%;
+    height: 33%;
+    right: 0%;
+    border-right: 1px solid rgba(255,255,255,0.25);
+}
+
+.countdownContainer.countdown_v2.HPcd-LargeCenter p:last-of-type:after {
+    border-right: none;
+}
+
+@media (max-width: 1365px) {
+
+  .bannerTextContainer.HPcd-LargeCenter.carCountdown .countdownContainer {
+      width: 364px;
+  }
+  .countdownContainer.countdown_v2.HPcd-LargeCenter p {
+      font-size: 16px;
+      width:90px;
+  }
+
+  .countdownContainer.countdown_v2.HPcd-LargeCenter p span {
+      display: block;
+      color: #fff;
+      font-size: 35px;
+  }
+
+}
