@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Bootstrap 4 Grids</title>
-  <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
   <style>
     .column {
         background: #d4e8f1;
@@ -212,23 +212,23 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script>
-    
+
     $(document).ready(function(){
         // get widths on page ready.
         updateWidths();
     }) ;
-    
+
     // Window Resize Listener
-    
+
     $( window ).resize(function() {
         // get widths on Browser Resize
         updateWidths();
     });
-    
-    
-    
+
+
+
     function updateWidths(){
-    
+
         $('.column').each(function(i, e){
         var width = $(this).outerWidth().toFixed(2);
         console.log($(this)[0].innerHTML = "<p>"+ width +"px<p>");
