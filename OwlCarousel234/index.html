@@ -8,7 +8,49 @@
   <!-- Owl Stylesheets -->
   <link rel="stylesheet" href="dist/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="dist/assets/owl.theme.default.min.css">
+  <link rel="stylesheet" href="dist/assets/animate.css">
+  <style>
+  .PrevSlide, .NextSlide {
+        width: 80px;
+        height: 104px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        opacity: 0.25;
+        display: block !important;
+    }
+    .PrevSlide:hover, .NextSlide:hover {
+      opacity: 0.75;
+    }
+    .PrevSlide { left: 0px; background:url(https://images.dfs.co.uk/i/dfs/carousel_nav_prev_no_dis_v2) no-repeat;background-position: 0px -104px;}
+    .NextSlide { right: -20px; background:url(https://images.dfs.co.uk/i/dfs/carousel_nav_next_no_dis_v2) no-repeat; background-position: 0px -104px;}
+    .PrevSlide span, .NextSlide span {transform : scale(2,5); color: #ccc;}
 
+    .owl-theme .owl-dots {
+      text-align: center;
+      -webkit-tap-highlight-color: transparent;
+      position: relative;
+      top: -60px;
+    }
+
+    .owl-carousel .item-caption{
+      position: absolute;
+      bottom: 40%;
+      left: 15%;
+      color: #FFF;
+      font-size: 56px;
+      font-weight: bold;
+    }
+    .item-caption h3 {
+      margin:10px;
+    }
+    .item-caption h5 {
+      font-size: 16px;
+      margin: 0;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 </head>
 <body>
 
@@ -17,23 +59,32 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="dist/owl.carousel.js"></script>
 
-
   <!--  SW Demo -->
   <section id="SWCarousel">
     <div class="row">
-      <div class="large-12 columns">
-        <div id="owl-1" class="owl-carousel owl-carousel-hero owl-theme">
+      <div class="large-12 columns" style="width:98%;margin:20px auto;">
+        <div id="owl2" class="owl-carousel owl-carousel-hero owl-theme" style="max-height:670px;overflow:hidden">
 
-      <div class="slide">
+      <div class="slide testCaption">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
+        <div class="item-caption">
+            <!-- Applying animation to Caption using animate.css  -->
+            <!-- add class animated <animation-name> provided by animate.css  -->
+            <h3 class="animated fadeInUp">Slider A Caption</h3>
+        </div>
       </div>
 
       <div class="slide">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
+        <div class="item-caption">
+            <!-- Applying animation to Caption using animate.css  -->
+            <!-- add class animated <animation-name> provided by animate.css  -->
+            <h3 class="">Slider B Caption</h3>
+        </div>
       </div>
 
 
@@ -41,32 +92,66 @@
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
+        <div class="item-caption">
+            <!-- Applying animation to Caption using animate.css  -->
+            <!-- add class animated <animation-name> provided by animate.css  -->
+            <h3 class="">Slider C Caption</h3>
+        </div>
       </div>
 
       <div class="slide">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
+        <div class="item-caption">
+            <!-- Applying animation to Caption using animate.css  -->
+            <!-- add class animated <animation-name> provided by animate.css  -->
+            <h3 class="">Slider D Caption</h3>
+            <h5 class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vero consequatur temporibus ea optio sequi, quo deserunt sint adipisci placeat eos laborum.</h5>
+        </div>
       </div>
 
       <div class="slide">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
+        <div class="item-caption">
+            <!-- Applying animation to Caption using animate.css  -->
+            <!-- add class animated <animation-name> provided by animate.css  -->
+            <h3 class="">Slider E Caption</h3>
+        </div>
       </div>
 
     </div>
         <script>
           $(document).ready(function() {
-            $('.owl-carousel').owlCarousel({
+            var heroSlider = $('.owl-carousel');
+
+            heroSlider.owlCarousel({
                 loop:true,
                 margin:10,
-                autoplay: true,
+                autoplay: false,
                 nav: true,
                 singleItem: true,
-                items: 1
+                items: 1,
+                navText : ['<span class="PrevSlide"></span>','<span class="NextSlide"></span>']
             });
-          })
+
+            heroSlider.on("changed.owl.carousel", function(event){
+                      // selecting the current active item
+
+                      var item = event.item.index-3;
+
+                      if(item == -2) { item = 3 }
+                      console.log('eq ', item);
+                      // first removing animation for all captions
+                      $('h3,h5').removeClass('animated fadeInUp');
+                      $('.owl-item').not('.cloned').eq(item).find('h3,h5').addClass('animated fadeInUp');
+                  });
+
+          });
+
+
         </script>
       </div>
     </div>
