@@ -436,7 +436,7 @@
   box-sizing: border-box;
   text-align: center;
   margin: 0 auto;
-  background: #ffe02e;
+  background: none;
 }
 
 .countdownContainer h6.cdHeader, .countdownContainer h6.cdFooter {
@@ -499,7 +499,7 @@
 }
 
 .cdEndMessage.HPcd-default {
-  background: #ffe02e;
+  background: none;
 }
 
 .cdEndMessage.HPcd-default {
@@ -592,7 +592,7 @@ section.timer {
 
 .cdEndMessage.HPcd_EarlyBird {
   bottom: -47px;
-  background: #ffe02e;
+  background: none;
   height: 52px;
 }
 
@@ -698,7 +698,7 @@ section.timer {
 
 .countdownContainer.HPcd_WS2Large {
   width: 322px;
-  background: #ffe02e;
+  background: none;
 }
 
 .countdownContainer.HPcd_WS2Large span.cdDays, .countdownContainer.HPcd_WS2Large span.cdHours, .countdownContainer.HPcd_WS2Large span.cdMinutes {
@@ -716,7 +716,7 @@ section.timer {
   }
   .countdownContainer.HPcd_WS2Large {
     width: 238px;
-    background: #ffe02e;
+    background: none;
   }
   .countdownContainer.HPcd_WS2Large .timer p {
     width: 55px;
@@ -748,7 +748,7 @@ section.timer {
   }
   .countdownContainer.HPcd_WS2Large {
     width: 210px;
-    background: #ffe02e;
+    background: none;
   }
   .countdownContainer.HPcd_WS2Large .timer p {
     width: 48px;
@@ -836,7 +836,7 @@ section.timer {
 
 .countdownContainer.HPcd_WS2Special {
   width: 322px;
-  background: #ffe02e;
+  background: none;
 }
 
 .countdownContainer.HPcd_WS2Special span.cdDays, .countdownContainer.HPcd_WS2Special span.cdHours, .countdownContainer.HPcd_WS2Special span.cdMinutes {
@@ -854,7 +854,7 @@ section.timer {
   }
   .countdownContainer.HPcd_WS2Special {
     width: 238px;
-    background: #ffe02e;
+    background: none;
   }
   .countdownContainer.HPcd_WS2Special .timer p {
     width: 55px;
@@ -900,7 +900,7 @@ section.timer {
   }
   .countdownContainer.HPcd_WS2Special {
     width: 210px;
-    background: #ffe02e;
+    background: none;
   }
   .countdownContainer.HPcd_WS2Special .timer p {
     width: 48px;
