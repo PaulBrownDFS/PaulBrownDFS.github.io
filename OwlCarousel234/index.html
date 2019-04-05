@@ -69,22 +69,14 @@
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
-        <div class="item-caption">
-            <!-- Applying animation to Caption using animate.css  -->
-            <!-- add class animated <animation-name> provided by animate.css  -->
-            <h3 class="animated fadeInUp">Slider A Caption</h3>
-        </div>
+
       </div>
 
       <div class="slide">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
-        <div class="item-caption">
-            <!-- Applying animation to Caption using animate.css  -->
-            <!-- add class animated <animation-name> provided by animate.css  -->
-            <h3 class="">Slider B Caption</h3>
-        </div>
+
       </div>
 
 
@@ -92,34 +84,21 @@
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
-        <div class="item-caption">
-            <!-- Applying animation to Caption using animate.css  -->
-            <!-- add class animated <animation-name> provided by animate.css  -->
-            <h3 class="">Slider C Caption</h3>
-        </div>
+
       </div>
 
       <div class="slide">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
-        <div class="item-caption">
-            <!-- Applying animation to Caption using animate.css  -->
-            <!-- add class animated <animation-name> provided by animate.css  -->
-            <h3 class="">Slider D Caption</h3>
-            <h5 class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima vero consequatur temporibus ea optio sequi, quo deserunt sint adipisci placeat eos laborum.</h5>
-        </div>
+
       </div>
 
       <div class="slide">
         <a href="/sofa/caruso" class="visible-xs">
           <img src="https://i1.adis.ws/i/dfs/SW-homepage_carousel" class="visible-xs-block" alt="Sofa Workshop">
         </a>
-        <div class="item-caption">
-            <!-- Applying animation to Caption using animate.css  -->
-            <!-- add class animated <animation-name> provided by animate.css  -->
-            <h3 class="">Slider E Caption</h3>
-        </div>
+
       </div>
 
     </div>
@@ -130,24 +109,14 @@
             heroSlider.owlCarousel({
                 loop:true,
                 margin:10,
-                autoplay: false,
+                autoplay: true,
                 nav: true,
                 singleItem: true,
                 items: 1,
                 navText : ['<span class="PrevSlide"></span>','<span class="NextSlide"></span>']
             });
 
-            heroSlider.on("changed.owl.carousel", function(event){
-                      // selecting the current active item
 
-                      var item = event.item.index-3;
-
-                      if(item == -2) { item = 3 }
-                      console.log('eq ', item);
-                      // first removing animation for all captions
-                      $('h3,h5').removeClass('animated fadeInUp');
-                      $('.owl-item').not('.cloned').eq(item).find('h3,h5').addClass('animated fadeInUp');
-                  });
 
           });
 
