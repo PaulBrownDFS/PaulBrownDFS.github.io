@@ -646,34 +646,24 @@
                 "minLength": "URL must start with a / and must be 3 to 256 characters in length"
             }
         },
-        "productSku": {
+        "shopButtonText": {
             "type": "string",
             "minLength": 0,
-            "maxLength": 20,
-            "title": "Product SKU",
-            "description": "Ie. SIN2ZCSHB",
+            "maxLength": 30,
+            "title": "Shop Button Text",
+            "description": "Shop now",
             "errors": {
-                "maxLength": "Product Code"
+                "maxLength": "max 30 Chars"
             }
         },
-        "catalogID": {
+        "shopButtonUrl": {
             "type": "string",
             "minLength": 0,
-            "maxLength": 10,
-            "title": "Cataglog ID",
-            "description": "UK 10101, IE 10601",
+            "maxLength": 255,
+            "title": "Shop Button URL",
+            "description": "/fabric-sofas/all-fabric-sofas",
             "errors": {
-                "maxLength": "Enter Number Only"
-            }
-        },
-        "storeID": {
-            "type": "string",
-            "minLength": 0,
-            "maxLength": 10,
-            "title": "Store ID",
-            "description": "UK 10202, IE 10203 ",
-            "errors": {
-                "maxLength": "Enter Number Only"
+                "maxLength": "max 255 Chars"
             }
         },
         "desktopslidequality": {
@@ -701,12 +691,54 @@
         "_title": {
             "type": "string",
             "title": "Title",
+            "description": "Ie. <strong>Cubix</strong>3 Seater Sofa",
             "minLength": 0,
             "maxLength": 150
+        },
+        "carouselVersion": {
+            "title": "Version",
+            "description": "Choose carousel version (None = Original)",
+            "type": "string",
+            "enum": [
+                "Original",
+                "Late2019"
+            ]
+        },
+        "showIcons": {
+            "title": "Show More Colours / Sizes Icons",
+            "description": "Yes / No",
+            "type": "boolean"
+        },
+        "priceLabel": {
+            "title": "Pricing Label Detail",
+            "description": "description",
+            "type": "array",
+            "minItems": 0,
+            "maxItems": 5,
+            "items": {
+                "type": "string"
+            }
+        },
+        "priceLabelStyle": {
+            "title": "Price Label Style Class",
+            "description": "Choose your pricing label style (desktop) Default = UK-1",
+            "type": "string",
+            "enum": [
+                "UK-1",
+                "IE-1",
+                "NL-1",
+                "ES-1"
+            ]
         }
     },
     "propertyOrder": [
         "_title",
+        "carouselVersion",
+        "showIcons",
+        "priceLabel",
+        "priceLabelStyle",
+        "shopButtonText",
+        "shopButtonUrl",
         "image",
         "mobileSidebarImage",
         "sidebarCharacter",
