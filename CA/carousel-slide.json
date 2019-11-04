@@ -424,7 +424,8 @@
                 "HPcd_EarlyBird",
                 "HPcd_WS2Large",
                 "HPcd_WS2Special",
-                "HPcd-LargeCenter"
+                "HPcd-LargeCenter",
+                "HPcd-late2019"
             ],
             "title": "Countdown Css Style",
             "description": "Css Class Name"
