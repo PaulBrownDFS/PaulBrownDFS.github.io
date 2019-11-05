@@ -712,7 +712,7 @@
         },
         "priceLabel": {
             "title": "Pricing Label Detail",
-            "description": "Please see label key for more details",
+            "description": "Please see label key image for more details",
             "type": "array",
             "minItems": 0,
             "maxItems": 7,
