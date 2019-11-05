@@ -715,7 +715,7 @@
             "description": "Please see label key for more details",
             "type": "array",
             "minItems": 0,
-            "maxItems": 6,
+            "maxItems": 7,
             "items": {
                 "type": "string"
             }
