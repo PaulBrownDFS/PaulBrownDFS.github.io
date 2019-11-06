@@ -726,7 +726,7 @@
             "type": "string",
             "enum": [
                 "UK-1",
-                "IE-1",
+                "IE-2",
                 "NL-1",
                 "ES-1"
             ]
