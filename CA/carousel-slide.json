@@ -730,6 +730,11 @@
                 "NL-1",
                 "ES-1"
             ]
+        },
+        "roiPreview": {
+            "title": "Preview Slide as ROI Version",
+            "description": "Yes / No",
+            "type": "boolean"
         }
     },
     "propertyOrder": [
