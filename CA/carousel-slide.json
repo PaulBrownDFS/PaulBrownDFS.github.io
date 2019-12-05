@@ -712,7 +712,7 @@
         },
         "priceLabel": {
             "title": "Pricing Label Detail",
-            "description": "Please see label key image for more details",
+            "description": "https://i1.adis.ws/i/dfs/homepage_DC-Key2",
             "type": "array",
             "minItems": 0,
             "maxItems": 7,
