@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Lazy Loader with Amplience Images</title>
+  <title>Lazy Loader with Amplience Images (compatible with Picture / Source) </title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <style>
 
@@ -19,7 +19,7 @@
   }
   .imagesContainer {
     height: 3000px;
-    width: 683px;
+    width:1024px;
     padding-top: 40px;
     margin: 0 auto;
   }
@@ -28,7 +28,7 @@
     margin: 20px 0;
   }
   .lazyImg {
-    width: 683px;
+    width: 1024px;
     margin:10px 0;
     height: 706px;
     position: relative;
@@ -45,7 +45,7 @@
 </style>
 </head>
 <body>
-  <h1 class="text-center">Lazy Loader with Amplience Images</h1>
+  <h1 class="text-center">Lazy Loader with Amplience Images<br>(compatible with Picture / Source)</h1>
 
   <div class="imagesContainer">
     <h2 class="text-center">Earthy Colours</h2>
@@ -57,7 +57,7 @@
       <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_naturaltaupe" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_naturaltaupe?w=300" src="loading-image.gif"/>
     </div>
     <div class="lazyImg">
-      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark?w=300"src="loading-image.gif"/>
+      <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_rosebark?w=300" src="loading-image.gif"/>
     </div>
     <div class="lazyImg">
       <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/earthy_roomset_cinnamonsprinkle" data-smallsrc="http://i1.adis.ws/i/dfs/earthy_roomset_cinnamonsprinkle?w=300" src="loading-image.gif"/>
@@ -79,6 +79,18 @@
     <div class="lazyImg">
       <img class="lazyLoadMe" data-src="http://i1.adis.ws/i/dfs/greens_roomset_freshartichoke" src="loading-image.gif"/>
     </div>
+
+    <picture>
+      <!-- WEBP -->
+      <source type="image/webp" media="(max-width: 1365px)"
+        data-srcset="//images.dfs.co.uk/i/dfs/measuringBuyingGuide_hero?w=964&fmt.jpeg.interlaced=true&fmt=webp">
+      <source type="image/webp" media="(min-width: 1366px)"
+        data-srcset="//images.dfs.co.uk/i/dfs/measuringBuyingGuide_hero?fmt.jpeg.interlaced=true&fmt=webp">
+      <!-- JPG -->
+      <source media="(max-width: 1365px)" data-srcset="//images.dfs.co.uk/i/dfs/measuringBuyingGuide_hero?w=964">
+      <source media="(min-width: 1366px)" data-srcset="//images.dfs.co.uk/i/dfs/measuringBuyingGuide_hero">
+      <img class="lazyLoadMe" data-src="//images.dfs.co.uk/i/dfs/measuringBuyingGuide_hero" alt="Measuring Buying Guide Hero">
+    </picture>
 
   </div>
 

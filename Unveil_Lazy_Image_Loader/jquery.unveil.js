@@ -15,20 +15,23 @@
     var $w = $(window),
         th = threshold || 0,
         retina = window.devicePixelRatio > 1,
-        attrib = retina? "data-src-retina" : "data-src",
+        attrib = "data-src",
         images = this,
-        winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
-        loaded;
-        if(winWidth <= 1365 && attrib == "data-src") {
-          attrib = "data-smallsrc";
-        }
+        winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth, loaded;
 
     this.one("unveil", function() {
       var source = this.getAttribute(attrib);
-      source = source || this.getAttribute("data-src");
-      if (source) {
-        console.log('lazy loading',source);
-        this.setAttribute("src", source);
+      var par = this.parentElement;
+      if(par.nodeName === 'PICTURE') {
+        $(par).find('source').each(function(i, e){ e.setAttribute('srcset', e.dataset.srcset) }) ;
+        this.style.opacity = 1;
+        console.log('lazy loading', source, par.parentElement);
+      } else {
+        source = source || this.getAttribute("data-src");
+        if (source) {
+          console.log('lazy loading', source);
+          this.setAttribute("src", source);
+      }      
         if (typeof callback === "function") callback.call(this);
       }
     });
