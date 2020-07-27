@@ -25,6 +25,7 @@
       if(par.nodeName === 'PICTURE') {
         $(par).find('source').each(function(i, e){ e.setAttribute('srcset', e.dataset.srcset) }) ;
         this.style.opacity = 1;
+        console.log(source, 'Lazy Loaded');
       } else {
         source = source || this.getAttribute("data-src");
         if (source) {
