@@ -25,12 +25,11 @@
       if(par.nodeName === 'PICTURE') {
         $(par).find('source').each(function(i, e){ e.setAttribute('srcset', e.dataset.srcset) }) ;
         this.style.opacity = 1;
-        console.log('lazy loading', source, par.parentElement);
       } else {
         source = source || this.getAttribute("data-src");
         if (source) {
-          console.log('lazy loading', source);
           this.setAttribute("src", source);
+          this.style.opacity = 1;
       }      
         if (typeof callback === "function") callback.call(this);
       }
@@ -62,3 +61,12 @@
   };
 
 })(window.jQuery || window.Zepto);
+
+
+$(document).ready(function () {
+  $("img.lazyLoadMe").unveil(200, function () {
+    $(this).on('load', function () {
+      console.log($(this)[0].dataset.src, 'Lazy Loaded');
+    });
+  });
+});

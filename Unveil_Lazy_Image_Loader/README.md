@@ -1,6 +1,7 @@
 # unveil.js
-### A very lightweight plugin to lazy load images for jQuery or Zepto.js
+### A very lightweight plugin to lazy load images for jQuery or Zepto js
 
+## < picture > tag lazy loading added by Paul Brown July 2020
 
 
 Most of us are familiar with the [Lazy Load](http://www.appelsiini.net/projects/lazyload) plugin by [Mika Tuupola](http://www.appelsiini.net/).
