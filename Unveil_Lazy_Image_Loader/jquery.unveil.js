@@ -23,6 +23,9 @@
       var source = this.getAttribute(attrib);
       var par = this.parentElement;
       if(par.nodeName === 'PICTURE') {
+        if (source) {
+          this.setAttribute("src", source);
+        }
         $(par).find('source').each(function(i, e){ e.setAttribute('srcset', e.dataset.srcset) }) ;
         this.style.opacity = 1;
         console.log(source, 'Lazy Loaded');
