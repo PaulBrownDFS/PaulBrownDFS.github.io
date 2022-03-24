@@ -1,110 +1,172 @@
-<!-- ContentID: Clearance_Image_Composer --> <!-- Clearance Bundle Image Creator V1.1 (PB) CSS-->
-
-<!-- Clearance Bundle Image Creator V1.1 (PB) HTML -->
-<link rel="stylesheet" href="styles.min.css">
-      <section class="clearance_bundle_image_creator">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Clearance Bundle Image Creator <small>V1.1</small></h2>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bundle Creator V2</title>
+  </head>
+  <body>
+    <!-- Clearance Bundle Image Creator V2 (PB) CSS
+         Clearance Bundle Image Creator V2 (PB) HTML -->
+    <link rel="stylesheet" href="styles.min.css" />
+    <section class="clearance_bundle_image_creator">
+      <div class="row">
+        <div class="col-xs-12">
+          <h2>Clearance Bundle Image Creator <small>V2</small></h2>
+        </div>
+        <div class="col-xs-12 skus">
+          <label for="SKU1">Image1:</label>
+          <input type="text" id="SKU1" name="SKU1" value="" />
+          <label for="SKU2">Image2:</label>
+          <input type="text" id="SKU2" name="SKU2" value="" />
+          <label for="SKU3">Image3:</label>
+          <input type="text" id="SKU3" name="SKU3" value="" />
+          <label for="SKU4">Image4:</label>
+          <input type="text" id="SKU4" name="SKU4" value="" />
+        </div>
+        <div class="col-xs-12 image_preview">
+          <h5>Image Preview</h5>
+          <img
+            src="https://classic.cdn.media.amplience.net/i/dfs/blank"
+            alt="Bundle_Image"
+            id="bundle"
+          />
+        </div>
+        <hr />
+        <div class="nudges">
+          <div class="main_image attributes">
+            <h4>Main Image</h4>
+            <label for="width">Width</label>
+            <input type="text" name="width" id="width" value="720" /><span>
+              px</span
+            >
+            <label for="height">Height</label>
+            <input type="text" name="height" id="height" value="478" /><span>
+              px</span
+            >
+            <button id="topUp">Up</button>
+            <button id="topDown">Down</button>
+            <button id="leftUp">Left</button>
+            <button id="leftDown">Right</button>
+            <label for="nudge">Nudge</label>
+            <input type="text" id="nudge" name="nudge" value="20" /><span>
+              px</span
+            >
+            <hr />
           </div>
-          <div class="col-xs-12 skus">
-            <label for="SKU1">SKU1:</label>
-              <input type="text" id="SKU1" name="SKU1" value="">
-            <label for="SKU2">SKU2:</label>
-              <input type="text" id="SKU2" name="SKU2" value="">
-            <label for="SKU3">SKU3:</label>
-              <input type="text" id="SKU3" name="SKU3" value="">
-            <label for="SKU4">SKU4:</label>
-              <input type="text" id="SKU4" name="SKU4" value="">
-          </div>
-          <div class="col-xs-12 image_preview">
-            <h5>Image Preview</h5>
-            <img src="" alt="" id="bundle">
-          </div>
-          <hr>
-          <div class="nudges">
-            <div class="main_image attributes">
-              <h4>Main Image</h4>
-              <label for="width">Width</label>
-              <input type="text" name="width" id="width" value="720"><span> px</span>
-              <label for="height">Height</label>
-              <input type="text" name="height" id="height" value="478"><span> px</span>
-              <button id="topUp">Up</button>
-              <button id="topDown">Down</button>
-              <button id="leftUp">Left</button>
-              <button id="leftDown">Right</button>
-              <label for="nudge">Nudge</label>
-              <input type="text" id="nudge" name="nudge" value="20"><span> px</span>
-              <hr>
-            </div>
 
-            <div class="left_image attributes">
-              <h4>Left Image</h4>
-              <label for="width">Width</label>
-              <input type="text" name="width1" id="width1" value="337"><span> px</span>
-              <label for="height">Height</label>
-              <input type="text" name="height1" id="height1" value="180"><span> px</span>
-              <button id="topUp1">Up</button>
-              <button id="topDown1">Down</button>
-              <button id="leftUp1">Left</button>
-              <button id="leftDown1">Right</button>
-              <label for="nudge">Nudge</label>
-              <input type="text" id="nudge1" name="nudge1" value="20"><span> px</span>
-              <hr>
-            </div>
-
-            <div class="middle_image attributes">
-              <h4>Middle Image</h4>
-              <label for="width">Width</label>
-              <input type="text" name="width2" id="width2" value="337"><span> px</span>
-              <label for="height">Height</label>
-              <input type="text" name="height2" id="height2" value="180"><span> px</span>
-              <button id="topUp2">Up</button>
-              <button id="topDown2">Down</button>
-              <button id="leftUp2">Left</button>
-              <button id="leftDown2">Right</button>
-              <label for="nudge">Nudge</label>
-              <input type="text" id="nudge2" name="nudge2" value="20"><span> px</span>
-              <hr>
-            </div>
-
-            <div class="right_image attributes">
-              <h4>Right Image</h4>
-              <label for="width">Width</label>
-              <input type="text" name="width3" id="width3" value="337"><span> px</span>
-              <label for="height">Height</label>
-              <input type="text" name="height3" id="height3" value="180"><span> px</span>
-              <button id="topUp3">Up</button>
-              <button id="topDown3">Down</button>
-              <button id="leftUp3">Left</button>
-              <button id="leftDown3">Right</button>
-              <label for="nudge">Nudge</label>
-              <input type="text" id="nudge3" name="nudge3" value="20"><span> px</span>
-              <hr>
-            </div>
+          <div class="left_image attributes">
+            <h4>Left Image</h4>
+            <label for="width">Width</label>
+            <input type="text" name="width1" id="width1" value="337" /><span>
+              px</span
+            >
+            <label for="height">Height</label>
+            <input type="text" name="height1" id="height1" value="180" /><span>
+              px</span
+            >
+            <button id="topUp1">Up</button>
+            <button id="topDown1">Down</button>
+            <button id="leftUp1">Left</button>
+            <button id="leftDown1">Right</button>
+            <label for="nudge">Nudge</label>
+            <input type="text" id="nudge1" name="nudge1" value="20" /><span>
+              px</span
+            >
+            <hr />
           </div>
-          <div class="col-xs-12 render">
-            <button id="render_image_btn">Render Image</button>
-            <hr>
+
+          <div class="middle_image attributes">
+            <h4>Middle Image</h4>
+            <label for="width">Width</label>
+            <input type="text" name="width2" id="width2" value="337" /><span>
+              px</span
+            >
+            <label for="height">Height</label>
+            <input type="text" name="height2" id="height2" value="180" /><span>
+              px</span
+            >
+            <button id="topUp2">Up</button>
+            <button id="topDown2">Down</button>
+            <button id="leftUp2">Left</button>
+            <button id="leftDown2">Right</button>
+            <label for="nudge">Nudge</label>
+            <input type="text" id="nudge2" name="nudge2" value="20" /><span>
+              px</span
+            >
+            <hr />
+          </div>
+
+          <div class="right_image attributes">
+            <h4>Right Image</h4>
+            <label for="width">Width</label>
+            <input type="text" name="width3" id="width3" value="337" /><span>
+              px</span
+            >
+            <label for="height">Height</label>
+            <input type="text" name="height3" id="height3" value="180" /><span>
+              px</span
+            >
+            <button id="topUp3">Up</button>
+            <button id="topDown3">Down</button>
+            <button id="leftUp3">Left</button>
+            <button id="leftDown3">Right</button>
+            <label for="nudge">Nudge</label>
+            <input type="text" id="nudge3" name="nudge3" value="20" /><span>
+              px</span
+            >
+            <hr />
           </div>
         </div>
-        <div class="changeColour">
-          Image URL:
-          <input type="text" id="image_url_text">
-          <button id="updateImageText">Update Colours</button>
-          <h3>Change Product Colour Information</h3>
-          <p>If you wish to display a different product colour, it is possible to adjust each product in the url that is called to build each bundle image.</p>
-          <ul>
-            <li>Step1: Create your bundle as normal with default colours</li>
-            <li>Step2: Adjust the bundle until its how you want the products sized / spaced</li>
-            <li>Step3: In the input box above, find the product image url, which follows main_product=, left_product=, right_product=, middle_product= or bottom_product= and locate the colour text in this string.</li>
-            <li>Step4: simply replace say charcoal, with red, sky or whatever colour you require ie. main_product=ludo_3h_revive_charcoal_view1, if we replace _charcoal_ with _red_ and then press the update colours button, a new bundle will be created with the current settings and new colours (if Valid)</li>
-          </ul>
-          <h3>In fact any image can be substituted if the whole image string is replaced with another amplience image url</h3>
+        <div class="col-xs-12 render">
+          <button id="render_image_btn">Render Image</button>
+          <hr />
         </div>
+      </div>
+      <div class="changeColour">
+        Image URL:
+        <input type="text" id="image_url_text" />
+        <button id="updateImageText">Update Colours</button>
+        <h3>Change Product Colour Information</h3>
+        <p>
+          If you wish to display a different product colour, it is possible to
+          adjust each product in the url that is called to build each bundle
+          image.
+        </p>
+        <ul>
+          <li>Step1: Create your bundle as normal with default colours</li>
+          <li>
+            Step2: Adjust the bundle until its how you want the products sized /
+            spaced
+          </li>
+          <li>
+            Step3: In the input box above, find the product image url, which
+            follows main_product=, left_product=, right_product=,
+            middle_product= or bottom_product= and locate the colour text in
+            this string.
+          </li>
+          <li>
+            Step4: simply replace say charcoal, with red, sky or whatever colour
+            you require ie. main_product=ludo_3h_revive_charcoal_view1, if we
+            replace _charcoal_ with _red_ and then press the update colours
+            button, a new bundle will be created with the current settings and
+            new colours (if Valid)
+          </li>
+        </ul>
+        <h3>
+          In fact any image can be substituted if the whole image string is
+          replaced with another amplience image url
+        </h3>
+      </div>
+    </section>
+    <script
+      src="https://code.jquery.com/jquery-1.9.1.min.js"
+      integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ="
+      crossorigin="anonymous"
+    ></script>
 
-      </section>
-      <script src="https://code.jquery.com/jquery-1.9.1.min.js" integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
-
-      <script src="index.min.js?v2a"></script>
-      <!-- @End Clearance Bundle Creator -->
+    <script src="index.min.js?v2a"></script>
+    <!-- @End Clearance Bundle Creator -->
+  </body>
+</html>
