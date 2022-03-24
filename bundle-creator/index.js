@@ -137,7 +137,7 @@ function getXML(sku_list){
   var images =[];
 
   $.each(sku_list, function(index, sku){
-    var template = 'https://www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + sku;
+    var template = 'https://uat2-www.dfs.co.uk/webapp/wcs/stores/servlet/GetAmplienceProductDataCmd?sku=' + sku;
     var ajaxRequest = 'ajaxRequest' + index;
     ajaxRequest = $.ajax({
                 url: template,
